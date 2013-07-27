@@ -16,12 +16,21 @@ html
                     - alt iune
             ul#info
                 li 
-                    a github
-                        - src
+                    a cc
+                li 
+                    a 
+                        - href https://github.com/iunetrecet
+                        img
+                            - src imgs/github.svg
+                            - alt github
                 li
-                    a flickr
-                        - src
-                li en
+                    a 
+                        - href https://secure.flickr.com/photos/93859818@N05/
+                        img 
+                            - src imgs/flickr.svg
+                            - alt flickr
+                li 
+                    a en
                       
 
         div.wrap    
