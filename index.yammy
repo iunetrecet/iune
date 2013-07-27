@@ -1,0 +1,148 @@
+<!doctype html/>
+
+html
+    head
+        title iune
+        link
+            - rel stylesheet
+            - type text/css
+            - href style.css
+
+    body
+        header
+            h1
+                img
+                    - src imgs/iune.svg 
+                    - alt iune
+            ul#info
+                li 
+                    a github
+                        - src
+                li
+                    a flickr
+                        - src
+                li en
+                      
+
+        div.wrap    
+            nav
+                a 
+                    - href #webs
+                    img
+                        - src imgs/web.svg
+                    | webs
+                a 
+                    - href #posters
+                    img
+                        - src imgs/poster.svg
+                    | posters
+                a
+                    - href #photos
+                    img
+                        - src imgs/photo.svg
+                    | photos
+                a
+                    - href #projects
+                    img
+                        - src imgs/project.svg
+                    | projects
+
+
+            a
+                -href #poster
+                | >
+
+
+            a#webs
+            ul
+                li 
+                    img
+                        - src imgs/web.svg
+                        | webs 
+                li 
+                    img
+                        - src imgs/web.svg
+                        | webs 
+                li 
+                    img
+                        - src imgs/web.svg
+                        | webs 
+                li 
+                    img
+                        - src imgs/web.svg
+                        | webs 
+                li 
+                    img
+                        - src imgs/web.svg
+                        | webs 
+
+            a#posters
+            ul
+                li 
+                    img
+                        - src imgs/poster.svg
+                        | posters 
+                li 
+                    img
+                        - src imgs/web.svg
+                        | webs 
+                li 
+                    img
+                        - src imgs/web.svg
+                        | webs 
+                li 
+                    img
+                        - src imgs/web.svg
+                        | webs 
+                li 
+                    img
+                        - src imgs/web.svg
+                        | webs 
+
+
+            a#photos
+            ul
+                li 
+                    img
+                        - src imgs/photo.svg
+                        | photos 
+                li 
+                    img
+                        - src imgs/web.svg
+                        | webs 
+                li 
+                    img
+                        - src imgs/web.svg
+                        | webs 
+                li 
+                    img
+                        - src imgs/web.svg
+                        | webs 
+                li 
+                    img
+                        - src imgs/web.svg
+                        | webs 
+
+
+            a#projects
+            ul
+                li 
+                    img
+                        - src imgs/project.svg
+                        | projects 
+                li 
+                    img
+                        - src imgs/web.svg
+                        | webs 
+                li 
+                    img
+                        - src imgs/web.svg
+                        | webs 
+                li 
+                    img
+                        - src imgs/web.svg
+                        | webs 
+                li 
+                    img
+                        - src imgs/web.svg
+                        | webs 
