@@ -159,7 +159,7 @@ html
 
             div#personalinfo
                 img
-                    - src imgs/iunetxikia.png
+                    - src imgs/iune.png
                     - alt iune
                 ul
                     li
