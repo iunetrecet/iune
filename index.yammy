@@ -67,7 +67,6 @@ html
                 li 
                     img
                         - src imgs/web.svg
-                        | webs 
                 li 
                     img
                         - src imgs/web.svg
@@ -155,3 +154,18 @@ html
                     img
                         - src imgs/web.svg
                         | webs 
+
+
+
+            div#personalinfo
+                img
+                    - src imgs/iunetxikia.png
+                    - alt iune
+                ul
+                    li
+                        Iune Trecet Obeso
+                    li
+                        1985-03-31
+                    li
+                        Donostia | Gipuzkoa
+                
