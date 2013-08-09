@@ -58,10 +58,20 @@ div.wrap
             text-align: center
             color: $red 
             font-weight: bold
-            img
-                display: block
-                width: 100%
+            div.icon
+                background: url("imgs/webbackground.svg")
+                background-repeat: no-repeat
+                background-size: 100%
+                border-radius: 100%
                 margin-bottom: 1em
+                img
+                    background: $red
+                    border-radius: 100%
+                    display: block
+                    width: 100%
+                    -moz-transition: opacity 0.5s
+                img:hover
+                    opacity: 0
     
     div#personalinfo
         position: relative

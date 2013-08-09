@@ -37,23 +37,27 @@ html
             nav
                 a 
                     - href #webs
-                    img
-                        - src imgs/web.svg
+                    div.icon
+                        img
+                            - src imgs/web.svg
                     | webs
                 a 
                     - href #posters
-                    img
-                        - src imgs/poster.svg
+                    div.icon
+                        img
+                            - src imgs/poster.svg
                     | posters
                 a
                     - href #photos
-                    img
-                        - src imgs/photo.svg
+                    div.icon
+                        img
+                            - src imgs/photo.svg
                     | photos
                 a
                     - href #projects
-                    img
-                        - src imgs/project.svg
+                    div.icon
+                        img
+                            - src imgs/project.svg
                     | projects
 
 
