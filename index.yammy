@@ -15,22 +15,57 @@ html
                     - src imgs/iune.svg 
                     - alt iune
             ul#info
-                li 
-                    a cc
-                li 
+                li.icon 
                     a 
                         - href https://github.com/iunetrecet
+                        - target _blank
                         img
                             - src imgs/github.svg
                             - alt github
-                li
+                li.icon 
+                    a 
+                        - href https://www.transifex.com/organization/iune
+                        - target _blank
+                        img
+                            - src 
+                            - alt tx
+                li.icon
                     a 
                         - href https://secure.flickr.com/photos/93859818@N05/
+                        - target _blank
                         img 
                             - src imgs/flickr.svg
                             - alt flickr
-                li 
-                    a en
+                li
+                    - class icon
+
+                    a
+                        - href #
+                        img 
+                            - src imgs/menu.svg
+                            - alt open menu
+                    ul.menu
+                        li.language 
+                            a language
+                                - href #
+                            ul
+                                li 
+                                    a en
+                                        - href #
+                                li 
+                                    a eu
+                                        - href #
+                                li 
+                                    a es
+                                        - href #
+                        li 
+                            a black theme
+                                - href #
+                        li 
+                            a license
+                                - href #
+                            
+
                       
 
         div.wrap    

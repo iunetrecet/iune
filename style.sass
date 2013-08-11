@@ -1,6 +1,7 @@
 $red: #d40000
+$darkred: #AA0000
 body
-    font-family: Raleway
+    font-family: Lato
     background-image: url('imgs/iunesketch.jpg')
     background-size: 100%
     margin: 0
@@ -27,7 +28,7 @@ header
         position: absolute
         top: 0
         right: 0
-        li
+        li.icon
             display: inline-block
             background: $red
             border-radius: 100%
@@ -43,6 +44,35 @@ header
                 line-height: 2em
                 font-weight: bold
                 color: white
+        li.icon:last-child
+            background: none
+        ul.menu
+            position: absolute
+            top: 4em
+            right: 1em
+            padding: 0
+            display: none
+            li
+                background: $darkred
+                list-style: none
+                padding: .5em 2em .5em 1em
+                text-align: left
+                color: white
+                img
+                    width: 1em
+            li.language
+                background-image: url('imgs/menuicon.svg') 
+                background-repeat: no-repeat 
+                background-position: center right
+                background-size: 1em
+                ul
+                    padding: 0
+            li:hover
+                background: $red
+            li:hover > ul > li
+                background: $red
+        li.icon:last-child:hover > ul.menu
+            display: block
 div.wrap
     position: absolute
     top: 45em
