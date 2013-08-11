@@ -1,0 +1,123 @@
+body {
+  font-family: Lato;
+  background-image: url("../images/iunesketch.jpg");
+  background-size: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+a {
+  text-decoration: none; }
+
+header, div.wrap {
+  background: white; }
+
+header h1 {
+  display: block;
+  margin: 0; }
+  header h1 img {
+    margin: 0 auto;
+    padding: 2em 0;
+    display: block; }
+header ul#info {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0; }
+  header ul#info li.icon {
+    display: inline-block;
+    background: #d40000;
+    border-radius: 100%;
+    width: 2.5em;
+    height: 2.5em;
+    margin: 0.5em;
+    vertical-align: top;
+    text-align: center; }
+    header ul#info li.icon img {
+      width: 80%;
+      margin: 10%; }
+    header ul#info li.icon a {
+      line-height: 2em;
+      font-weight: bold;
+      color: white; }
+  header ul#info li.icon:last-child {
+    background: none; }
+  header ul#info ul.menu {
+    position: absolute;
+    top: 4em;
+    right: 1em;
+    padding: 0;
+    display: none; }
+    header ul#info ul.menu li {
+      background: #aa0000;
+      list-style: none;
+      padding: 0.5em 2em 0.5em 1em;
+      text-align: left;
+      color: white; }
+      header ul#info ul.menu li img {
+        width: 1em; }
+    header ul#info ul.menu li.language {
+      background-image: url("../images/menuicon.svg");
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-size: 1em; }
+      header ul#info ul.menu li.language ul {
+        padding: 0; }
+    header ul#info ul.menu li:hover {
+      background: #d40000; }
+    header ul#info ul.menu li:hover > ul > li {
+      background: #d40000; }
+  header ul#info li.icon:last-child:hover > ul.menu {
+    display: block; }
+
+div.wrap {
+  position: absolute;
+  top: 45em;
+  padding: 0 10%;
+  width: 80%; }
+  div.wrap nav {
+    padding: 2em 0;
+    width: 100%; }
+    div.wrap nav a {
+      display: inline-block;
+      width: 15%;
+      margin: 0 5%;
+      text-align: center;
+      color: #d40000;
+      font-weight: bold; }
+      div.wrap nav a div.icon {
+        background: url("../images/webbackground.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border-radius: 100%;
+        margin-bottom: 1em; }
+        div.wrap nav a div.icon img {
+          background: #d40000;
+          border-radius: 100%;
+          display: block;
+          width: 100%;
+          -moz-transition: opacity 0.5s; }
+        div.wrap nav a div.icon img:hover {
+          opacity: 0; }
+  div.wrap div#personalinfo {
+    position: relative; }
+    div.wrap div#personalinfo img {
+      border-radius: 100%;
+      width: 70%; }
+    div.wrap div#personalinfo ul {
+      background: #d40000;
+      border-radius: 100%;
+      position: absolute;
+      top: 0;
+      right: 30%;
+      padding: 2em;
+      width: 10em;
+      height: 10em;
+      margin: 0;
+      line-height: 2em; }
+      div.wrap div#personalinfo ul li {
+        list-style: none;
+        text-align: center;
+        color: white;
+        margin-top: 1em; }

@@ -1,0 +1,164 @@
+<!doctype html>
+
+html
+    head
+        {% block starthead %}
+        {% endblock starthead %}
+
+        meta
+            - charset {{ resource.meta.charset }}
+        meta
+            - http-equiv X-UA-Compatible
+            - content {{ resource.meta.compatibility }}
+
+        title
+            | {% block title %}iune {{ resource.meta.title }}{% endblock %}
+
+        meta
+            - name description
+            - content {{ resource.meta.description }}
+        meta
+            - name author
+            - content {{ resource.meta.author }}
+        meta
+            - name viewport
+            - content {{ resource.meta.viewport }}
+
+        {% block favicons %}
+        link
+            - rel "shortcut icon"
+            - href {{ media_url('/favicon.ico') }}
+        {% endblock favicons %}
+
+        {% block css %}
+        link
+            - rel stylesheet
+            - type text/css
+            - href {{ media_url('css/style.css') }}
+        {% endblock css %}
+
+        {% block headjs %}
+        script[src="{{ media_url('js/libs/modernizr-1.7.min.js') }}"]
+        {% endblock headjs %}
+
+        {% block endhead %}{% endblock endhead %}
+
+    body[id="{{ resource.meta.id if resource.meta.id else resource.slug }}"]
+        header
+            {% block header %}
+            h1
+                img
+                    - src {{ media_url('images/iune.svg') }}
+                    - alt iune
+            {% endblock header %}
+
+            {% block info %}
+            ul#info
+                li.icon 
+                    a 
+                        - href https://github.com/iunetrecet
+                        - target _blank
+                        img
+                            - src {{ media_url('images/github.svg') }}
+                            - alt github
+                li.icon 
+                    a 
+                        - href https://www.transifex.com/organization/iune
+                        - target _blank
+                        img
+                            - src 
+                            - alt tx
+                li.icon
+                    a 
+                        - href https://secure.flickr.com/photos/93859818@N05/
+                        - target _blank
+                        img 
+                            - src {{ media_url('images/flickr.svg') }}
+                            - alt flickr
+                li.icon
+                    a
+                        - href #
+                        img 
+                            - src {{ media_url('images/menu.svg') }}
+                            - alt open menu
+                    ul.menu
+                        li.language 
+                            a language
+                                - href #
+                            ul
+                                li 
+                                    a en
+                                        - href #
+                                li 
+                                    a eu
+                                        - href #
+                                li 
+                                    a es
+                                        - href #
+                        li 
+                            a black theme
+                                - href #
+                        li 
+                            a license
+                                - href #
+            {% endblock %}
+
+        div.wrap    
+            {% block nav %}
+            nav
+                {% for grp, res_walker in site.content.walk_section_groups() %}
+                a 
+                    - href #{{ grp.name }}
+                    div.icon
+                        img
+                            - src {{ static_url('images/web.svg') }}
+                    | {{ grp.name }}
+                {% endfor %}
+            {% endblock %}
+
+
+            {% block content %}
+            section.content
+                {% for grp, res_walker in site.content.walk_section_groups() %}
+                a
+                    - name {{ grp.name }}
+                    | {{ grp.description }}
+
+                ul
+                    {% for res in res_walker %}
+                    li 
+                        a
+                            - href {{ res.full_url }}
+                            | {{ res.slug|capitalize|replace("-"," ") }}
+                        img
+                            - src {{ static_url ('images/web.svg') }}
+                    {% endfor %}
+
+                {% endfor %}
+
+                div#personalinfo
+                    img
+                        - src {{ static_url('images/iune.png') }}
+                        - alt iune
+                    ul
+                        li
+                            Iune Trecet Obeso
+                        li
+                            1985-03-31
+                        li
+                            Donostia | Gipuzkoa
+            {% endblock content %}
+
+        footer
+            Powered by
+            a[href="http://ringce.com/hyde"] hyde
+
+        {% block js %}
+        {% block jquery %}
+        script[src="js/libs/jquery-1.5.1.min.js"]
+        {% endblock jquery %}
+        {% block scripts %}
+        {% endblock scripts %}
+        {% endblock js %}
+
+

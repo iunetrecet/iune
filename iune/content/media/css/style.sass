@@ -1,0 +1,127 @@
+$red: #d40000
+$darkred: #AA0000
+body
+    font-family: Lato
+    background-image: url('../images/iunesketch.jpg')
+    background-size: 100%
+    margin: 0
+    background-repeat: no-repeat
+    background-attachment: fixed
+
+a
+    text-decoration: none
+
+header, div.wrap
+    background: white
+
+header
+    h1
+        display: block
+        margin: 0
+        img
+            margin: 0 auto
+            padding: 2em 0
+            display: block
+    ul#info
+        margin: 0
+        padding: 0
+        position: absolute
+        top: 0
+        right: 0
+        li.icon
+            display: inline-block
+            background: $red
+            border-radius: 100%
+            width: 2.5em
+            height: 2.5em
+            margin: .5em
+            vertical-align: top
+            text-align: center
+            img
+                width: 80%
+                margin: 10%
+            a
+                line-height: 2em
+                font-weight: bold
+                color: white
+        li.icon:last-child
+            background: none
+        ul.menu
+            position: absolute
+            top: 4em
+            right: 1em
+            padding: 0
+            display: none
+            li
+                background: $darkred
+                list-style: none
+                padding: .5em 2em .5em 1em
+                text-align: left
+                color: white
+                img
+                    width: 1em
+            li.language
+                background-image: url('../images/menuicon.svg') 
+                background-repeat: no-repeat 
+                background-position: center right
+                background-size: 1em
+                ul
+                    padding: 0
+            li:hover
+                background: $red
+            li:hover > ul > li
+                background: $red
+        li.icon:last-child:hover > ul.menu
+            display: block
+div.wrap
+    position: absolute
+    top: 45em
+    padding: 0 10%
+    width: 80%
+    nav
+        padding: 2em 0
+        width: 100%
+        a
+            display: inline-block
+            width: 15%
+            margin: 0 5%
+            text-align: center
+            color: $red 
+            font-weight: bold
+            div.icon
+                background: url("../images/webbackground.svg")
+                background-repeat: no-repeat
+                background-size: 100%
+                border-radius: 100%
+                margin-bottom: 1em
+                img
+                    background: $red
+                    border-radius: 100%
+                    display: block
+                    width: 100%
+                    -moz-transition: opacity 0.5s
+                img:hover
+                    opacity: 0
+    
+    div#personalinfo
+        position: relative
+        img
+            border-radius: 100%
+            width: 70%
+        ul
+            background: $red
+            border-radius: 100%
+            position: absolute
+            top: 0
+            right: 30%
+            padding: 2em
+            width: 10em
+            height: 10em
+            margin: 0
+            line-height: 2em
+            li
+                list-style: none
+                text-align: center
+                color: white
+                margin-top: 1em
+
