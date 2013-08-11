@@ -37,12 +37,6 @@ html
             - href {{ media_url('css/style.css') }}
         {% endblock css %}
 
-        {% block headjs %}
-        script[src="{{ media_url('js/libs/modernizr-1.7.min.js') }}"]
-        {% endblock headjs %}
-
-        {% block endhead %}{% endblock endhead %}
-
     body[id="{{ resource.meta.id if resource.meta.id else resource.slug }}"]
         header
             {% block header %}
@@ -111,7 +105,7 @@ html
                     - href #{{ grp.name }}
                     div.icon
                         img
-                            - src {{ static_url('images/web.svg') }}
+                            - src {{ media_url(grp.image|string) }}
                     | {{ grp.name }}
                 {% endfor %}
             {% endblock %}
@@ -131,14 +125,14 @@ html
                             - href {{ res.full_url }}
                             | {{ res.slug|capitalize|replace("-"," ") }}
                         img
-                            - src {{ static_url ('images/web.svg') }}
+                            - src {{ media_url ('images/web.svg') }}
                     {% endfor %}
 
                 {% endfor %}
 
                 div#personalinfo
                     img
-                        - src {{ static_url('images/iune.png') }}
+                        - src {{ media_url('images/iune.png') }}
                         - alt iune
                     ul
                         li
@@ -154,11 +148,4 @@ html
             a[href="http://ringce.com/hyde"] hyde
 
         {% block js %}
-        {% block jquery %}
-        script[src="js/libs/jquery-1.5.1.min.js"]
-        {% endblock jquery %}
-        {% block scripts %}
-        {% endblock scripts %}
         {% endblock js %}
-
-

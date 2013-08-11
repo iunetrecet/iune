@@ -45,12 +45,16 @@ grouper:
             - 
                 name: webs
                 description: webs
+                image: image/webs.svg
             -
                 name: posters
                 description: posters
+                image: image/posters.svg
             -   
                 name: photos
                 description: photos
+                image: image/photos.svg
             -
                 name: projects
                 description: projects
+                image: image/projects.svg
