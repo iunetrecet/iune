@@ -18,6 +18,7 @@ plugins:
     - hyde.ext.plugins.text.TextlinksPlugin
     - hyde.ext.plugins.urls.UrlCleanerPlugin
     - yammy_plugin.YammyPlugin
+    - sass_plugin.SASSPlugin
 
 context:
     data:
