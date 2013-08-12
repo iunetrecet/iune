@@ -17,10 +17,10 @@ plugins:
     - hyde.ext.plugins.meta.GrouperPlugin
     - hyde.ext.plugins.text.SyntextPlugin
     - hyde.ext.plugins.text.TextlinksPlugin
+    - hyde.ext.plugins.urls.UrlCleanerPlugin
 
 simple_copy:
-    - "*.svg"
-    - "*.css"
+    - 'media/*'
 
 context:
     data:
@@ -31,6 +31,13 @@ context:
             -
                 name: license
                 url: /
+
+urlcleaner:
+    index_file_names:
+        - index.html
+    strip_extensions:
+        - html
+    append_slash: true
 
 meta:
     nodemeta: meta.yaml
