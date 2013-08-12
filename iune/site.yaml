@@ -21,6 +21,7 @@ plugins:
 
 simple_copy:
     - 'media/*'
+    - CNAME
 
 context:
     data:
