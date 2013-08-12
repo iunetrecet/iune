@@ -1,4 +1,4 @@
-extends: base.j2
+extends: base.ymy
 default_block: main
 section: webs
 listable: true

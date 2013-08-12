@@ -8,7 +8,8 @@ from yammy.translator import yammy_to_html_string
 class YammyHydeLoader(HydeLoader):
     def get_html_source(self, get_source, environment, template):
         contents, filename, uptodate = get_source(environment, template)
-        contents = yammy_to_html_string(contents, keep_line_numbers=False)
+        if filename.endswith(('.ymy', '.yammy')):
+            contents = yammy_to_html_string(contents, keep_line_numbers=False)
         return contents, filename, uptodate
 
     def get_source(self, environment, template):
