@@ -18,6 +18,7 @@ plugins:
     - hyde.ext.plugins.text.SyntextPlugin
     - hyde.ext.plugins.text.TextlinksPlugin
     - hyde.ext.plugins.urls.UrlCleanerPlugin
+    - hyde.ext.plugins.css.SassyCSSPlugin
 
 simple_copy:
     - 'media/*'

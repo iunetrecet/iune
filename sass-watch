@@ -1,3 +1,0 @@
-#!/bin/bash
-
-sass --watch iune/content/media/css/style.sass:iune/content/media/css/style.css
