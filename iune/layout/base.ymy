@@ -100,16 +100,16 @@ html
         div.wrap    
             {% block nav %}
             nav
-                {% for grp, res_walker in site.content.walk_section_groups() %}
+                {% for grp, res_walker in site.content.walk_section_groups() -%}
                 {% if not loop.first %}
-                a 
+                a
                     - href #{{ grp.name }}
                     div.icon
                         img
                             - src {{ media_url(grp.image|string) }}
                     | {{ grp.name }}
                 {% endif %}
-                {% endfor %}
+                {%- endfor %}
             {% endblock %}
 
 
