@@ -50,6 +50,12 @@ html
             ul#info
                 li.icon 
                     a 
+                        - href #
+                        img
+                            - src {{ media_url('images/me.svg') }}
+                            - alt about me
+                li.icon 
+                    a 
                         - href https://github.com/iunetrecet
                         - target _blank
                         img
