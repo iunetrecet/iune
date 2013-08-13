@@ -30,8 +30,6 @@ header
         right: 0
         li.icon
             display: inline-block
-            background: $red
-            border-radius: 100%
             width: 2.5em
             height: 2.5em
             margin: .5em
@@ -40,12 +38,11 @@ header
             img
                 width: 80%
                 margin: 10%
+                padding: .3em
             a
                 line-height: 2em
                 font-weight: bold
                 color: white
-        li.icon:last-child
-            background: none
         ul.menu
             position: absolute
             top: 4em
@@ -53,7 +50,6 @@ header
             padding: 0
             display: none
             li
-                background: $darkred
                 list-style: none
                 padding: .5em 2em .5em 1em
                 text-align: left
@@ -73,6 +69,11 @@ header
                 background: $red
         li.icon:last-child:hover > ul.menu
             display: block
+.red
+    background: $red
+    border-radius: 100%
+    display: block
+
 div.wrap
     position: absolute
     top: 45em
@@ -92,36 +93,31 @@ div.wrap
                 background: url("../images/webbackground.svg")
                 background-repeat: no-repeat
                 background-size: 100%
-                border-radius: 100%
                 margin-bottom: 1em
                 img
-                    background: $red
-                    border-radius: 100%
-                    display: block
                     width: 100%
                     -moz-transition: opacity 0.5s
                 img:hover
                     opacity: 0
     
-    div#personalinfo
-        position: relative
-        img
-            border-radius: 100%
-            width: 70%
-        ul
-            background: $red
-            border-radius: 100%
-            position: absolute
-            top: 0
-            right: 30%
-            padding: 2em
-            width: 10em
-            height: 10em
-            margin: 0
-            line-height: 2em
-            li
-                list-style: none
-                text-align: center
-                color: white
-                margin-top: 1em
+    section.content
+        div#personalinfo
+            position: relative
+            img
+                border-radius: 100%
+                width: 70%
+            ul
+                position: absolute
+                top: 0
+                right: 30%
+                padding: 2em
+                width: 10em
+                height: 10em
+                margin: 0
+                line-height: 2em
+                li
+                    list-style: none
+                    text-align: center
+                    color: white
+                    margin-top: 1em
 

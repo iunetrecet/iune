@@ -51,28 +51,28 @@ html
                 li.icon 
                     a 
                         - href #
-                        img
+                        img.red
                             - src {{ media_url('images/me.svg') }}
                             - alt about me
                 li.icon 
                     a 
                         - href https://github.com/iunetrecet
                         - target _blank
-                        img
+                        img.red
                             - src {{ media_url('images/github.svg') }}
                             - alt github
                 li.icon 
                     a 
                         - href https://www.transifex.com/organization/iune
                         - target _blank
-                        img
+                        img.red
                             - src 
                             - alt tx
                 li.icon
                     a 
                         - href https://secure.flickr.com/photos/93859818@N05/
                         - target _blank
-                        img 
+                        img.red
                             - src {{ media_url('images/flickr.svg') }}
                             - alt flickr
                 li.icon
@@ -111,8 +111,9 @@ html
                 a
                     - href #{{ grp.name }}
                     div.icon
-                        img
+                        img.red
                             - src {{ media_url(grp.image|string) }}
+                            - alt {{ grp.name }}
                     | {{ grp.name }}
                 {% endif %}
                 {%- endfor %}
@@ -123,19 +124,24 @@ html
             section.content
                 {% for grp, res_walker in site.content.walk_section_groups() %}
                 {% if not loop.first %}
-                a
-                    - name {{ grp.name }}
-                    | {{ grp.description }}
+                div.grp
+                    a
+                        - name {{ grp.name }}
+                        img.red
+                            - src {{ media_url(grp.image|string) }}
+                            - alt {{ grp.name }}
+                            
+                        | {{ grp.description }}
 
-                ul
-                    {% for res in res_walker %}
-                    li 
-                        a
-                            - href {{ res.full_url }}
-                            | {{ res.slug|capitalize|replace("-"," ") }}
-                        img
-                            - src {{ media_url ('images/webs.svg') }}
-                    {% endfor %}
+                    ul
+                        {% for res in res_walker %}
+                        li 
+                            a
+                                - href {{ res.full_url }}
+                                | {{ res.slug|capitalize|replace("-"," ") }}
+                                img
+                                    - src {{ media_url ('images/webs.svg') }}
+                        {% endfor %}
                 {% endif %}
                 {% endfor %}
 
@@ -143,7 +149,7 @@ html
                     img
                         - src {{ media_url('images/iune.png') }}
                         - alt iune
-                    ul
+                    ul.red
                         li
                             Iune Trecet Obeso
                         li
