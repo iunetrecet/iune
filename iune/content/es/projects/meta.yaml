@@ -1,0 +1,4 @@
+extends: base.ymy
+default_block: main
+section: projects
+listable: true
