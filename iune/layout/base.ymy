@@ -146,9 +146,9 @@ html
                             Donostia | Gipuzkoa
             {% endblock content %}
 
-        footer
-            Powered by
-            a[href="http://ringce.com/hyde"] hyde
+#        footer
+#            Powered by
+#            a[href="http://ringce.com/hyde"] hyde
 
         {% block js %}
         {% endblock js %}
