@@ -120,12 +120,14 @@ html
 
                 ul
                     {% for res in res_walker %}
+                    {% if res.meta.language == resource.meta.language %}
                     li 
                         a
                             - href {{ res.full_url }}
                             | {{ res.slug|capitalize|replace("-"," ") }}
                         img
                             - src {{ media_url ('images/webs.svg') }}
+                    {% endif %}
                     {% endfor %}
                 {% endif %}
                 {% endfor %}
