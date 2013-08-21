@@ -80,15 +80,12 @@ html
                             a language
                                 - href #
                             ul
+                                {% for language, translations in resource.translations|groupby('meta.language') %}
+                                {% set translation = translations|first %}
                                 li 
-                                    a en
-                                        - href #
-                                li 
-                                    a eu
-                                        - href #
-                                li 
-                                    a es
-                                        - href #
+                                    a {{ language }}
+                                        - href {{ translation.full_url }}
+                                {% endfor %}
                         li 
                             a black theme
                                 - href #
