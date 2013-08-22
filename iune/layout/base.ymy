@@ -86,15 +86,12 @@ html
                             a language
                                 - href #
                             ul
+                                {% for language, translations in resource.translations|groupby('meta.language') %}
+                                {% set translation = translations|first %}
                                 li 
-                                    a en
-                                        - href #
-                                li 
-                                    a eu
-                                        - href #
-                                li 
-                                    a es
-                                        - href #
+                                    a {{ language }}
+                                        - href {{ translation.full_url }}
+                                {% endfor %}
                         li 
                             a black theme
                                 - href #
@@ -132,15 +129,16 @@ html
                             - alt {{ grp.name }}
                             
                         | {{ grp.description }}
-
                     ul
                         {% for res in res_walker %}
+                        {% if res.meta.language == resource.meta.language %}
                         li 
                             a
                                 - href {{ res.full_url }}
                                 | {{ res.slug|capitalize|replace("-"," ") }}
                                 img
                                     - src {{ media_url ('images/webs.svg') }}
+                        {% endif %}
                         {% endfor %}
                 {% endif %}
                 {% endfor %}
