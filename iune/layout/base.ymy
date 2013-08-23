@@ -108,7 +108,9 @@ html
                 a
                     - href #{{ grp.name }}
                     div.icon
-                        img.red
+                        img
+                            - class red
+                            - class {{ grp.name }}
                             - src {{ media_url(grp.image|string) }}
                             - alt {{ grp.name }}
                     | {{ grp.name }}
@@ -122,11 +124,8 @@ html
                 {% for grp, res_walker in site.content.walk_section_groups() %}
                 {% if not loop.first %}
                 div.grp
-                    a
+                    a.red
                         - name {{ grp.name }}
-                        img.red
-                            - src {{ media_url(grp.image|string) }}
-                            - alt {{ grp.name }}
                             
                         | {{ grp.description }}
                     ul
