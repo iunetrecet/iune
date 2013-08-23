@@ -14,7 +14,7 @@
    id="svg2"
    sodipodi:version="0.32"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="projects.svg"
+   sodipodi:docname="projectsbackground.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.1"
    inkscape:export-filename="/home/koxta/proiektuak/iunetrecet/manuala/iune_txikia.png"
@@ -29,7 +29,7 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.3358628"
+     inkscape:zoom="4.4459184"
      inkscape:cx="111.54968"
      inkscape:cy="120.02517"
      inkscape:document-units="mm"
@@ -58,7 +58,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -73,14 +73,9 @@
        id="rect6403-1-4-3"
        inkscape:connector-curvature="0" />
     <path
-       sodipodi:type="arc"
-       style="color:#000000;fill:none;stroke:#d40000;stroke-width:5.43439198;stroke-miterlimit:4;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#d40000;fill-opacity:1;stroke:none;stroke-width:5.43439198;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+       d="m 146.70894,711.69057 c -65.831232,0 -119.257692,53.42646 -119.257692,119.2577 0,65.83123 53.42646,119.25769 119.257692,119.25769 65.83124,0 119.2577,-53.42646 119.2577,-119.25769 0,-65.83124 -53.42646,-119.2577 -119.2577,-119.2577 z m 0,5.318 c 62.95882,0 113.9397,50.98088 113.9397,113.9397 0,62.95882 -50.98088,113.93969 -113.9397,113.93969 -62.958814,0 -113.939692,-50.98087 -113.939692,-113.93969 0,-62.95882 50.980878,-113.9397 113.939692,-113.9397 z"
        id="path3212"
-       sodipodi:cx="119.21754"
-       sodipodi:cy="119.21754"
-       sodipodi:rx="119.21754"
-       sodipodi:ry="119.21754"
-       d="m 238.43507,119.21754 a 119.21754,119.21754 0 1 1 -238.43507,0 119.21754,119.21754 0 1 1 238.43507,0 z"
-       transform="matrix(0.97802313,0,0,0.97802313,30.110248,714.34957)" />
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
