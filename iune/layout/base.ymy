@@ -142,24 +142,40 @@ html
                 {% endif %}
                 {% endfor %}
 
-                div#personalinfo
+                div#about
                     header
                         img
                             - src {{ media_url('images/iune.jpg') }}
                             - alt iune
                         hgroup
                             h1 
-                                | I'm 
-                                span
+                                | I'm&nbsp
+                                span#name
                                     | iune
                             h2 a libre graphic designer
-                    ul
+                    ul#personal
                         li
                             Iune Trecet Obeso
                         li
                             1985-03-31
                         li
                             Donostia | Gipuzkoa
+                    ul#links
+                        li
+                            img
+                                - src {{ media_url ('images/cv.svg') }}
+                                - alt CV
+                            | See my CV
+                        li
+                            | Contact me
+                            img
+                                - src {{ media_url ('images/contact.svg') }}
+                                - alt Contact
+                        li
+                            img
+                                - src {{ media_url ('images/identity.svg') }}
+                                - alt Identity handbook
+                            | See my identity handbook
             {% endblock content %}
 
 #        footer

@@ -109,17 +109,20 @@ section.content
             vertical-align: bottom
             a.red
                 width: 100%
-                padding: 46.5% 0
+                padding: 44.5% 0
                 text-align: center
                 color: white
                 font-weight: bold
                 display: inline-block
+                font-size: 1.5em
             img
                 width: 100%
                 vertical-align: bottom
-div#personalinfo
+div#about
     position: relative
-    margin-top: 30em
+    margin: 30em 0
+    font-family: Aleo
+    font-weight: bold
     header
         img
             border-radius: 100%
@@ -131,12 +134,36 @@ div#personalinfo
             display: inline-block
             width: 75%
             h1, h2
-                font-family: Aleo
                 margin: 0
             h1
                 font-size: 5em
-                span
+                #name
                     color: $red
             h2 
                 font-size: 4em
+    ul#personal
+        width: 20%
+        border: $red solid .2em
+        color: $red
+        font-size: 1.2em
+        padding: .5em
+        li
+            list-style: none
+            margin: 0
+    ul#links
+        width: 80%
+        margin: 9em auto
+        li
+            list-style: none
+            color: $red
+            font-size: 2em
+            img
+                width: 10%
+                vertical-align: middle
+                margin-right: 2%
+        li:nth-child(2)
+            text-align: right
+            img
+                margin: 0 0 0 2%
+                
 
