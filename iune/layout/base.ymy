@@ -143,10 +143,17 @@ html
                 {% endfor %}
 
                 div#personalinfo
-                    img
-                        - src {{ media_url('images/iune.jpg') }}
-                        - alt iune
-                    ul.red
+                    header
+                        img
+                            - src {{ media_url('images/iune.jpg') }}
+                            - alt iune
+                        hgroup
+                            h1 
+                                | I'm 
+                                span
+                                    | iune
+                            h2 a libre graphic designer
+                    ul
                         li
                             Iune Trecet Obeso
                         li
