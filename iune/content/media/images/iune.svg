@@ -29,9 +29,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.2229593"
-     inkscape:cx="82.808406"
-     inkscape:cy="111.98206"
+     inkscape:zoom="1.5718696"
+     inkscape:cx="184.59802"
+     inkscape:cy="-16.527328"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:window-width="1398"
@@ -45,11 +45,13 @@
      inkscape:snap-page="true"
      inkscape:snap-to-guides="true"
      inkscape:window-maximized="0"
-     borderlayer="true"
+     borderlayer="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="0"
+     inkscape:showpageshadow="false"
+     showborder="false" />
   <metadata
      id="metadata7">
     <rdf:RDF>
