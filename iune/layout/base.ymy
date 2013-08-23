@@ -124,19 +124,19 @@ html
                 {% for grp, res_walker in site.content.walk_section_groups() %}
                 {% if not loop.first %}
                 div.grp
-                    a.red
-                        - name {{ grp.name }}
-                            
-                        | {{ grp.description }}
                     ul
+                        li
+                            a.red
+                                - name {{ grp.name }}
+                                | {{ grp.description }}
                         {% for res in res_walker %}
                         {% if res.meta.language == resource.meta.language %}
                         li 
                             a
                                 - href {{ res.full_url }}
-                                | {{ res.slug|capitalize|replace("-"," ") }}
+                            #    | {{ res.slug|capitalize|replace("-"," ") }}
                                 img
-                                    - src {{ media_url ('images/webs.svg') }}
+                                    - src {{ media_url ('images/hmtb.png') }}
                         {% endif %}
                         {% endfor %}
                 {% endif %}
@@ -144,7 +144,7 @@ html
 
                 div#personalinfo
                     img
-                        - src {{ media_url('images/iune.png') }}
+                        - src {{ media_url('images/iune.jpg') }}
                         - alt iune
                     ul.red
                         li
