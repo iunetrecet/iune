@@ -1,5 +1,16 @@
 $red: #d40000
 $darkred: #AA0000
+
+@mixin columns
+    column-count: 2
+    -moz-column-count: 2
+    -webkit-column-count: 2
+    -ms-column-count: 2
+    column-gap: 3em
+    -moz-column-gap: 3em
+    -webkit-column-gap: 3em
+    -ms-column-gap: 3em
+
 body
     font-family: Lato
     background-image: url('../images/iunesketch.jpg')
@@ -141,18 +152,17 @@ div#about
                     color: $red
             h2 
                 font-size: 4em
-    ul#personal
-        width: 20%
-        border: $red solid .2em
-        color: $red
-        font-size: 1.2em
-        padding: .5em
-        li
-            list-style: none
-            margin: 0
+    div#personal
+        @include columns
+        margin: 5em auto
+        width: 80%
+        p
+            font-weight: normal
+            text-align: justify
+            font-size: .9em
     ul#links
         width: 80%
-        margin: 9em auto
+        margin: 0 auto 10em auto
         li
             list-style: none
             color: $red
