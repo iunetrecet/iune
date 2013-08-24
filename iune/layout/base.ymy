@@ -112,7 +112,7 @@ html
                                 h1 {{ grp.description }}
                         {% for res in res_walker %}
                         {% if res.meta.language == resource.meta.language %}
-                        li 
+                        li.thumbnail 
                             a.grayscale
                                 - href {{ res.full_url }}
                                 img

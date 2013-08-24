@@ -12,11 +12,17 @@ $grey: #4d4d4d
     -moz-column-gap: 3em
     -webkit-column-gap: 3em
     -ms-column-gap: 3em
+@mixin column
+    column-count: 1
+    -moz-column-count: 1
+    -webkit-column-count: 1
+    -ms-column-count: 1
 @mixin opacity
     transition: opacity 0.5s
     -moz-transition: opacity 0.5s
     -webkit-transition: opacity 0.5s
     -ms-transition: opacity 0.5s
+
 body
     font-family: Lato
     background-image: url('../images/iunesketch.jpg')
@@ -26,7 +32,6 @@ body
     background-attachment: fixed
     min-width: 500px
     width: 100%
-
 a
     text-decoration: none
     color: $darkgrey
@@ -37,6 +42,7 @@ header, div#wrap
     background: white
 
 header
+    width: 100%
     h1
         display: block
         margin: 0
@@ -44,6 +50,10 @@ header
             margin: 0 auto
             padding: 2em 0
             display: block
+            @media (max-width: 600px)
+                width: 40%
+                padding-top: 3em
+            
 ul#info
     margin: 0
     padding: 0
@@ -109,6 +119,9 @@ div#wrap
         top: 30em
     @media (max-width: 650px)
         top: 25em
+    @media (max-width: 600px)
+        width: 100%
+        padding: 0
     nav
         padding: 2em 0
         width: 100%
@@ -129,48 +142,69 @@ div#wrap
 section.content
     div.grp
         margin-top: 20em
-        li
-            display: inline-block
-            width: 25%
-            vertical-align: bottom
-            position: relative
-            a.square
-                width: 100%
-                padding: 0
-                text-align: center
-                color: white
-                font-weight: bold
+        ul
+            margin: 0
+            padding: 0
+            li
                 display: inline-block
-                font-size: 1.5em
-                background: $red
-                img
-                    width: 90%
-                    margin: 0% 5% 10% 5%
-                h1
-                    position: absolute
-                    bottom: 0
+                width: 25%
+                vertical-align: bottom
+                position: relative
+                @media (max-width: 600px)
+                    width: 95%
+                    display: block
+                    margin: 2.5%
+                a.square
                     width: 100%
+                    padding: 0
                     text-align: center
-                    font-size: 1em
-            a
-                img
-                    width: 100%
-                    vertical-align: bottom
-                h2
-                    opacity: 0
-                    position: absolute
-                    bottom: 0
-                    margin: 0
-                    padding: .5em 0
-                    width: 100%
-                    text-align: center
-                    color: rgba(255,255,255,0.9)
-                    background: rgba(0,0,0,0.6)
-                    @include opacity    
-            a:hover
-                h1
-                    opacity: 1
-                    
+                    color: white
+                    font-weight: bold
+                    display: inline-block
+                    font-size: 1.5em
+                    background: $red
+                    img
+                        width: 90%
+                        margin: 0% 5% 10% 5%
+                        @media (max-width: 600px)
+                            display: none
+                    h1
+                        position: absolute
+                        bottom: 0
+                        width: 100%
+                        text-align: center
+                        font-size: 1em
+                        @media (max-width: 1000px)
+                            font-size: .8em
+                        @media (max-width: 800px)
+                            font-size: .7em
+                        @media (max-width: 700px)
+                            font-size: .6em
+                        @media (max-width: 600px)
+                            position: relative
+                a
+                    img
+                        width: 100%
+                        vertical-align: bottom
+                    h2
+                        opacity: 0
+                        position: absolute
+                        bottom: 0
+                        margin: 0
+                        padding: .5em 0
+                        width: 100%
+                        text-align: center
+                        color: rgba(255,255,255,0.9)
+                        background: rgba(0,0,0,0.6)
+                        @include opacity    
+                a:hover
+                    h1
+                        opacity: 1
+            li.square
+                @media (max-width: 600px)
+                    height: 10em
+                
+                        
 div#about
     position: relative
     margin: 30em 0
@@ -198,6 +232,8 @@ div#about
         @include columns
         margin: 5em auto
         width: 80%
+        @media (max-width: 600px)
+            @include column
         p
             font-weight: normal
             text-align: justify
