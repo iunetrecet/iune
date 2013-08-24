@@ -17,10 +17,6 @@ $grey: #4d4d4d
     -moz-transition: opacity 0.5s
     -webkit-transition: opacity 0.5s
     -ms-transition: opacity 0.5s
-a
-    color: $darkgrey
-a:visited
-    color: $grey
 body
     font-family: Lato
     background-image: url('../images/iunesketch.jpg')
@@ -28,9 +24,13 @@ body
     margin: 0
     background-repeat: no-repeat
     background-attachment: fixed
+    min-width: 500px
 
 a
     text-decoration: none
+    color: $darkgrey
+a:visited
+    color: $grey
 
 header, div#wrap
     background: white
@@ -100,6 +100,14 @@ div#wrap
     top: 45em
     padding: 0 10%
     width: 80%
+    @media (max-width: 1000px)
+        top: 40em
+    @media (max-width: 900px)
+        top: 35em
+    @media (max-width: 700px)
+        top: 30em
+    @media (max-width: 650px)
+        top: 25em
     nav
         padding: 2em 0
         width: 100%
