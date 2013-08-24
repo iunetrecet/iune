@@ -1,5 +1,7 @@
 $red: #d40000
 $darkred: #AA0000
+$darkgrey: #333333
+$grey: #4d4d4d
 
 @mixin columns
     column-count: 2
@@ -10,7 +12,10 @@ $darkred: #AA0000
     -moz-column-gap: 3em
     -webkit-column-gap: 3em
     -ms-column-gap: 3em
-
+a
+    color: $darkgrey
+a:visited
+    color: $grey
 body
     font-family: Lato
     background-image: url('../images/iunesketch.jpg')
@@ -171,7 +176,7 @@ div#about
         li
             list-style: none
             color: $red
-            font-size: 2em
+            font-size: 1.5em
             img
                 width: 10%
                 vertical-align: middle
@@ -181,4 +186,28 @@ div#about
             img
                 margin: 0 0 0 2%
                 
+
+footer
+    border-top: .1em solid $red
+    margin-bottom: 5em
+    padding-top: 2em
+    position: relative
+    a#license
+        display: inline-block
+        width: 35%
+    img
+        width: 15%
+        margin-right: 1%
+        vertical-align: top
+    div#cc
+        font-size: .7em
+        margin-top: 1em
+    a:hover
+        text-decoration: underline
+    div#hyde
+        position: absolute
+        top: 2em
+        right: 0
+        img
+            width: 40%
 
