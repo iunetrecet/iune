@@ -110,16 +110,13 @@ div.wrap
             text-align: center
             color: $red 
             font-weight: bold
-            div.icon
-                background: url("../images/webbackground.svg")
-                background-repeat: no-repeat
-                background-size: 100%
-                margin-bottom: 1em
-                object
-                    width: 100%
-                    @include opacity    
-                img:hover
-                    opacity: 0
+            object
+                width: 100%
+                pointer-events: none
+                @include opacity    
+            svg path
+                fill: $red !important
+                color: red
 section.content
     div.grp
         margin-top: 20em

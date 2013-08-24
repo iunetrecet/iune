@@ -122,16 +122,15 @@ html
                 {% if not loop.first %}
                 a
                     - href #{{ grp.name }}
-                    div.icon
-                        object
-                            - class red
-                            - class {{ grp.name }}
-                            - type image/svg+xml
-                            - data {{ media_url(grp.image|string) }}
-                            - alt {{ grp.name }}
-                            param
-                                - name src
-                                - value {{ media_url(grp.image|string) }}
+                    object
+                        - class red
+                        - class {{ grp.name }}
+                        - type image/svg+xml
+                        - data {{ media_url(grp.image|string) }}
+                        - alt {{ grp.name }}
+                        param
+                            - name src
+                            - value {{ media_url(grp.image|string) }}
                     | {{ grp.name }}
                 {% endif %}
                 {%- endfor %}
