@@ -21,6 +21,9 @@ plugins:
     - yammy_plugin.YammyPlugin
     - sass_plugin.SASSPlugin
 
+simple_copy:
+    - "*.js"
+
 context:
     data:
         pages:
