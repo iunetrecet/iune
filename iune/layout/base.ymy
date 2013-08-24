@@ -126,8 +126,11 @@ html
                 div.grp
                     ul
                         li
-                            a.red
+                            a.square
                                 - name {{ grp.name }}
+                                img
+                                    - src {{ media_url(grp.image|string) }}
+                                    - alt {{ grp.name }}
                                 | {{ grp.description }}
                         {% for res in res_walker %}
                         {% if res.meta.language == resource.meta.language %}
