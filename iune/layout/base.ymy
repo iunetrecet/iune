@@ -156,9 +156,10 @@ html
                         li 
                             a.grayscale
                                 - href {{ res.full_url }}
-                            #    | {{ res.slug|capitalize|replace("-"," ") }}
                                 img
                                     - src {{ media_url ('images/hm.png') }}
+                                h1
+                                    | {{ res.slug|capitalize|replace("-"," ") }}
                         {% endif %}
                         {% endfor %}
                 {% endif %}
