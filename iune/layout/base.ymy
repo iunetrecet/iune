@@ -109,7 +109,7 @@ html
                                 img
                                     - src {{ media_url(grp.image|string) }}
                                     - alt {{ grp.name }}
-                                | {{ grp.description }}
+                                h1 {{ grp.description }}
                         {% for res in res_walker %}
                         {% if res.meta.language == resource.meta.language %}
                         li 
@@ -117,7 +117,7 @@ html
                                 - href {{ res.full_url }}
                                 img
                                     - src {{ media_url ('images/hm.png') }}
-                                h1
+                                h2
                                     | {{ res.slug|capitalize|replace("-"," ") }}
                         {% endif %}
                         {% endfor %}
