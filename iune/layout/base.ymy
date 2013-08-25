@@ -40,21 +40,7 @@ html
         {% block js %}
         script[src="{{ media_url('/js/jquery.js') }}"]
         script[src="{{ media_url('/js/jquery.BlackAndWhite.js') }}"]
-        script
-            function adjustWrap() {
-                var distance = $(window).height() - $('nav').outerHeight();
-                $('#wrap').css('top', distance);
-            };
-            $(window).load(function() {
-                $('.grayscale').BlackAndWhite({
-                    hoverEffect: true,
-                    responsive: true,
-                    inverHoverEffect: false,
-                    speed: 200
-                });
-
-                adjustWrap();
-            });
+        script[src="{{ media_url('/js/iune.js') }}"]
         {% endblock js %}
 
 
