@@ -115,7 +115,7 @@ html
                                 - href #
             {% endblock %}
 
-        div.wrap    
+        div#wrap    
             {% block nav %}
             nav
                 {% for grp, res_walker in site.content.walk_section_groups() -%}
