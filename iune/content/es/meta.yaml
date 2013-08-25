@@ -1,2 +1,3 @@
-extends: es/index.html
+extends: detail.ymy
+default_block: content
 language: es
