@@ -55,56 +55,24 @@ html
 
             {% block info %}
             ul#info
-                li.icon 
-                    a 
-                        - href #
-                        img.red
-                            - src {{ media_url('images/me.svg') }}
-                            - alt about me
-                li.icon 
-                    a 
-                        - href https://github.com/iunetrecet
-                        - target _blank
-                        img.red
-                            - src {{ media_url('images/github.svg') }}
-                            - alt github
-                li.icon 
-                    a 
-                        - href https://www.transifex.com/organization/iune
-                        - target _blank
-                        img.red
-                            - src 
-                            - alt tx
-                li.icon
-                    a 
-                        - href https://secure.flickr.com/photos/93859818@N05/
-                        - target _blank
-                        img.red
-                            - src {{ media_url('images/flickr.svg') }}
-                            - alt flickr
+                {% for icon in info %}
                 li.icon
                     a
+                        - href {{ icon.href }}
+                        img.red
+                            - src {{ media_url(icon.image|string) }}
+                            - alt {{ icon.name }}
+                {% endfor %}
+                li.icon.language 
+                    a language
                         - href #
-                        img 
-                            - src {{ media_url('images/menu.svg') }}
-                            - alt open menu
-                    ul.menu
-                        li.language 
-                            a language
-                                - href #
-                            ul
-                                {% for language, translations in resource.translations|groupby('meta.language') %}
-                                {% set translation = translations|first %}
-                                li 
-                                    a {{ language }}
-                                        - href {{ translation.full_url }}
-                                {% endfor %}
+                    ul
+                        {% for language, translations in resource.translations|groupby('meta.language') %}
+                        {% set translation = translations|first %}
                         li 
-                            a black theme
-                                - href #
-                        li 
-                            a license
-                                - href #
+                            a {{ language }}
+                                - href {{ translation.full_url }}
+                        {% endfor %}
             {% endblock %}
 
         div#wrap    
