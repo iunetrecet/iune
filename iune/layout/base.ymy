@@ -64,8 +64,11 @@ html
                             - alt {{ icon.name }}
                 {% endfor %}
                 li.icon.language 
-                    a language
+                    a 
                         - href #
+                        img.red
+                            - src {{ media_url('images/languages.svg') }}
+                            - alt languages
                     ul
                         {% for language, translations in resource.translations|groupby('meta.language') %}
                         {% set translation = translations|first %}
