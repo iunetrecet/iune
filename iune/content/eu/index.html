@@ -3,4 +3,49 @@ extends: base.ymy
 description: iune trecet
 language: eu
 uuid: index
+parse: yammy
 ---
+
+
+{% block about %}
+header
+    img
+        - src {{ media_url('images/iune.jpg') }}
+        - alt iune
+    hgroup
+        h1 
+            | I'm&nbsp
+            span#name
+                | iune,
+        h2 a libre graphic designer
+div#personal
+    p    
+        Iune Trecet Obeso naiz, 1985eko martxoatren 31an Donostian (Gipuzkoa) jaioa.
+    p
+        Txikitatik gurasoek nere alde artistikoa garatu izan dute, txikitan jostailu gogokoena margoak eta orriak ziren, eta leku guztitara joaten nintzen hauekin. Urteak aurrera joan hala, beste bide bat hartuz, Geografiako karrera egin nuen, baina ez nintzen guztiz gustora sentitzen.
+    p
+        Inguruko kolektibo eta jendearentzako kartelak eta beste diseinu batzuk egiten hasi nintzen orduan, eta garai hartan ere Lakaxitako hacklaba ezagutu nuen. Han hasi zen software askearekiko lotura, mundu berri bat nuen aurrean eta oso erakargarria zen.
+    p
+        Hacklabean parte hartzen hasi nintzenean Django-ko ikastaro bat hasi zen, eta hemen web garapenean oinarri bat hartu nuen. Honen ondoren, nire kabuz HTMLa eta CSSa ikaste hasi nintzen. Honela, nire lehenengo diseinatzaile lana lortu nuen.
+    p
+        Horrela ezagutu nuen GISA elkartea, eta bertako partaide izatera hasi nintzen, Gipuzkoan software askea zabaltzea duen elkartea izanik.
+    p
+        Diseinu grafikoa eta software askearekiko loturak aurrera jarraitzen du, webguneak diseinatzeaz gain, argazkiak atera eta eraldatu, kartelen, manual korporatiboen edota merchandisingaren diseinua ere sortzen ditut. Beti askeak diren tresnak erabiliz, eta sortutako guztiari lizentzia askea jarriz.
+
+ul#links
+    li
+        img
+            - src {{ media_url ('images/cv.svg') }}
+            - alt CV
+        | See my CV
+    li
+        | Contact me
+        img
+            - src {{ media_url ('images/contact.svg') }}
+            - alt Contact
+    li
+        img
+            - src {{ media_url ('images/identity.svg') }}
+            - alt Identity handbook
+        | See my identity handbook
+{% endblock about %}
