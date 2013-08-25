@@ -38,7 +38,7 @@ context:
             -
                 name: transifex
                 href: https://www.transifex.com/organization/iune
-                image:
+                image: images/transifex.svg
             -
                 name: flickr
                 href: https://secure.flickr.com/photos/93859818@N05/
