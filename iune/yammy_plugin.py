@@ -26,3 +26,8 @@ class YammyPlugin(Plugin):
                 loader.preprocessor,
                 )
         super(YammyPlugin, self).template_loaded(template)
+
+    def begin_text_resource(self, resource, text):
+        if resource.meta.get('parse', None) == 'yammy':
+            return yammy_to_html_string(text, keep_line_numbers=False)
+        return text
