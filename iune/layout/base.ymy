@@ -84,7 +84,7 @@ html
                 {% for grp, res_walker in site.content.walk_section_groups() -%}
                 {% if not loop.first %}
                 a
-                    - href #{{ grp.name }}
+                    - href /#{{ grp.name }}
                     object
                         - class red
                         - class {{ grp.name }}
