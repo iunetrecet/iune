@@ -18,7 +18,7 @@ Installation
 Development server
 ------------------
 
-
+    cd iune
     hyde gen && hyde serve
 
 
