@@ -27,39 +27,31 @@ simple_copy:
 context:
     data:
         info:
-            -
-                name: about me
+            about me:
                 href: #
                 image: images/me.svg
-            -   
-                name: github
+            github:
                 href: https://github.com/iunetrecet
                 image: images/github.svg
-            -
-                name: transifex
+            transifex:
                 href: https://www.transifex.com/organization/iune
                 image: images/transifex.svg
-            -
-                name: flickr
+            flickr:
                 href: https://secure.flickr.com/photos/93859818@N05/
                 image: images/flickr.svg
 
 
         licenses:
-            -
-                name: cc-by-sa
+            cc-by-sa:
                 href: https://creativecommons.org/licenses/by-sa/3.0/
                 image: images/cc-by-sa.svg 
-            -
-                name: cc0
+            cc0:
                 href: https://creativecommons.org/publicdomain/zero/1.0/
                 image: images/cc-zero.svg
-            -
-                name: gpl
+            gpl:
                 href: https://www.gnu.org/licenses/gpl.html
                 image: images/gpl.svg
-            -
-                name: agpl
+            agpl:
                 href: https://www.gnu.org/licenses/agpl.html
                 image: images/agpl.svg
 

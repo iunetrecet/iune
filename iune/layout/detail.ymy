@@ -28,16 +28,14 @@ ul.links
     {% endfor %}
 {% endif %}
 
-{% if resource.meta.license %}
-{% for license in licenses %}
-{% if license.name == resource.meta.license %}
+{% with name = resource.meta.license, license = licenses[resource.meta.license] %}
+{% if license %}
 a 
     - href {{ license.href }}
     img 
         - src {{ media_url(license.image|string) }}
-        - alt {{ license.name }}
+        - alt {{ name }}
 {% endif %}
-{% endfor %}
-{% endif %}
+{% endwith %}
 
 {% endblock content %}
