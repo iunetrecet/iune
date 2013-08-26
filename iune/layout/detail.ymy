@@ -28,4 +28,16 @@ ul.links
     {% endfor %}
 {% endif %}
 
+{% if resource.meta.license %}
+{% for license in licenses %}
+{% if license.name == resource.meta.license %}
+a 
+    - href {{ license.href }}
+    img 
+        - src {{ media_url(license.image|string) }}
+        - alt {{ license.name }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
 {% endblock content %}
