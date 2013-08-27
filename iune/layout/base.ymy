@@ -132,10 +132,6 @@ html
                     {% endblock about %}
             {% endblock content %}
 
-            {% block detail %}
-            {% endblock detail %}
-
-
             footer
                 {% block footer %}
                 {% endblock footer %}
