@@ -2,40 +2,46 @@
 
 {% block content %}
 
-h2 {{ resource.meta.title }}
+section.detail
+    h2 
+        img
+            - src {{ media_url('images/point.svg') }}
+            - alt point
+        | {{ resource.meta.title }}
+    div.main
+        img
+            - src {{ media_url(resource.meta.image|string) }}
+            - alt {{ resource.meta.image|string }}
 
-img
-    - src {{ media_url(resource.meta.image|string) }}
-    - alt {{ resource.meta.image|string }}
+    div.description
+        {% if resource.meta.files %}
+        ul.files
+            {% for name, url in resource.meta.files %}
+            li
+                a
+                    - href {{ media_url(url|string) }}
+                    | {{ name }}
+            {% endfor %}
+        {% endif %}
 
-{% if resource.meta.files %}
-ul.files
-    {% for name, url in resource.meta.files %}
-    li
-        a
-            - href {{ media_url(url|string) }}
-            | {{ name }}
-    {% endfor %}
-{% endif %}
+        {% if resource.meta.links %}
+        ul.links
+            {% for name, url in resource.meta.links %}
+            li
+                a
+                    - href {{ url|string }}
+                    | {{ name }}
+            {% endfor %}
+        {% endif %}
 
-{% if resource.meta.links %}
-ul.links
-    {% for name, url in resource.meta.links %}
-    li
-        a
-            - href {{ url|string }}
-            | {{ name }}
-    {% endfor %}
-{% endif %}
-
-{% with name = resource.meta.license, license = licenses[resource.meta.license] %}
-{% if license %}
-a 
-    - href {{ license.href }}
-    img 
-        - src {{ media_url(license.image|string) }}
-        - alt {{ name }}
-{% endif %}
-{% endwith %}
+        {% with name = resource.meta.license, license = licenses[resource.meta.license] %}
+        {% if license %}
+        a 
+            - href {{ license.href }}
+            img 
+                - src {{ media_url(license.image|string) }}
+                - alt {{ name }}
+        {% endif %}
+        {% endwith %}
 
 {% endblock content %}
