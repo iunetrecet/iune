@@ -38,4 +38,7 @@ a
 {% endif %}
 {% endwith %}
 
+{% block text %}
+{% endblock text %}
+
 {% endblock content %}
