@@ -8,13 +8,20 @@ section.detail
             - src {{ media_url('images/point.svg') }}
             - alt point
         | {{ resource.meta.title }}
-    div.main
+    div#main
         img
             - src {{ media_url(resource.meta.image|string) }}
             - alt {{ resource.meta.image|string }}
 
-    div.description
+    div#description
+        {% block text %}
+        {% endblock text %}
         {% if resource.meta.files %}
+        h3
+            img.red
+                - src {{ media_url('images/download.svg') }}
+                - alt download
+            | files
         ul.files
             {% for name, url in resource.meta.files %}
             li
@@ -44,7 +51,5 @@ section.detail
         {% endif %}
         {% endwith %}
 
-{% block text %}
-{% endblock text %}
 
 {% endblock content %}
