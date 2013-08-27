@@ -1,6 +1,10 @@
-from hyde.ext.templates.jinja import HydeLoader
-from hyde.plugin import Plugin
+from itertools import groupby
+from operator import attrgetter
 
+from hyde.plugin import Plugin
+from hyde.ext.templates.jinja import HydeLoader
+
+from jinja2 import contextfunction
 from jinja2.loaders import FileSystemLoader
 from yammy.translator import yammy_to_html_string
 
@@ -31,3 +35,19 @@ class YammyPlugin(Plugin):
         if resource.meta.get('parse', None) == 'yammy':
             return yammy_to_html_string(text, keep_line_numbers=False)
         return text
+
+
+@contextfunction
+def translated(context, resources):
+    current_lang = context['resource'].meta.get('language', None)
+    for uuid, resources in groupby(resources, attrgetter('meta.uuid')):
+        resources = list(resources)
+        current = ( r for r in resources if r.meta.language == current_lang )
+        current = next(current, None)
+        resource = resources[0] if current is None else current
+        yield resource
+
+
+class TranslatedResourcePlugin(Plugin):
+    def begin_site(self):
+        self.template.env.globals['translated'] = translated

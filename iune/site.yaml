@@ -18,8 +18,9 @@ plugins:
     - hyde.ext.plugins.text.TextlinksPlugin
     - hyde.ext.plugins.urls.UrlCleanerPlugin
     - hyde.ext.plugins.languages.LanguagePlugin
-    - plugins.templates.YammyPlugin
-    - plugins.css.SASSPlugin
+    - ext.plugins.templates.YammyPlugin
+    - ext.plugins.templates.TranslatedResourcePlugin
+    - ext.plugins.css.SASSPlugin
 
 simple_copy:
     - "*.js"
