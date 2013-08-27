@@ -103,7 +103,7 @@ html
             {% block content %}
             section.content
                 {% for grp, res_walker in site.content.walk_section_groups() %}
-                {% if not loop.first %}
+                {% if grp.name != 'section' %}
                 div.grp
                     ul
                         li
