@@ -1,4 +1,1 @@
-extends: base.ymy
-default_block: main
 section: photos
-listable: true

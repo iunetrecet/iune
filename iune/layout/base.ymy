@@ -55,13 +55,13 @@ html
 
             {% block info %}
             ul#info
-                {% for icon in info %}
+                {% for name, icon in info %}
                 li.icon
                     a
                         - href {{ icon.href }}
                         img.red
                             - src {{ media_url(icon.image|string) }}
-                            - alt {{ icon.name }}
+                            - alt {{ name }}
                 {% endfor %}
                 li.icon.language 
                     a 
@@ -84,7 +84,7 @@ html
                 {% for grp, res_walker in site.content.walk_section_groups() -%}
                 {% if not loop.first %}
                 a
-                    - href #{{ grp.name }}
+                    - href /#{{ grp.name }}
                     object
                         - class red
                         - class {{ grp.name }}
@@ -131,6 +131,10 @@ html
                     {% block about %}
                     {% endblock about %}
             {% endblock content %}
+
+            {% block detail %}
+            {% endblock detail %}
+
 
             footer
                 {% block footer %}
