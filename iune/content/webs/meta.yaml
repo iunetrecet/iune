@@ -1,0 +1,3 @@
+extends: index.eu.html
+default_block: text
+section: webs
