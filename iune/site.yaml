@@ -18,6 +18,7 @@ plugins:
     - hyde.ext.plugins.text.TextlinksPlugin
     - hyde.ext.plugins.urls.UrlCleanerPlugin
     - hyde.ext.plugins.languages.LanguagePlugin
+    - hyde.ext.plugins.urls.SmartUrlsPlugin
     - ext.plugins.templates.YammyPlugin
     - ext.plugins.templates.TranslatedResourcePlugin
     - ext.plugins.css.SASSPlugin
