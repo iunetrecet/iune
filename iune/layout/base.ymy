@@ -48,9 +48,11 @@ html
         header
             {% block header %}
             h1
-                img
-                    - src {{ media_url('images/iune.svg') }}
-                    - alt iune
+                a
+                    - href #
+                    img
+                        - src {{ media_url('images/iune.svg') }}
+                        - alt iune
             {% endblock header %}
 
             {% block info %}
