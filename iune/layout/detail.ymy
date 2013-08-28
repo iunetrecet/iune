@@ -14,42 +14,48 @@ section.detail
             - alt {{ resource.meta.image|string }}
 
     div#description
-        {% block text %}
-        {% endblock text %}
-        {% if resource.meta.files %}
-        h3
-            img.red
-                - src {{ media_url('images/download.svg') }}
-                - alt download
-            | files
-        ul.files
-            {% for name, url in resource.meta.files %}
-            li
-                a
-                    - href {{ media_url(url|string) }}
-                    | {{ name }}
-            {% endfor %}
-        {% endif %}
-
-        {% if resource.meta.links %}
-        ul.links
-            {% for name, url in resource.meta.links %}
-            li
-                a
-                    - href {{ url|string }}
-                    | {{ name }}
-            {% endfor %}
-        {% endif %}
+        div#text
+            {% block text %}
+            {% endblock text %}
 
         {% with name = resource.meta.license, license = licenses[resource.meta.license] %}
         {% if license %}
-        a 
+        a.license 
             - href {{ license.href }}
             img 
                 - src {{ media_url(license.image|string) }}
                 - alt {{ name }}
         {% endif %}
         {% endwith %}
+
+        {% if resource.meta.files %}
+        div.more
+            img.red
+                - src {{ media_url('images/download.svg') }}
+                - alt download
+            ul
+                {% for name, url in resource.meta.files %}
+                li
+                    a
+                        - href {{ media_url(url|string) }}
+                        | {{ name }}
+                {% endfor %}
+        {% endif %}
+
+        {% if resource.meta.links %}
+        div.more
+            img.red
+                - src {{ media_url('images/link.svg') }}
+                - alt link
+            ul
+                {% for name, url in resource.meta.links %}
+                li
+                    a
+                        - href {{ url|string }}
+                        | {{ name }}
+                {% endfor %}
+        {% endif %}
+
 
 
 {% endblock content %}

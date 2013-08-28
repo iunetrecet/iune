@@ -37,6 +37,8 @@ a
     color: $darkgrey
 a:visited
     color: $grey
+p
+    text-align: justify
 
 header, div#wrap
     background: white
@@ -212,24 +214,34 @@ section.detail
     div#description
         width: 30%
         display: inline-block
-        h3
-            color: $red
-            border-top: .1em solid $red
+        div#text
+            color: white
+            background: $red
+            padding: 1em
+        a.license
             img
-                width: 10%
-                display: inline
-                vertical-align: middle
-                margin-right: 3%
-        ul
-            padding: 0
+                width: 50%
+                margin: 1em 25%
+        div.more
             border-top: .1em solid $red
             border-bottom: .1em solid $red
-            li
+            margin-bottom: 2em
+            img
+                width: 10%
+                display: inline-block
+                vertical-align: middle
+                margin-right: 10%
+            ul
                 padding: 0
-                color: $red
-                list-style-position: inside
-                a
-                    color: black
+                width: 80%
+                display: inline-block
+                vertical-align: middle
+                li
+                    padding: 0
+                    color: $red
+                    list-style-position: inside
+                    a
+                        color: black
         
                 
                         
@@ -285,7 +297,7 @@ div#about
 
 footer
     border-top: .1em solid black
-    margin-bottom: 5em
+    margin: 10em 0
     padding-top: 2em
     div#left
         width: 50%
