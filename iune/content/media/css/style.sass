@@ -39,6 +39,10 @@ a:visited
     color: $grey
 p
     text-align: justify
+.red
+    background: $red
+    border-radius: 100%
+    display: block
 
 header, div#wrap
     background: white
@@ -77,36 +81,19 @@ ul#info
             line-height: 2em
             font-weight: bold
             color: white
-        ul.menu
+    li.language
+        ul
+            padding: 0
             position: absolute
             top: 4em
-            right: 1em
-            padding: 0
-            display: none
+            right: 0
+            width: 4em
             li
                 list-style: none
-                padding: .5em 2em .5em 1em
-                text-align: left
-                color: white
-                img
-                    width: 1em
-            li.language
-                background-image: url('../images/menuicon.svg') 
-                background-repeat: no-repeat 
-                background-position: center right
-                background-size: 1em
-                ul
-                    padding: 0
-            li:hover
+                padding: .5em 1em
                 background: $red
-            li:hover > ul > li
-                background: $red
-        li.icon:last-child:hover > ul.menu
-            display: block
-.red
-    background: $red
-    border-radius: 100%
-    display: block
+            li:last-child
+                background: $darkred
 
 div#wrap
     position: absolute
