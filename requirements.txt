@@ -1,4 +1,4 @@
 six
 yammy
-https://github.com/hyde/hyde.git
+git+https://github.com/unaizalakain/hyde.git@lang_extension#egg=hyde
 git+https://github.com/Kronuz/pyScss.git

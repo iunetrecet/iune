@@ -38,9 +38,9 @@ html
         {% endblock css %}
 
         {% block js %}
-        script[src="{{ media_url('/js/jquery.js') }}"]
-        script[src="{{ media_url('/js/jquery.BlackAndWhite.js') }}"]
-        script[src="{{ media_url('/js/iune.js') }}"]
+        script[src="{{ media_url('js/jquery.js') }}"]
+        script[src="{{ media_url('js/jquery.BlackAndWhite.js') }}"]
+        script[src="{{ media_url('js/iune.js') }}"]
         {% endblock js %}
 
 

@@ -1,0 +1,3 @@
+extends: detail.ymy
+default_block: text
+section: webs
