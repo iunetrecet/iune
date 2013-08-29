@@ -57,13 +57,13 @@ html
 
             {% block info %}
             ul#info
-                {% for name, icon in info %}
+                {% for icon in info %}
                 li.icon
                     a
                         - href {{ icon.href }}
                         img.red
                             - src {{ media_url(icon.image|string) }}
-                            - alt {{ name }}
+                            - alt {{ icon.name }}
                 {% endfor %}
                 li.icon.language 
                     a 
