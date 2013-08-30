@@ -44,7 +44,7 @@ html
         {% endblock js %}
 
 
-    body[id="{{ resource.meta.id if resource.meta.id else resource.slug }}"]
+    body[class="{{ resource.meta.extends.split('.')[0] }}"]
         header
             {% block header %}
             h1
@@ -102,8 +102,8 @@ html
             {% endblock %}
 
 
-            {% block content %}
             section.content
+                {% block content %}
                 {% for grp, res_walker in site.content.walk_section_groups() %}
                 {% if grp.name != 'section' %}
                 div.grp
@@ -130,7 +130,7 @@ html
                 div#about
                     {% block about %}
                     {% endblock about %}
-            {% endblock content %}
+                {% endblock content %}
 
             footer
                 {% block footer %}
