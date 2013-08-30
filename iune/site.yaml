@@ -13,12 +13,12 @@ plugins:
     - hyde.ext.plugins.meta.MetaPlugin
     - hyde.ext.plugins.meta.AutoExtendPlugin
     - hyde.ext.plugins.meta.SorterPlugin
-    - hyde.ext.plugins.meta.GrouperPlugin
     - hyde.ext.plugins.text.SyntextPlugin
     - hyde.ext.plugins.text.TextlinksPlugin
     - hyde.ext.plugins.urls.UrlCleanerPlugin
     - hyde.ext.plugins.languages.LanguagePlugin
     - hyde.ext.plugins.urls.SmartUrlsPlugin
+    - ext.plugins.meta.LanguageGrouperPlugin
     - ext.plugins.templates.YammyPlugin
     - ext.plugins.templates.TranslatedResourcePlugin
     - ext.plugins.css.SASSPlugin
@@ -29,16 +29,20 @@ simple_copy:
 context:
     data:
         info:
-            about me:
+            -
+                name: about me
                 href: #
                 image: images/me.svg
-            github:
+            -   
+                name: github
                 href: https://github.com/iunetrecet
                 image: images/github.svg
-            transifex:
+            -
+                name: transifex
                 href: https://www.transifex.com/organization/iune
                 image: images/transifex.svg
-            flickr:
+            -
+                name: flickr
                 href: https://secure.flickr.com/photos/93859818@N05/
                 image: images/flickr.svg
 

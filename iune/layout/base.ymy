@@ -44,7 +44,7 @@ html
         {% endblock js %}
 
 
-    body[id="{{ resource.meta.id if resource.meta.id else resource.slug }}"]
+    body[class="{{ resource.meta.extends.split('.')[0] }}"]
         header
             {% block header %}
             h1
@@ -57,13 +57,13 @@ html
 
             {% block info %}
             ul#info
-                {% for name, icon in info %}
+                {% for icon in info %}
                 li.icon
                     a
                         - href {{ icon.href }}
                         img.red
                             - src {{ media_url(icon.image|string) }}
-                            - alt {{ name }}
+                            - alt {{ icon.name }}
                 {% endfor %}
                 li.icon.language 
                     a 
@@ -102,8 +102,8 @@ html
             {% endblock %}
 
 
-            {% block content %}
             section.content
+                {% block content %}
                 {% for grp, res_walker in site.content.walk_section_groups() %}
                 {% if grp.name != 'section' %}
                 div.grp
@@ -122,7 +122,7 @@ html
                                 img
                                     - src {{ media_url ('images/hm.png') }}
                                 h2
-                                    | {{ res.slug|capitalize|replace("-"," ") }}
+                                    | {{ res.meta.title }}
                         {% endfor %}
                 {% endif %}
                 {% endfor %}
@@ -130,7 +130,7 @@ html
                 div#about
                     {% block about %}
                     {% endblock about %}
-            {% endblock content %}
+                {% endblock content %}
 
             footer
                 {% block footer %}

@@ -56,6 +56,16 @@ section.detail
                 {% endfor %}
         {% endif %}
 
+        {% if resource.next_in_section %}
+        a 
+            - href {{ resource.next_in_section.full_url }}
+            | {{ resource.next_in_section.meta.title }}
+        {% endif %}
 
+        {% if resource.prev_in_section %}
+        a 
+            - href {{ resource.prev_in_section.full_url }}
+            | {{ resource.prev_in_section.meta.title }}
+        {% endif %}
 
 {% endblock content %}
