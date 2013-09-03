@@ -35,6 +35,12 @@ html
             - rel stylesheet
             - type text/css
             - href {{ media_url('css/style.css') }}
+        link 
+            - rel stylesheet
+            - media screen
+            - href http://openfontlibrary.org/face/lato-regular
+            - rel stylesheet 
+            - type text/css 
         {% endblock css %}
 
         {% block js %}

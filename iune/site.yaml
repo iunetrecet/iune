@@ -39,7 +39,7 @@ context:
                 image: images/github.svg
             -
                 name: transifex
-                href: https://www.transifex.com/organization/iune
+                href: https://www.transifex.com/accounts/profile/iune/
                 image: images/transifex.svg
             -
                 name: flickr

@@ -3,17 +3,18 @@
 {% block content %}
 
 section.detail
-    h2 
-        img
-            - src {{ media_url('images/point.svg') }}
-            - alt point
-        | {{ resource.meta.title }}
-    div#main
-        img
-            - src {{ media_url(resource.meta.image|string) }}
-            - alt {{ resource.meta.image|string }}
+    div#detail_image
+        div.box
+            img
+                - src {{ media_url(resource.meta.image|string) }}
+                - alt {{ resource.meta.image|string }}
 
-    div#description
+    div#detail_description
+        h2 
+            img
+                - src {{ media_url('images/point.svg') }}
+                - alt point
+            | {{ resource.meta.title }}
         div#text
             {% block text %}
             {% endblock text %}
@@ -30,7 +31,7 @@ section.detail
 
         {% if resource.meta.files %}
         div.more
-            img.red
+            img
                 - src {{ media_url('images/download.svg') }}
                 - alt download
             ul
@@ -44,7 +45,7 @@ section.detail
 
         {% if resource.meta.links %}
         div.more
-            img.red
+            img
                 - src {{ media_url('images/link.svg') }}
                 - alt link
             ul

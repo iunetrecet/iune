@@ -1,7 +1,8 @@
 $red: #d40000
 $darkred: #800000
-$darkgrey: #333333
+$darkgrey: #1a1a1a
 $grey: #4d4d4d
+$lightgrey: #808080
 
 @mixin columns
     column-count: 2
@@ -22,6 +23,7 @@ $grey: #4d4d4d
     -moz-transition: opacity 0.2s
     -webkit-transition: opacity 0.2s
     -ms-transition: opacity 0.2s
+
 
 body
     font-family: Lato
@@ -44,7 +46,7 @@ p
     border-radius: 100%
     display: block
 
-header, div#wrap
+header, div.wrap
     background: white
 
 header
@@ -95,7 +97,7 @@ ul#info
             li:last-child
                 background: $darkred
 
-div#wrap
+div.wrap
     position: absolute
     top: 45em
     padding: 0 10%
@@ -182,38 +184,65 @@ section.content
             li.square
                 @media (max-width: 600px)
                     height: 10em
-    
+body.detail
+    background: none
+    header
+        background: $darkgrey
+        a
+            width: 3em
+            padding: 1em 0
+    #info
+        display: none
+    .wrap
+        padding: 0
+        width: 100%
+        background: $darkgrey
+        position: relative
+        top: 0
+        nav
+            display: none
+
 section.detail
-    h2
-        color: $red
-        text-transform: capitalize
-        img
-            width: 3%
-            vertical-align: middle
-            margin-right: 1%
-    div#main
+    div#detail_image
         display: inline-block
-        width: 65%
-        margin-right: 5%
+        width: 78%
         vertical-align: top
-        img
-            width: 100%
-            margin: 0 auto
-            height: inherit
-    div#description
-        width: 30%
+        position: relative
+        div.box
+            position: absolute
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0
+            img
+                max-width: 100%
+                max-height: 100%
+                margin: 0 auto
+                height: auto
+                display: block
+    div#detail_image:before
+        content: ""
+        display: block
+        padding-top: 100%
+    div#detail_description
+        width: 20%
         display: inline-block
+        padding: 0 1%
+        h2
+            color: $red
+            text-transform: capitalize
+            margin-top: 0
+        img
+            width: 7%
+            vertical-align: baseline
+            margin-right: 3%
         div#text
             color: white
-            background: $red
-            padding: 1em
         a.license
             img
                 width: 50%
                 margin: 1em 25%
         div.more
-            border-top: .1em solid $red
-            border-bottom: .1em solid $red
             margin-bottom: 2em
             img
                 width: 10%
@@ -227,10 +256,11 @@ section.detail
                 vertical-align: middle
                 li
                     padding: 0
-                    color: $red
+                    color: $lightgrey
                     list-style-position: inside
                     a
-                        color: black
+                        color: $lightgrey
+                        font-weight: bold
         
                 
                         
