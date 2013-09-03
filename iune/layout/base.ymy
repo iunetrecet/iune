@@ -54,8 +54,11 @@ html
         header
             {% block header %}
             h1
-                img
+                img.big
                     - src {{ media_url('images/poster.svg') }}
+                    - alt iune
+                img.little
+                    - src {{ media_url('images/iune.svg') }}
                     - alt iune
             {% endblock header %}
 
@@ -108,14 +111,13 @@ html
                 {% for grp, res_walker in site.content.walk_section_groups() %}
                 {% if grp.name != 'section' %}
                 div.grp
+                    a.grp_title
+                        - name {{ grp.name }}
+                        img
+                            - src {{ media_url(grp.image|string) }}
+                            - alt {{ grp.name }}
+                        h1 {{ grp.description }}
                     ul
-                        li
-                            a.square
-                                - name {{ grp.name }}
-                                img
-                                    - src {{ media_url(grp.image|string) }}
-                                    - alt {{ grp.name }}
-                                h1 {{ grp.description }}
                         {% for res in translated(res_walker) %}
                         li.thumbnail 
                             a.grayscale
