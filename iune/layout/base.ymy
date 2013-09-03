@@ -12,7 +12,7 @@ html
             - content {{ resource.meta.compatibility }}
 
         title
-            | {% block title %}iune {{ resource.meta.title }}{% endblock %}
+            | {% block title %}iune | {{ resource.meta.title }}{% endblock %}
 
         meta
             - name description
