@@ -3,6 +3,7 @@ $darkred: #800000
 $darkgrey: #1a1a1a
 $grey: #4d4d4d
 $lightgrey: #808080
+$blue: #007f7f
 
 @mixin columns
     column-count: 2
@@ -54,20 +55,15 @@ header
     h1
         display: block
         margin: 0
-        a
-            width: 10em
-            margin: 0 auto
-            padding: 2em 0
-            display: block
-            img
-                width: 100%
+        img
+            width: 100%
             
 ul#info
     margin: 0
     padding: 0
     position: absolute
-    top: 0
-    right: 0
+    top: 4em
+    right: 1%
     li.icon
         display: inline-block
         width: 2.5em
@@ -90,39 +86,43 @@ ul#info
             top: 4em
             right: 0
             width: 4em
+            display: none
             li
                 list-style: none
                 padding: .5em 1em
                 background: $red
             li:last-child
                 background: $darkred
+nav
+    position: absolute
+    top: 25%
+    right: 3%
+    width: 10%
+    a
+        text-align: center
+        color: $blue 
+        font-weight: bold
+        display: block
+        margin-bottom: 1em
+        object
+            width: 100%
+            margin-bottom: .5em
+            pointer-events: none
+            @include opacity    
+            background: $blue
+            border-radius: 100%            
+        svg path
+            fill: $red !important
+            color: red
+    a:visited
+        color: $blue
 
 div.wrap
-    position: absolute
-    top: 45em
     padding: 0 10%
     width: 80%
     @media (max-width: 600px)
         width: 100%
         padding: 0
-    nav
-        padding: 2em 0
-        width: 100%
-        a
-            display: inline-block
-            width: 15%
-            margin: 0 5%
-            text-align: center
-            color: $red 
-            font-weight: bold
-            object
-                width: 100%
-                margin-bottom: 1em
-                pointer-events: none
-                @include opacity    
-            svg path
-                fill: $red !important
-                color: red
 section.content
     div.grp
         margin-top: 20em

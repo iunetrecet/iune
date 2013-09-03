@@ -54,11 +54,9 @@ html
         header
             {% block header %}
             h1
-                a
-                    - href #
-                    img
-                        - src {{ media_url('images/iune.svg') }}
-                        - alt iune
+                img
+                    - src {{ media_url('images/poster.svg') }}
+                    - alt iune
             {% endblock header %}
 
             {% block info %}
@@ -85,29 +83,26 @@ html
                                 - href {{ translation.full_url }}
                         {% endfor %}
             {% endblock %}
+        {% block nav %}
+        nav
+            {% for grp, res_walker in site.content.walk_section_groups() -%}
+            {% if not loop.first %}
+            a
+                - href /#{{ grp.name }}
+                object
+                    - class {{ grp.name }}
+                    - type image/svg+xml
+                    - data {{ media_url(grp.image|string) }}
+                    - alt {{ grp.name }}
+                    param
+                        - name src
+                        - value {{ media_url(grp.image|string) }}
+                | {{ grp.name }}
+            {% endif %}
+            {%- endfor %}
+        {% endblock %}
 
         div.wrap    
-            {% block nav %}
-            nav
-                {% for grp, res_walker in site.content.walk_section_groups() -%}
-                {% if not loop.first %}
-                a
-                    - href /#{{ grp.name }}
-                    object
-                        - class red
-                        - class {{ grp.name }}
-                        - type image/svg+xml
-                        - data {{ media_url(grp.image|string) }}
-                        - alt {{ grp.name }}
-                        param
-                            - name src
-                            - value {{ media_url(grp.image|string) }}
-                    | {{ grp.name }}
-                {% endif %}
-                {%- endfor %}
-            {% endblock %}
-
-
             section.content
                 {% block content %}
                 {% for grp, res_walker in site.content.walk_section_groups() %}
