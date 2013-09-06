@@ -122,8 +122,17 @@ html
                         li.thumbnail 
                             a.grayscale
                                 - href {{ res.full_url }}
+
+                                {% if res.meta.thumbnail %}
+                                {% set thumbnail=res.meta.thumbnail %}
+                                {% elif res.meta.image %}
+                                {% set thumbnail=res.meta.image %}
+                                {% endif %}
+
+                                {% if thumbnail %}
                                 img
-                                    - src {{ media_url(res.meta.thumbnail) }}
+                                    - src {{ media_url(thumbnail) }}
+                                {% endif %}
                                 h2
                                     | {{ res.meta.title }}
                         {% endfor %}
