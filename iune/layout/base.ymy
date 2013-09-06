@@ -123,7 +123,7 @@ html
                             a.grayscale
                                 - href {{ res.full_url }}
                                 img
-                                    - src {{ media_url ('images/hm.png') }}
+                                    - src {{ media_url(res.meta.image) }}
                                 h2
                                     | {{ res.meta.title }}
                         {% endfor %}
