@@ -129,45 +129,47 @@ section.content
     div.grp
         margin-top: 20em
         padding: 2em 0
-        a.grp_title
-            width: 20%
-            padding: 0
-            text-align: center
-            color: $darkgrey
-            font-weight: bold
-            display: inline-block
-            font-size: 1.5em
-            vertical-align: middle
-            img
-                width: 50%
-                border-radius: 100%
-                background: $darkgrey
-            h1
-                color: $darkgrey
-                bottom: 0
-                width: 100%
-                text-align: center
-                font-size: .8em
-                margin-bottom: 0
-                @media (max-width: 1000px)
-                    font-size: .8em
-                @media (max-width: 800px)
-                    font-size: .7em
-                @media (max-width: 700px)
-                    font-size: .6em
-                @media (max-width: 600px)
-                    position: relative
         ul
             margin: 0
             padding: 0
             display: inline-block
-            width: 80%
+            width: 100%
             vertical-align: middle
+            li:first-child
+                width: 24.6%
+                a.grp_title
+                    width: 100%
+                    padding: 0
+                    text-align: center
+                    color: $darkgrey
+                    font-weight: bold
+                    display: inline-block
+                    font-size: 1.5em
+                    vertical-align: middle
+                    img
+                        width: 50%
+                        border-radius: 100%
+                        background: $darkgrey
+                h1
+                    color: $darkgrey
+                    bottom: 0
+                    width: 100%
+                    text-align: center
+                    font-size: .8em
+                    margin-bottom: 0
+                    @media (max-width: 1000px)
+                        font-size: .8em
+                    @media (max-width: 800px)
+                        font-size: .7em
+                    @media (max-width: 700px)
+                        font-size: .6em
+                    @media (max-width: 600px)
+                        position: relative
             li
                 display: inline-block
                 width: 24.6%
                 margin: 0.2%
-                vertical-align: bottom
+                vertical-align: middle
                 position: relative
                 @media (max-width: 600px)
                     width: 50%
@@ -334,11 +336,10 @@ div#about
 footer
     border-top: .1em solid black
     margin: 10em 0 0 0
-    padding-top: 2em
+    padding: 2em
     div#left
         width: 48%
         display: inline-block
-        margin-left: 2%
         a#license
             display: inline-block
             width: 65%
