@@ -113,14 +113,14 @@ html
                 {% for grp, res_walker in site.content.walk_section_groups() %}
                 {% if grp.name != 'section' %}
                 div.grp
+                    a.grp_title
+                        - name {{ grp.name }}
                     ul
                         li
-                            a.grp_title
-                                - name {{ grp.name }}
-                                img
-                                    - src {{ media_url(grp.image|string) }}
-                                    - alt {{ grp.name }}
-                                h1 {{ grp.description }}
+                            img
+                                - src {{ media_url(grp.image|string) }}
+                                - alt {{ grp.name }}
+                            h1 {{ grp.description }}
                         {% for res in translated(res_walker) %}
                         li.thumbnail 
                             a.grayscale
