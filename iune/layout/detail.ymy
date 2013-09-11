@@ -10,12 +10,12 @@ section.detail
                 - alt {{ resource.meta.image|string }}
 
     div#detail_description
-        h2 
-            img
-                - src {{ media_url('images/point.svg') }}
-                - alt point
-            | {{ resource.meta.title }}
         div#text
+            h2 
+                img
+                    - src {{ media_url('images/point.svg') }}
+                    - alt point
+                | {{ resource.meta.title }}
             {% block text %}
             {% endblock text %}
 
@@ -57,16 +57,24 @@ section.detail
                 {% endfor %}
         {% endif %}
 
-        {% if resource.next_in_section %}
-        a 
-            - href {{ resource.next_in_section.full_url }}
-            | {{ resource.next_in_section.meta.title }}
-        {% endif %}
+    {% if resource.next_in_section %}
+    a
+        - class arrow
+        - id right_arrow 
+        - href {{ resource.next_in_section.full_url }}
+        img
+            - src {{ media_url('images/arrow.svg') }}
+            - alt {{ resource.next_in_section.meta.title }}
+    {% endif %}
 
-        {% if resource.prev_in_section %}
-        a 
-            - href {{ resource.prev_in_section.full_url }}
-            | {{ resource.prev_in_section.meta.title }}
-        {% endif %}
+    {% if resource.prev_in_section %}
+    a
+        - class arrow
+        - id left_arrow
+        - href {{ resource.prev_in_section.full_url }}
+        img
+            - src {{ media_url('images/arrow.svg') }}
+            - alt {{ resource.prev_in_section.meta.title }}
+    {% endif %}
 
 {% endblock content %}
