@@ -2,7 +2,7 @@
 
 {% block content %}
 
-section.detail
+section.detail.full_screen
     div#detail_image
         div.box
             img
@@ -58,9 +58,7 @@ section.detail
         {% endif %}
 
     {% if resource.next_in_section %}
-    a
-        - class arrow
-        - id right_arrow 
+    a.arrow.right_arrow 
         - href {{ resource.next_in_section.full_url }}
         img
             - src {{ media_url('images/arrow.svg') }}
@@ -68,9 +66,7 @@ section.detail
     {% endif %}
 
     {% if resource.prev_in_section %}
-    a
-        - class arrow
-        - id left_arrow
+    a.arrow.left_arrow
         - href {{ resource.prev_in_section.full_url }}
         img
             - src {{ media_url('images/arrow.svg') }}
