@@ -248,54 +248,54 @@ section.detail
         padding-top: 100%
     div#detail_description
         position: absolute
-        bottom: 60%
-        left: 2%
-        width: 40%
+        bottom: 0
+        left: 0
+        width: 96%
         padding: 2%
-        background: rgba(26,26,26,0.7)
-        border: $grey .2em solid
-        h2
-            color: $red
-            text-transform: capitalize
-            margin-top: 0
-            font-size: 1.2em
-        img
-            width: 4%
-            vertical-align: middle
-            margin-right: 2%
-        div#text
+        background: rgb(12,12,12)
+        div.text
             color: white
             text-align: justify
-            width: 80%
+            width: 75%
             display: inline-block
-        a.license
+            h2
+                color: $red
+                text-transform: capitalize
+                margin: 0 0 1em 0
+                font-size: 1.2em
+                img
+                    display: none
+                    width: 2%
+                    vertical-align: middle
+                    margin-right: 1.5%
+        div.detail_meta
+            width: 20%
             display: inline-block
-            width: 15%
             vertical-align: top
-            img
+            a.license
+                display: block
+                img
+                    width: 50%
+            div.more
+                margin: 0
                 width: 100%
-                margin: 1em 25%
-        div.more
-            width: 49%
-            margin: 0
-            display: inline-block
-            img
-                width: 10%
-                display: inline-block
-                vertical-align: middle
-                margin-right: 5%
-            ul
-                padding: 0
-                width: 85%
-                display: inline-block
-                vertical-align: middle
-                li
+                img
+                    width: 10%
+                    display: inline-block
+                    vertical-align: middle
+                    margin-right: 5%
+                ul
                     padding: 0
-                    color: white
-                    list-style-position: inside
-                    a
-                        color: white
-                        font-weight: bold
+                    width: 85%
+                    display: inline-block
+                    vertical-align: middle
+                    li
+                        padding: 0
+                        color: $grey
+                        list-style-position: inside
+                        a
+                            color: $grey
+                            font-weight: bold
     a.arrow
         display: block
         position: absolute
@@ -305,9 +305,9 @@ section.detail
         img
             width: 100%
             opacity: 0.3
-    a#right_arrow
+    a.right_arrow
         right: 0
-    a#left_arrow
+    a.left_arrow
         left: 0
         img
             @include transformrotate
