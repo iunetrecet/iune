@@ -1,6 +1,8 @@
-function adjustWrap() {
-    var distance = $(window).height() - $('nav').outerHeight();
-    $('#wrap').css('top', distance);
+function fullscreen(selector) {
+    win = $(window);
+    ele = $(selector); 
+    ele.width(win.width());
+    ele.height(win.height());
 };
 
 
@@ -12,5 +14,5 @@ $(window).load(function() {
         speed: 200
     });
 
-    adjustWrap();
+    fullscreen('.full_screen');
 });
