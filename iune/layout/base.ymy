@@ -54,14 +54,23 @@ html
         header
             {% block header %}
             h1
-                img.big
-                    - src {{ media_url('images/poster.svg') }}
-                    - alt iune
                 a
                     -href /
-                    img.little
+                    img
                         - src {{ media_url('images/iune.svg') }}
                         - alt iune
+            hgroup.hi
+                h2
+                    | I'm&nbsp
+                    span#name
+                        | iune,
+                h3 a libre graphic designer
+            a.scroll
+                - href
+                img
+                    - src {{ media_url('images/down.svg') }}
+                    - alt scroll
+
             {% endblock header %}
 
             {% block info %}
@@ -88,24 +97,24 @@ html
                                 - href {{ translation.full_url }}
                         {% endfor %}
             {% endblock %}
-        {% block nav %}
-        nav
-            {% for grp, res_walker in site.content.walk_section_groups() -%}
-            {% if not loop.first %}
-            a
-                - href /#{{ grp.name }}
-                object
-                    - class {{ grp.name }}
-                    - type image/svg+xml
-                    - data {{ media_url(grp.image|string) }}
-                    - alt {{ grp.name }}
-                    param
-                        - name src
-                        - value {{ media_url(grp.image|string) }}
-                | {{ grp.name }}
-            {% endif %}
-            {%- endfor %}
-        {% endblock %}
+#       {% block nav %}
+#       nav
+#           {% for grp, res_walker in site.content.walk_section_groups() -%}
+#           {% if not loop.first %}
+#           a
+#               - href /#{{ grp.name }}
+#               object
+#                   - class {{ grp.name }}
+#                   - type image/svg+xml
+#                   - data {{ media_url(grp.image|string) }}
+#                   - alt {{ grp.name }}
+#                   param
+#                       - name src
+#                       - value {{ media_url(grp.image|string) }}
+#               | {{ grp.name }}
+#           {% endif %}
+#           {%- endfor %}
+#       {% endblock %}
 
         div.wrap    
             section.content

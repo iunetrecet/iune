@@ -33,13 +33,11 @@ $blue: #007f7f
 
 body
     font-family: Lato
-    background-image: url('../images/iunesketch.jpg')
-    background-size: 100%
     margin: 0
-    background-repeat: no-repeat
-    background-attachment: fixed
     min-width: 500px
     width: 100%
+    background: black
+    color: white
 a
     text-decoration: none
     color: $darkgrey
@@ -48,41 +46,64 @@ a:visited
 p
     text-align: justify
 .red
-    background: $red
     border-radius: 100%
     display: block
-
-header, div.wrap
-    background: white
+hgroup.hi
+    font-family: Aleo
+    h2, h3
+        margin: 0
+    h2
+        font-size: 5em
+        #name
+            color: $red
+    h3 
+        font-size: 4em
 
 body > header
     width: 100%
-    margin-bottom: 30em
+    height: 100em
+    background-image: url('../images/iunesketch.jpg')
+    background-size: 100%
+    background-repeat: no-repeat
     h1
         display: block
         margin: 0
-        img.big
+        position: absolute
+        top: 40%
+        left: 39%
+        width: 22%
+        img
             width: 100%
-        img.little
-            display: none
+    hgroup
+        position: absolute
+        bottom: 3%
+        left: 3%
+    a.scroll
+        display: block
+        width: 1%
+        position: absolute
+        bottom: 0
+        left: 49.5%
+        img
+            width: 100%
             
 ul#info
     margin: 0
-    padding: 0
+    padding: 0 1% 0 0
     position: absolute
-    top: 8.5%
-    right: 1%
+    top: 2%
+    right: 0
+    background: black
     li.icon
         display: inline-block
         width: 2.5em
         height: 2.5em
-        margin: .5em
+        margin: 0 .5em
         vertical-align: top
         text-align: center
         img
             width: 80%
             margin: 10%
-            padding: .3em
         a
             line-height: 2em
             font-weight: bold
@@ -101,30 +122,31 @@ ul#info
                 background: $red
             li:last-child
                 background: $darkred
-nav
-    position: absolute
-    top: 25%
-    right: 3%
-    width: 10%
-    a
-        text-align: center
-        color: $darkgrey 
-        font-weight: bold
-        display: block
-        margin-bottom: 1em
-        object
-            width: 100%
-            margin-bottom: .5em
-            pointer-events: none
-            @include opacity    
-            background: $darkgrey
-            border-radius: 100%            
-    a:visited
-        color: $darkgrey
+//  nav
+//      position: absolute
+//      top: 25%
+//      right: 3%
+//      width: 10%
+//      a
+//          text-align: center
+//          color: $darkgrey 
+//          font-weight: bold
+//          display: block
+//          margin-bottom: 1em
+//          object
+//              width: 100%
+//              margin-bottom: .5em
+//              pointer-events: none
+//              @include opacity    
+//              background: $darkgrey
+//              border-radius: 100%            
+//      a:visited
+//          color: $darkgrey
 
-g
-    path
-        fill: black !important
+//  g
+//      path
+//          fill: black !important
+
 div.wrap
     padding: 0
     width: 100%
@@ -253,44 +275,43 @@ section.detail
         width: 96%
         padding: 2%
         background: rgb(12,12,12)
+        h2
+            color: $red
+            text-transform: capitalize
+            margin: 0 0 1em 0
+            font-size: 1em
         div.text
             color: white
             text-align: justify
-            width: 75%
+            width: 50%
             display: inline-block
-            h2
-                color: $red
-                text-transform: capitalize
-                margin: 0 0 1em 0
-                font-size: 1.2em
-        div.detail_meta
-            width: 20%
+            font-size: .8em
+        a.license
+            width: 10%
             display: inline-block
-            vertical-align: top
-            a.license
-                display: block
-                img
-                    width: 50%
-            div.more
-                margin: 0
+            img
                 width: 100%
-                img
-                    width: 10%
-                    display: inline-block
-                    vertical-align: middle
-                    margin-right: 5%
-                ul
+        div.more
+            display: inline-block
+            margin: 0
+            width: 17.5%
+            img
+                width: 10%
+                display: inline-block
+                vertical-align: middle
+                margin-right: 5%
+            ul
+                padding: 0
+                width: 85%
+                display: inline-block
+                vertical-align: middle
+                li
                     padding: 0
-                    width: 85%
-                    display: inline-block
-                    vertical-align: middle
-                    li
-                        padding: 0
+                    color: $grey
+                    list-style-position: inside
+                    a
                         color: $grey
-                        list-style-position: inside
-                        a
-                            color: $grey
-                            font-weight: bold
+                        font-weight: bold
     a.arrow
         display: block
         position: absolute
@@ -325,14 +346,6 @@ div#about
             vertical-align: middle
             display: inline-block
             width: 75%
-            h1, h2
-                margin: 0
-            h1
-                font-size: 5em
-                #name
-                    color: $red
-            h2 
-                font-size: 4em
     div#personal
         @include columns
         margin: 5em auto
