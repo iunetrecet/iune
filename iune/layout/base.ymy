@@ -124,12 +124,10 @@ html
                 div.grp
                     a.grp_title
                         - name {{ grp.name }}
+                    hr
+                    h1 {{ grp.description }}
+                    hr
                     ul
-                        li
-                            img
-                                - src {{ media_url(grp.image|string) }}
-                                - alt {{ grp.name }}
-                            h1 {{ grp.description }}
                         {% for res in translated(res_walker) %}
                         li.thumbnail 
                             a.grayscale
