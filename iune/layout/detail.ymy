@@ -3,56 +3,53 @@
 {% block content %}
 
 section.detail.full_screen
-    div#detail_image
-        div.box
-            img
-                - src {{ media_url(resource.meta.image|string) }}
-                - alt {{ resource.meta.image|string }}
+    img.detail_image
+        - src {{ media_url(resource.meta.image|string) }}
+        - alt {{ resource.meta.image|string }}
 
+    {% with name = resource.meta.license, license = licenses[resource.meta.license] %}
+    {% if license %}
+    a.license 
+        - href {{ license.href }}
+        img 
+            - src {{ media_url(license.image|string) }}
+            - alt {{ name }}
+    {% endif %}
+    {% endwith %}
     div#detail_description
+        h2 {{ resource.meta.title }}
         div.text
-            h2 {{ resource.meta.title }}
             {% block text %}
             {% endblock text %}
 
-        div.detail_meta
-            {% with name = resource.meta.license, license = licenses[resource.meta.license] %}
-            {% if license %}
-            a.license 
-                - href {{ license.href }}
-                img 
-                    - src {{ media_url(license.image|string) }}
-                    - alt {{ name }}
-            {% endif %}
-            {% endwith %}
 
-            {% if resource.meta.files %}
-            div.more
-                img
-                    - src {{ media_url('images/download.svg') }}
-                    - alt download
-                ul
-                    {% for name, url in resource.meta.files %}
-                    li
-                        a
-                            - href {{ media_url(url|string) }}
-                            | {{ name }}
-                    {% endfor %}
-            {% endif %}
+        {% if resource.meta.files %}
+        div.more
+            img
+                - src {{ media_url('images/download.svg') }}
+                - alt download
+            ul
+                {% for name, url in resource.meta.files %}
+                li
+                    a
+                        - href {{ media_url(url|string) }}
+                        | {{ name }}
+                {% endfor %}
+        {% endif %}
 
-            {% if resource.meta.links %}
-            div.more
-                img
-                    - src {{ media_url('images/link.svg') }}
-                    - alt link
-                ul
-                    {% for name, url in resource.meta.links %}
-                    li
-                        a
-                            - href {{ url|string }}
-                            | {{ name }}
-                    {% endfor %}
-            {% endif %}
+        {% if resource.meta.links %}
+        div.more
+            img
+                - src {{ media_url('images/link.svg') }}
+                - alt link
+            ul
+                {% for name, url in resource.meta.links %}
+                li
+                    a
+                        - href {{ url|string }}
+                        | {{ name }}
+                {% endfor %}
+        {% endif %}
 
     {% if resource.next_in_section %}
     a.arrow.right_arrow 

@@ -51,7 +51,7 @@ html
 
 
     body[class="{{ resource.meta.extends.split('.')[0] }}"]
-        header
+        header.full_screen
             {% block header %}
             h1
                 a
