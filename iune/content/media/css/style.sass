@@ -5,7 +5,7 @@ $grey: #4d4d4d
 $lightgrey: #808080
 $blue: #007f7f
 
-@mixin columns
+=columns
     column-count: 2
     -moz-column-count: 2
     -webkit-column-count: 2
@@ -14,17 +14,17 @@ $blue: #007f7f
     -moz-column-gap: 3em
     -webkit-column-gap: 3em
     -ms-column-gap: 3em
-@mixin column
+=column
     column-count: 1
     -moz-column-count: 1
     -webkit-column-count: 1
     -ms-column-count: 1
-@mixin opacity
+=opacity
     transition: opacity 0.2s
     -moz-transition: opacity 0.2s
     -webkit-transition: opacity 0.2s
     -ms-transition: opacity 0.2s
-@mixin transformrotate
+=transformrotate
     transform: rotate(180deg)
     -moz-transform: rotate(180deg)
     -webkit-transform: rotate(180deg)
@@ -36,8 +36,8 @@ body
     margin: 0
     min-width: 500px
     width: 100%
-    background: $darkgrey
-    color: white
+    background: white
+    color: black
 a
     text-decoration: none
     color: $darkgrey
@@ -66,6 +66,7 @@ body > header
     background-size: 100%
     background-repeat: no-repeat
     position: relative
+    color: white
     h1
         display: block
         margin: 0
@@ -138,7 +139,7 @@ ul#info
 //              width: 100%
 //              margin-bottom: .5em
 //              pointer-events: none
-//              @include opacity    
+//              +opacity    
 //              background: $darkgrey
 //              border-radius: 100%            
 //      a:visited
@@ -155,24 +156,6 @@ section.content
     div.grp
         margin-top: 20em
         padding: 2em 0
-        hr
-            color: $red
-            width: 40%
-            display: inline-block
-            vertical-align: middle
-            border: $red .05em solid
-        h1
-            color: $red
-            width: 20%
-            display: inline-block
-            vertical-align: middle
-            margin: 2em 0
-            text-transform: capitalize
-            text-align: center
-            img
-                width: 1em
-                vertical-align: middle
-                margin-right: .5em
         ul
             margin: 0
             padding: 0 .3%
@@ -191,25 +174,32 @@ section.content
                     img
                         width: 100%
                         vertical-align: bottom
-                    h2
-                        opacity: 0
+                    hgroup
+                        background: black
+                        color: white
+                        padding: 3%
+                        position: relative
+                        h1
+                            font-variant: small-caps
+                            border-bottom: white solid .05em
+                            padding-bottom: 1em
+                            font-size: 1.2em
+                        h2
+                            font-family: Lora
+                            font-size: .8em
+                            font-weight: normal
+                    hgroup:before
+                        background: black
+                        top: -1em
+                        height: 2em
+                        left: 50%
+                        transform: translateX(-50%) rotate(45deg)
+                        width: 2em
+                        content: ""
+                        ponter-events: none
                         position: absolute
-                        bottom: 0
-                        margin: 0
-                        padding: .5em 0
-                        width: 100%
-                        text-align: center
-                        font-size: 1em
-                        text-trans
-                        color: rgba(255,255,255,0.9)
-                        background: rgba(0,0,0,0.6)
-                        @include opacity    
-                a:hover
-                    h2
-                        opacity: 1
-            li.square
-                @media (max-width: 600px)
-                    height: 10em
+                        -moz-box-sizing: border-box
+
 body.detail
     position: relative
     header
@@ -319,7 +309,7 @@ section.detail
     a.left_arrow
         left: 0
         img
-            @include transformrotate
+            +transformrotate
             
                 
                         
@@ -340,11 +330,11 @@ div#about
             display: inline-block
             width: 75%
     div#personal
-        @include columns
+        +columns
         margin: 5em auto
         width: 80%
         @media (max-width: 600px)
-            @include column
+            +column
         p
             font-weight: normal
             text-align: justify

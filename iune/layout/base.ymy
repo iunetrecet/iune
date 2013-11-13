@@ -122,11 +122,6 @@ html
                 {% for grp, res_walker in site.content.walk_section_groups() %}
                 {% if grp.name != 'section' %}
                 div.grp
-                    a.grp_title
-                        - name {{ grp.name }}
-                    hr
-                    h1 {{ grp.description }}
-                    hr
                     ul
                         {% for res in translated(res_walker) %}
                         li.thumbnail 
@@ -143,8 +138,11 @@ html
                                 img
                                     - src {{ media_url(thumbnail) }}
                                 {% endif %}
-                                h2
-                                    | {{ res.meta.title }}
+                                hgroup
+                                    h1
+                                        | {{ res.meta.title }}
+                                    h2
+                                        | {{ res.meta.title }}
                         {% endfor %}
                 {% endif %}
                 {% endfor %}
