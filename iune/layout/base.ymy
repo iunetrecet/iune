@@ -5,6 +5,7 @@ html
         {% block starthead %}
         {% endblock starthead %}
 
+
         meta
             - charset {{ resource.meta.charset }}
         meta
@@ -41,6 +42,17 @@ html
             - href http://openfontlibrary.org/face/lato-regular
             - rel stylesheet 
             - type text/css 
+        link 
+            - href {{ media_url('/stylesheets/screen.css') }}
+            - media screen, projection
+            - rel stylesheet
+            - type text/css
+        link 
+            - href {{ media_url('/stylesheets/print.css') }}
+            - media print
+            - rel stylesheet
+            - type text/css
+</head>
         {% endblock css %}
 
         {% block js %}
