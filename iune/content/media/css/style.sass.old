@@ -1,0 +1,430 @@
+$red: #d40000
+$darkred: #800000
+$darkgrey: #040404
+$grey: #4d4d4d
+$lightgrey: #808080
+$blue: #007f7f
+
+=columns
+    column-count: 2
+    -moz-column-count: 2
+    -webkit-column-count: 2
+    -ms-column-count: 2
+    column-gap: 3em
+    -moz-column-gap: 3em
+    -webkit-column-gap: 3em
+    -ms-column-gap: 3em
+=column
+    column-count: 1
+    -moz-column-count: 1
+    -webkit-column-count: 1
+    -ms-column-count: 1
+=opacity
+    transition: opacity 0.2s
+    -moz-transition: opacity 0.2s
+    -webkit-transition: opacity 0.2s
+    -ms-transition: opacity 0.2s
+=transformrotate
+    transform: rotate(180deg)
+    -moz-transform: rotate(180deg)
+    -webkit-transform: rotate(180deg)
+    -ms-transform: rotate(180deg)
+
+h1, h2, h3, h4, h5, h6
+    word-wrap: break-word
+
+body
+    font-family: Lato
+    margin: 0
+    min-width: 500px
+    width: 100%
+    background: white
+    color: black
+a
+    text-decoration: none
+    color: $darkgrey
+a:visited
+    color: $grey
+p
+    text-align: justify
+.red
+    border-radius: 100%
+    display: block
+hgroup.hi
+    font-family: Aleo
+    h2, h3
+        margin: 0
+    h2
+        font-size: 5em
+        #name
+            color: $red
+    h3 
+        font-size: 4em
+
+body > header
+    width: 100%
+    height: 70em
+    background-image: url('../images/iunesketch.jpg')
+    background-size: 100%
+    background-repeat: no-repeat
+    position: relative
+    color: white
+    h1
+        display: block
+        margin: 0
+        position: absolute
+        top: 40%
+        left: 39%
+        width: 22%
+        img
+            width: 100%
+    hgroup
+        position: absolute
+        bottom: 3%
+        left: 3%
+    a.scroll
+        display: block
+        width: 1%
+        position: absolute
+        bottom: 0
+        left: 49.5%
+        img
+            width: 100%
+            
+ul#info
+    margin: 0
+    padding: 0 1% 0 0
+    position: absolute
+    top: 2%
+    right: 0
+    background: $darkgrey
+    li.icon
+        display: inline-block
+        width: 2.5em
+        height: 2.5em
+        margin: 0 .5em
+        vertical-align: top
+        text-align: center
+        img
+            width: 80%
+            margin: 10%
+        a
+            line-height: 2em
+            font-weight: bold
+            color: white
+    li.language
+        ul
+            padding: 0
+            position: absolute
+            top: 4em
+            right: 0
+            width: 4em
+            display: none
+            li
+                list-style: none
+                padding: .5em 1em
+                background: $red
+            li:last-child
+                background: $darkred
+//  nav
+//      position: absolute
+//      top: 25%
+//      right: 3%
+//      width: 10%
+//      a
+//          text-align: center
+//          color: $darkgrey 
+//          font-weight: bold
+//          display: block
+//          margin-bottom: 1em
+//          object
+//              width: 100%
+//              margin-bottom: .5em
+//              pointer-events: none
+//              +opacity    
+//              background: $darkgrey
+//              border-radius: 100%            
+//      a:visited
+//          color: $darkgrey
+
+//  g
+//      path
+//          fill: black !important
+
+div.wrap
+    padding: 0
+    width: 100%
+section.content
+    div.grp
+        margin-top: 20em
+        padding: 2em 0
+        ul
+            margin: 0
+            padding: 0 
+            display: inline-block
+            width: 100%
+            vertical-align: middle
+            li:nth-child(even)
+                display: inline-block
+                width: 25%
+                vertical-align: middle
+                position: relative
+                vertical-align: top
+                a
+                    img
+                        width: 100%
+                        vertical-align: bottom
+                    hgroup
+                        background: black
+                        color: white
+                        padding: 2em
+                        position: relative
+                        height: 7em
+                        h1
+                            font-variant: small-caps
+                            border-bottom: white solid .05em
+                            padding-bottom: 1em
+                            font-size: 1.2em
+                            margin: 0
+                            text-align: center
+                        h2
+                            font-size: .8em
+                            font-weight: normal
+                    hgroup:before
+                        background: black
+                        top: -1em
+                        height: 2em
+                        left: 50%
+                        transform: translateX(-50%) rotate(45deg)
+                        width: 2em
+                        content: ""
+                        ponter-events: none
+                        position: absolute
+                        -moz-box-sizing: border-box
+            li:nth-child(odd)
+                display: inline-block
+                width: 25%
+                vertical-align: middle
+                position: relative
+                vertical-align: top
+                a
+                    img
+                        position: absolute
+                        top: 11em
+                        width: 100%
+                        vertical-align: bottom
+                        height: inherit
+                    hgroup
+                        background: black
+                        color: white
+                        padding: 15%
+                        position: relative
+                        height: 7em
+                        position: absolute
+                        top: 0
+                        width: 70%
+                        h1
+                            font-variant: small-caps
+                            border-bottom: white solid .05em
+                            padding-bottom: 1em
+                            font-size: 1.2em
+                            margin: 0
+                            text-align: center
+                        h2
+                            font-size: .8em
+                            font-weight: normal
+                    hgroup:after
+                        background: black
+                        bottom: -1em
+                        height: 2em
+                        left: 50%
+                        transform: translateX(-50%) rotate(45deg)
+                        width: 2em
+                        content: ""
+                        ponter-events: none
+                        position: absolute
+                        -moz-box-sizing: border-box
+
+body.detail
+    position: relative
+    header
+        width: 7% !important
+        background: $darkgrey
+        height: inherit !important
+        margin: 0
+        padding: 0
+        position: absolute
+        top: 0
+        left: 0
+        h1
+            width: 100%
+            position: static
+            a
+                width: 100%
+                img
+                    display: block
+                    width: 86%
+                    padding: 7%
+        hgroup
+            display: none
+    #info
+        display: none
+    nav
+        display: none
+    .wrap
+        padding: 0
+        width: 100%
+        position: relative
+        top: 0
+        border: none
+        background: none
+        nav
+            display: none
+    footer
+        margin: 0
+
+
+section.detail
+    margin: 0
+    position: relative
+    img.detail_image
+        max-width: 100%
+        max-height: 100%
+        margin: auto
+        height: auto
+        display: block
+    a.license
+        position: absolute
+        top: 8%
+        right: 0
+        width: 10%
+        display: inline-block
+        img
+            width: 100%
+    div#detail_description
+        position: absolute
+        bottom: 2%
+        right: 2%
+        width: 20%
+        padding: 2%
+        background: rgb(12,12,12)
+        h2
+            color: $red
+            text-transform: capitalize
+            margin: 0 0 1em 0
+            font-size: 1em
+        div.text
+            color: white
+            text-align: justify
+            width: 50%
+            display: inline-block
+            font-size: .8em
+        div.more
+            display: inline-block
+            margin: 0
+            width: 17.5%
+            img
+                width: 10%
+                display: inline-block
+                vertical-align: middle
+                margin-right: 5%
+            ul
+                padding: 0
+                width: 85%
+                display: inline-block
+                vertical-align: middle
+                li
+                    padding: 0
+                    color: $grey
+                    list-style-position: inside
+                    a
+                        color: $grey
+                        font-weight: bold
+    a.arrow
+        display: block
+        position: absolute
+        top: 20%
+        z-index: 2
+        width: 7%
+        img
+            width: 100%
+            opacity: 0.3
+    a.right_arrow
+        right: 0
+    a.left_arrow
+        left: 0
+        img
+            +transformrotate
+            
+                
+                        
+div#about
+    position: relative
+    margin: 30em 0
+    font-family: Aleo
+    font-weight: bold
+    header
+        margin: 0 10%
+        img
+            border-radius: 100%
+            width: 20%
+            margin-right: 5%
+            vertical-align: middle
+        hgroup
+            vertical-align: middle
+            display: inline-block
+            width: 75%
+    div#personal
+        +columns
+        margin: 5em auto
+        width: 80%
+        @media (max-width: 600px)
+            +column
+        p
+            font-weight: normal
+            text-align: justify
+            font-size: .9em
+    ul#links
+        width: 80%
+        margin: 0 auto 10em auto
+        li
+            list-style: none
+            color: $red
+            font-size: 1.5em
+            img
+                width: 10%
+                vertical-align: middle
+                margin-right: 2%
+        li:nth-child(2)
+            text-align: right
+            img
+                margin: 0 0 0 2%
+                
+
+footer
+    border-top: .1em solid black
+    margin: 10em 0 0 0
+    padding: 2em
+    div#left
+        width: 48%
+        display: inline-block
+        a#license
+            display: inline-block
+            width: 65%
+        img
+            width: 30%
+            margin-right: 1%
+            vertical-align: top
+        div#cc
+            font-size: .7em
+            margin-top: 1em
+        a:hover
+            text-decoration: underline
+    div#right
+        width: 50%
+        display: inline-block
+        vertical-align: top
+        img
+            width: 30%
+            margin-left: 35%
+
