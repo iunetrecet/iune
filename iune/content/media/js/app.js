@@ -1,6 +1,8 @@
+$(document).foundation();
+
 function fullscreen(selector) {
     win = $(window);
-    ele = $(selector); 
+    ele = $(selector);
     ele.width(win.width());
     ele.height(win.height());
 };
