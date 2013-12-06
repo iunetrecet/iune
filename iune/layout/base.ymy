@@ -1,6 +1,6 @@
 <!doctype html>
 
-html
+html.no-js [lang="{{ resource.meta.language }}"]
     head
         {% block starthead %}
         {% endblock starthead %}
@@ -11,6 +11,10 @@ html
         meta
             - http-equiv X-UA-Compatible
             - content {{ resource.meta.compatibility }}
+        meta
+            - name viewport
+            - content width=device-width
+            - initial-scale 1.0
 
         title
             | {% block title %}iune | {{ resource.meta.title }}{% endblock %}
@@ -35,29 +39,21 @@ html
         link
             - rel stylesheet
             - type text/css
-            - href {{ media_url('css/style.css') }}
-        link 
+            - href {{ media_url('stylesheets/app.css') }}
+        link
             - rel stylesheet
             - media screen
             - href http://openfontlibrary.org/face/lato-regular
-            - rel stylesheet 
-            - type text/css 
-        link 
-            - href {{ media_url('stylesheets/screen.css') }}
-            - media screen, projection
-            - rel stylesheet
-            - type text/css
-        link 
-            - href {{ media_url('stylesheets/print.css') }}
-            - media print
             - rel stylesheet
             - type text/css
         {% endblock css %}
 
         {% block js %}
+        script[src="{{ media_url('bower_components/modernizr/modernizr.js') }}"]
+        script[src="{{ media_url('bower_components/foundation/js/foundation.min.js') }}"]
         script[src="{{ media_url('js/jquery.js') }}"]
         script[src="{{ media_url('js/jquery.BlackAndWhite.js') }}"]
-        script[src="{{ media_url('js/iune.js') }}"]
+        script[src="{{ media_url('js/app.js') }}"]
         {% endblock js %}
 
 
@@ -94,8 +90,8 @@ html
                             - src {{ media_url(icon.image|string) }}
                             - alt {{ icon.name }}
                 {% endfor %}
-                li.icon.language 
-                    a 
+                li.icon.language
+                    a
                         - href #
                         img.red
                             - src {{ media_url('images/languages.svg') }}
@@ -103,7 +99,7 @@ html
                     ul
                         {% for language, translations in resource.translations|groupby('meta.language') %}
                         {% set translation = translations|first %}
-                        li 
+                        li
                             a {{ language }}
                                 - href {{ translation.full_url }}
                         {% endfor %}
@@ -127,7 +123,7 @@ html
 #           {%- endfor %}
 #       {% endblock %}
 
-        div.wrap    
+        div.wrap
             section.content
                 {% block content %}
                 {% for grp, res_walker in site.content.walk_section_groups() %}
@@ -135,7 +131,7 @@ html
                 div.grp
                     ul
                         {% for res in translated(res_walker) %}
-                        li.thumbnail 
+                        li.thumbnail
                             a.grayscale
                                 - href {{ res.full_url }}
 

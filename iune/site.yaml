@@ -21,10 +21,10 @@ plugins:
     - ext.plugins.meta.LanguageGrouperPlugin
     - ext.plugins.templates.YammyPlugin
     - ext.plugins.templates.TranslatedResourcePlugin
-    - ext.plugins.css.SASSPlugin
 
 simple_copy:
     - "*.js"
+    - "*.scss"
 
 context:
     data:
@@ -33,7 +33,7 @@ context:
                 name: about me
                 href: #
                 image: images/me.svg
-            -   
+            -
                 name: github
                 href: https://github.com/iunetrecet
                 image: images/github.svg
@@ -46,7 +46,7 @@ context:
         licenses:
             cc-by-sa:
                 href: https://creativecommons.org/licenses/by-sa/3.0/
-                image: images/cc-by-sa.svg 
+                image: images/cc-by-sa.svg
             cc0:
                 href: https://creativecommons.org/publicdomain/zero/1.0/
                 image: images/cc-zero.svg
@@ -82,7 +82,7 @@ grouper:
     section:
         sorter: time
         groups:
-            - 
+            -
                 name: webs
                 description: webs
                 image: images/webs.svg
@@ -90,7 +90,7 @@ grouper:
                 name: posters
                 description: posters
                 image: images/posters.svg
-            -   
+            -
                 name: photos
                 description: photos
                 image: images/photos.svg
