@@ -54,7 +54,7 @@ html.no-js [lang="{{ resource.meta.language }}"]
 
 
     body[class="{{ resource.meta.extends.split('.')[0] }}"]
-        header.full_screen
+        header
             {% block header %}
             h1
                 a
@@ -77,7 +77,7 @@ html.no-js [lang="{{ resource.meta.language }}"]
             {% endblock header %}
 
             {% block info %}
-            ul#info
+            ul.info.no-bullet.inline-list
                 {% for icon in info %}
                 li.icon
                     a
@@ -100,65 +100,45 @@ html.no-js [lang="{{ resource.meta.language }}"]
                                 - href {{ translation.full_url }}
                         {% endfor %}
             {% endblock %}
-#       {% block nav %}
-#       nav
-#           {% for grp, res_walker in site.content.walk_section_groups() -%}
-#           {% if not loop.first %}
-#           a
-#               - href /#{{ grp.name }}
-#               object
-#                   - class {{ grp.name }}
-#                   - type image/svg+xml
-#                   - data {{ media_url(grp.image|string) }}
-#                   - alt {{ grp.name }}
-#                   param
-#                       - name src
-#                       - value {{ media_url(grp.image|string) }}
-#               | {{ grp.name }}
-#           {% endif %}
-#           {%- endfor %}
-#       {% endblock %}
 
-        div.wrap
-            section.content
-                {% block content %}
-                {% for grp, res_walker in site.content.walk_section_groups() %}
-                {% if grp.name != 'section' %}
-                div.grp
-                    ul
-                        {% for res in translated(res_walker) %}
-                        li.thumbnail
-                            a.grayscale
-                                - href {{ res.full_url }}
+        section.content
+            {% block content %}
+            {% for grp, res_walker in site.content.walk_section_groups() %}
+            {% if grp.name != 'section' %}
+            div#portfolio
+                ul
+                    {% for res in translated(res_walker) %}
+                    li.thumbnail
+                        a.grayscale
+                            - href {{ res.full_url }}
 
-                                {% if res.meta.thumbnail %}
-                                {% set thumbnail=res.meta.thumbnail %}
-                                {% elif res.meta.image %}
-                                {% set thumbnail=res.meta.image %}
-                                {% endif %}
+                            {% if res.meta.thumbnail %}
+                            {% set thumbnail=res.meta.thumbnail %}
+                            {% elif res.meta.image %}
+                            {% set thumbnail=res.meta.image %}
+                            {% endif %}
 
-                                {% if thumbnail %}
-                                img
-                                    - src {{ media_url(thumbnail) }}
-                                {% endif %}
-                                hgroup
-                                    h1
-                                        | {{ res.meta.title }}
-                                    h2
-                                        | {{ res.meta.title }}
-                        {% endfor %}
-                {% endif %}
-                {% endfor %}
+                            {% if thumbnail %}
+                            img
+                                - src {{ media_url(thumbnail) }}
+                            {% endif %}
+                            hgroup
+                                h1
+                                    | {{ res.meta.title }}
+                                h2
+                                    | {{ res.meta.title }}
+                    {% endfor %}
+            {% endif %}
+            {% endfor %}
 
-                div#about
-                    {% block about %}
-                    {% endblock about %}
-                {% endblock content %}
+            div#portfolio
+                {% block about %}
+                {% endblock about %}
+            {% endblock content %}
 
-            footer
-                {% block footer %}
-                {% endblock footer %}
-
+        footer
+            {% block footer %}
+            {% endblock footer %}
         script[src="{{ media_url('js/jquery.js') }}"]
         script[src="{{ media_url('bower_components/foundation/js/foundation.min.js') }}"]
         script[src="{{ media_url('js/jquery.BlackAndWhite.js') }}"]

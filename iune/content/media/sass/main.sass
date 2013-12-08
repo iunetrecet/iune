@@ -1,2 +1,37 @@
 @import foundation/_settings
 @import foundation
+@import compass
+
+$sans: Lato
+$serif: Lota
+$emphasis: Aleo
+$base-font-size: 18px
+$base-line-height: 30px
++establish-baseline
+
+$red: #d40000
+$blue: #009999
+$green: #9fee00
+
+p
+    +leader(1)
+    +trailer(1)
+
+body
+    font-family: $sans
+    background: scale-lightness($blue, -95%)
+
+header
+    background: url('../iunesketch.jpg')
+    width: 100%
+    height: image-height('../iunesketch.jpg')
+    h1
+        height: 20%
+
+
+div#portfolio
+    ul
+        +grid-row()
+        li
+            +grid-column(4)
+
