@@ -20,11 +20,12 @@ p
 body
     font-family: $sans
     background: scale-lightness($blue, -95%)
-
+    +force-wrap
+    
 header
-    background: url('../iunesketch.jpg')
-    width: 100%
-    height: image-height('../iunesketch.jpg')
+    background-image: url('../images/iunesketch.jpg')
+    background-size: cover
+    background-repeat: no-repeat
     h1
         height: 20%
 
