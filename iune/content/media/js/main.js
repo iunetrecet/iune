@@ -1,5 +1,3 @@
-$(document).foundation();
-
 function fullscreen(selector) {
     win = $(window);
     ele = $(selector);
@@ -9,6 +7,8 @@ function fullscreen(selector) {
 
 
 $(window).load(function() {
+    $(document).foundation();
+
     $('.grayscale').BlackAndWhite({
         hoverEffect: true,
         responsive: true,

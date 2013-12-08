@@ -7,7 +7,7 @@ html.no-js [lang="{{ resource.meta.language }}"]
 
 
         meta
-            - charset {{ resource.meta.charset }}
+            - charset utf-8
         meta
             - http-equiv X-UA-Compatible
             - content {{ resource.meta.compatibility }}
@@ -50,10 +50,6 @@ html.no-js [lang="{{ resource.meta.language }}"]
 
         {% block js %}
         script[src="{{ media_url('bower_components/modernizr/modernizr.js') }}"]
-        script[src="{{ media_url('bower_components/foundation/js/foundation.min.js') }}"]
-        script[src="{{ media_url('js/jquery.js') }}"]
-        script[src="{{ media_url('js/jquery.BlackAndWhite.js') }}"]
-        script[src="{{ media_url('js/main.js') }}"]
         {% endblock js %}
 
 
@@ -162,3 +158,8 @@ html.no-js [lang="{{ resource.meta.language }}"]
             footer
                 {% block footer %}
                 {% endblock footer %}
+
+        script[src="{{ media_url('js/jquery.js') }}"]
+        script[src="{{ media_url('bower_components/foundation/js/foundation.min.js') }}"]
+        script[src="{{ media_url('js/jquery.BlackAndWhite.js') }}"]
+        script[src="{{ media_url('js/main.js') }}"]
