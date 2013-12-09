@@ -137,9 +137,8 @@ html.no-js [lang="{{ resource.meta.language }}"]
         footer
             {% block footer %}
             {% endblock footer %}
-        script[src="{{ media_url('js/jquery.js') }}"]
+        script[src="{{ media_url('bower_components/foundation/js/vendor/jquery.js') }}"]
         script[src="{{ media_url('bower_components/foundation/js/foundation.min.js') }}"]
+        script[src="{{ media_url('bower_components/foundation/js/foundation/foundation.dropdown.js') }}"]
         script[src="{{ media_url('js/jquery.BlackAndWhite.js') }}"]
         script[src="{{ media_url('js/main.js') }}"]
-        script[src="{{ media_url('js/foundation.js') }}"]
-        script[src="{{ media_url('js/foundation.dropdown.js') }}"]
