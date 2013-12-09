@@ -49,7 +49,7 @@ html.no-js [lang="{{ resource.meta.language }}"]
         {% endblock css %}
 
         {% block js %}
-        script[src="{{ media_url('bower_components/modernizr/modernizr.js') }}"]
+        script[src="{{ media_url('components/modernizr/modernizr.js') }}"]
         {% endblock js %}
 
 
@@ -137,8 +137,8 @@ html.no-js [lang="{{ resource.meta.language }}"]
         footer
             {% block footer %}
             {% endblock footer %}
-        script[src="{{ media_url('bower_components/foundation/js/vendor/jquery.js') }}"]
-        script[src="{{ media_url('bower_components/foundation/js/foundation.min.js') }}"]
-        script[src="{{ media_url('bower_components/foundation/js/foundation/foundation.dropdown.js') }}"]
+        script[src="{{ media_url('components/foundation/js/vendor/jquery.js') }}"]
+        script[src="{{ media_url('components/foundation/js/foundation.min.js') }}"]
+        script[src="{{ media_url('components/foundation/js/foundation/foundation.dropdown.js') }}"]
         script[src="{{ media_url('js/jquery.BlackAndWhite.js') }}"]
         script[src="{{ media_url('js/main.js') }}"]
