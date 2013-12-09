@@ -38,10 +38,6 @@ context:
                 href: https://github.com/iunetrecet
                 image: images/github.svg
             -
-                name: transifex
-                href: https://www.transifex.com/accounts/profile/iune/
-                image: images/transifex.svg
-            -
                 name: flickr
                 href: https://secure.flickr.com/photos/93859818@N05/
                 image: images/flickr.svg
