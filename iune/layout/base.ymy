@@ -87,11 +87,9 @@ html.no-js [lang="{{ resource.meta.language }}"]
                             - alt {{ icon.name }}
                 {% endfor %}
                 li.icon.language
-                    a
+                    a.custom-split-button-class
                         - href #
-                        img.red
-                            - src {{ media_url('images/languages.svg') }}
-                            - alt languages
+                        | i18n
                     ul
                         {% for language, translations in resource.translations|groupby('meta.language') %}
                         {% set translation = translations|first %}
@@ -143,3 +141,5 @@ html.no-js [lang="{{ resource.meta.language }}"]
         script[src="{{ media_url('bower_components/foundation/js/foundation.min.js') }}"]
         script[src="{{ media_url('js/jquery.BlackAndWhite.js') }}"]
         script[src="{{ media_url('js/main.js') }}"]
+        script[src="{{ media_url('js/foundation.js') }}"]
+        script[src="{{ media_url('js/foundation.dropdown.js') }}"]
