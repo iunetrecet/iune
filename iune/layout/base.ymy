@@ -99,37 +99,32 @@ html.no-js [lang="{{ resource.meta.language }}"]
                         {% endfor %}
             {% endblock %}
 
-        section.content
+        main
             {% block content %}
-            {% for grp, res_walker in site.content.walk_section_groups() %}
-            {% if grp.name != 'section' %}
-            div#portfolio
-                ul
-                    {% for res in translated(res_walker) %}
-                    li.thumbnail
-                        a.grayscale
-                            - href {{ res.full_url }}
+            ul#portfolio
+                {% for res in translated(site.content.walk_resources_sorted_by_time()) %}
+                li.thumbnail
+                    a.grayscale
+                        - href {{ res.full_url }}
 
-                            {% if res.meta.thumbnail %}
-                            {% set thumbnail=res.meta.thumbnail %}
-                            {% elif res.meta.image %}
-                            {% set thumbnail=res.meta.image %}
-                            {% endif %}
+                        {% if res.meta.thumbnail %}
+                        {% set thumbnail=res.meta.thumbnail %}
+                        {% elif res.meta.image %}
+                        {% set thumbnail=res.meta.image %}
+                        {% endif %}
 
-                            {% if thumbnail %}
-                            img
-                                - src {{ media_url(thumbnail) }}
-                            {% endif %}
-                            hgroup
-                                h1
-                                    | {{ res.meta.title }}
-                                h2
-                                    | {{ res.meta.title }}
-                    {% endfor %}
-            {% endif %}
-            {% endfor %}
+                        {% if thumbnail %}
+                        img
+                            - src {{ media_url(thumbnail) }}
+                        {% endif %}
+                        hgroup
+                            h1
+                                | {{ res.meta.title }}
+                            h2
+                                | {{ res.meta.title }}
+                {% endfor %}
 
-            div#portfolio
+            div#about
                 {% block about %}
                 {% endblock about %}
             {% endblock content %}

@@ -1,3 +1,3 @@
 extends: detail.ymy
 default_block: text
-section: projects
+listable: true
