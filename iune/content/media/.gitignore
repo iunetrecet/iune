@@ -2,3 +2,8 @@
 /.sass-cache/*
 *.DS_Store
 /stylesheets/*
+!components/foundation/js/foundation.min.js
+!components/foundation/js/foundation/foundation.dropdown.js
+!components/foundation/js/vendor/jquery.js
+!components/modernizr/modernizr.js
+!stylesheets/main.css
