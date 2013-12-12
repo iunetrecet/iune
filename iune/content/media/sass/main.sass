@@ -62,7 +62,6 @@ section#portfolio
             list-style: none
             position: relative
             hgroup
-                background: scale-color($color: $blue, $lightness: -40%, $alpha: -25%)
                 position: absolute
                 width: 70%
                 height: 70%
@@ -70,28 +69,34 @@ section#portfolio
                 left: 15%
                 padding: 10%
                 +box-sizing(padding-box)
-                +border-radius(100%)
-                @media #{$large-up}
-                    display: none
                 h1, h2
                     position: absolute
                     left: 5%
                     width: 90%
                     margin: 0
                     padding: 4% 0
-                    color: white
+                    color: $blue
                     text-align: center
                     +box-sizing(content-box)
-
                 h1
                     font-family: $sans
-                    border-bottom: .1em solid white
+                    border-bottom: .1em solid $blue
                     font-size: 1.2em
                     bottom: 50%
                 h2
                     font-family: $serif
                     font-size: .9em
                     top: 50%
+
+            @media #{$large-up}
+                hgroup
+                    background: scale-color($color: $blue, $lightness: -40%, $alpha: -25%)
+                    +border-radius(100%)
+                    display: none
+                    h1, h2
+                        color: white
+                    h1
+                        border-bottom: .1em solid white
         li:hover
             hgroup
                 @media #{$large-up}
