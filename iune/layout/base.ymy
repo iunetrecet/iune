@@ -65,7 +65,7 @@ html.no-js [lang="{{ resource.meta.language }}"]
             hgroup.hi
                 h2
                     | I'm&nbsp
-                    span#name
+                    span.red
                         | iune,
                 h3 a libre graphic designer
             a.scroll
@@ -102,6 +102,9 @@ html.no-js [lang="{{ resource.meta.language }}"]
         main
             {% block content %}
             section#portfolio
+                header
+                    h1 my 
+                        span.red portfolio
                 ul
                     {% for res in translated(site.content.walk_resources_sorted_by_time()) %}
                     li.thumbnail

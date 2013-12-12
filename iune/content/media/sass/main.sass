@@ -19,6 +19,8 @@ p
 
 h1, h2, h3, h4, h5, h6
     font-family: $sans
+.red
+    color: $red
 
 body
     font-family: $sans
@@ -38,6 +40,13 @@ body > header
     background-image: image-url('iunesketch.jpg') //
 
 section#portfolio
+    header
+        h1
+            font-family: $emphasis
+            font-weight: bold
+            color: white
+            margin: 0 1.5%
+            text-align: right
     ul
         +block-grid(4)
         max-width: 100%
