@@ -48,8 +48,6 @@ section#portfolio
             margin: 0 1.5%
             text-align: right
     ul
-        max-width: 100%
-        margin: 0 .7%
         @media #{$small-only}
             +block-grid(2)
         @media #{$medium-only}
@@ -58,6 +56,8 @@ section#portfolio
             +block-grid(4)
         @media #{$xlarge-up}
             +block-grid(5)
+        margin: 0 .7% !important
+        max-width: 100%
         li
             list-style: none
             position: relative
@@ -71,6 +71,8 @@ section#portfolio
                 padding: 10%
                 +box-sizing(padding-box)
                 +border-radius(100%)
+                @media #{$large-up}
+                    display: none
                 h1, h2
                     position: absolute
                     left: 5%
@@ -90,6 +92,10 @@ section#portfolio
                     font-family: $serif
                     font-size: .9em
                     top: 50%
+        li:hover
+            hgroup
+                @media #{$large-up}
+                    display: block
 
 section#cv
     background: scale-color($color: $green, $lightness: 95%, $saturation: -95%)
