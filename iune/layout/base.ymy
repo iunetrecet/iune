@@ -105,7 +105,7 @@ html.no-js [lang="{{ resource.meta.language }}"]
                 ul
                     {% for res in translated(site.content.walk_resources_sorted_by_time()) %}
                     li.thumbnail
-                        a.grayscale
+                        a
                             - href {{ res.full_url }}
 
                             {% if res.meta.thumbnail %}
