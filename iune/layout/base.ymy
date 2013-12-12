@@ -75,29 +75,31 @@ html.no-js [lang="{{ resource.meta.language }}"]
                     - alt scroll
 
             {% endblock header %}
-
             {% block info %}
-            ul.info.no-bullet.inline-list
-                {% for icon in info %}
-                li.icon
-                    a
-                        - href {{ icon.href }}
-                        img.red
-                            - src {{ media_url(icon.image|string) }}
-                            - alt {{ icon.name }}
-                {% endfor %}
-                li.icon.language
-                    a.custom-split-button-class
-                        - href #
-                        | i18n
-                    ul
-                        {% for language, translations in resource.translations|groupby('meta.language') %}
-                        {% set translation = translations|first %}
-                        li
-                            a {{ language }}
-                                - href {{ translation.full_url }}
-                        {% endfor %}
-            {% endblock %}
+            div#info
+                ul.info.no-bullet.inline-list
+                    {% for icon in info %}
+                    li.icon
+                        a
+                            - href {{ icon.href }}
+                            img.red
+                                - src {{ media_url(icon.image|string) }}
+                                - alt {{ icon.name }}
+                    {% endfor %}
+                    li.icon.language
+                        a
+                            - href #
+                            | i18n
+                            span
+                        ul
+                            {% for language, translations in resource.translations|groupby('meta.language') %}
+                            {% set translation = translations|first %}
+                            li
+                                a {{ language }}
+                                    - href {{ translation.full_url }}
+                            {% endfor %}
+            {% endblock info %}
+
 
         main
             {% block content %}

@@ -12,6 +12,7 @@ $include-open-sans: false !important
 $red: #d40000
 $blue: #009999
 $green: #9fee00
+$body_color: scale-lightness($blue, -95%)
 
 p
     +leader(1)
@@ -21,23 +22,60 @@ h1, h2, h3, h4, h5, h6
     font-family: $sans
 .red
     color: $red
+a
+    color: $blue
 
 body
     font-family: $sans
-    background: scale-lightness($blue, -95%)
     +force-wrap
     
 body > header
+    position: relative
+    width: 100%
+    background-image: image-url('iunesketch.jpg')
     background-size: cover
     background-repeat: no-repeat
     h1
+        position: absolute
         height: 20%
+        width: 30%
+        top: 35%
+        left: 35%
+        img
+            width: 100%
+    hgroup.hi
+        position: absolute
+        bottom: 1%
+        left: 1%
+        h2, h3
+            font-family: $emphasis
+            color: white
+            font-weight: bold
+        h2
+            font-size: 3em
+        h3
+            font-size: 2.5em
+    a.scroll
+        width: 5%
+        position: absolute
+        bottom: 1%
+        left: 47.5%
     ul.info
-        li.language
-            a.custom-split-button-class
-                +split-button($padding: medium, $pip-color: $red, $base-style: true )
+        position: absolute
+        top: 1%
+        right: 0
+        background: $body-color
+        li
+            width: 15%
+            margin: 0 2.5%
+            a.language
+                width: 40%
+                vertical-align: middle
+                +split-button( $padding: medium, $pip-color: orange, $span-border: pink, $base-style: true )
+            ul
+                display: none
 
-    background-image: image-url('iunesketch.jpg') //
+
 
 section#portfolio
     header
@@ -61,7 +99,6 @@ section#portfolio
         li
             list-style: none
             position: relative
-<<<<<<< Updated upstream
             hgroup
                 position: absolute
                 width: 70%
