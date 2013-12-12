@@ -23,6 +23,7 @@ plugins:
 
 simple_copy:
     - "*.js"
+    - "*.sass"
     - "*.scss"
 
 context:
