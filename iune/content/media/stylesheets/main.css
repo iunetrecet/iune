@@ -7715,16 +7715,30 @@ html {
   line-height: 1.66667em;
 }
 
-/* line 16, ../sass/main.sass */
+/* line 17, ../sass/main.sass */
 p {
   margin-top: 1.66667em;
   margin-bottom: 1.66667em;
 }
 
-/* line 20, ../sass/main.sass */
+/* line 21, ../sass/main.sass */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Lato;
+}
+
+/* line 23, ../sass/main.sass */
+.red {
+  color: #d40000;
+}
+
+/* line 25, ../sass/main.sass */
+a {
+  color: #009999;
+}
+
+/* line 28, ../sass/main.sass */
 body {
   font-family: Lato;
-  background: #000808;
   white-space: pre;
   white-space: pre-wrap;
   white-space: pre-line;
@@ -7735,23 +7749,74 @@ body {
   word-wrap: break-word;
 }
 
-/* line 25, ../sass/main.sass */
+/* line 32, ../sass/main.sass */
 body > header {
+  position: relative;
+  width: 100%;
+  background-image: url('/media/images/iunesketch.jpg?1381053954');
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('/media/images/iunesketch.jpg?1381053954');
 }
-/* line 28, ../sass/main.sass */
+/* line 38, ../sass/main.sass */
 body > header h1 {
+  position: absolute;
   height: 20%;
+  width: 30%;
+  top: 35%;
+  left: 35%;
 }
-/* line 32, ../sass/main.sass */
-body > header ul.info li.language a.custom-split-button-class {
+/* line 44, ../sass/main.sass */
+body > header h1 img {
+  width: 100%;
+}
+/* line 46, ../sass/main.sass */
+body > header hgroup.hi {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+}
+/* line 50, ../sass/main.sass */
+body > header hgroup.hi h2, body > header hgroup.hi h3 {
+  font-family: Aleo;
+  color: white;
+  font-weight: bold;
+}
+/* line 54, ../sass/main.sass */
+body > header hgroup.hi h2 {
+  font-size: 3em;
+}
+/* line 56, ../sass/main.sass */
+body > header hgroup.hi h3 {
+  font-size: 2.5em;
+}
+/* line 58, ../sass/main.sass */
+body > header a.scroll {
+  width: 5%;
+  position: absolute;
+  bottom: 1%;
+  left: 47.5%;
+}
+/* line 63, ../sass/main.sass */
+body > header ul.info {
+  position: absolute;
+  top: 1%;
+  right: 0;
+  background: #000808;
+}
+/* line 68, ../sass/main.sass */
+body > header ul.info li {
+  width: 15%;
+  margin: 0 2.5%;
+}
+/* line 71, ../sass/main.sass */
+body > header ul.info li a.language {
+  width: 40%;
+  vertical-align: middle;
   position: relative;
   padding-right: 5.0625rem;
 }
 /* line 72, ../components/foundation/scss/foundation/components/_split-buttons.scss */
-body > header ul.info li.language a.custom-split-button-class span {
+body > header ul.info li a.language span {
   display: block;
   height: 100%;
   position: absolute;
@@ -7760,7 +7825,7 @@ body > header ul.info li.language a.custom-split-button-class span {
   border-left: solid 1px;
 }
 /* line 81, ../components/foundation/scss/foundation/components/_split-buttons.scss */
-body > header ul.info li.language a.custom-split-button-class span:before {
+body > header ul.info li a.language span:before {
   position: absolute;
   content: "";
   width: 0;
@@ -7771,94 +7836,237 @@ body > header ul.info li.language a.custom-split-button-class span:before {
   left: 50%;
 }
 /* line 93, ../components/foundation/scss/foundation/components/_split-buttons.scss */
-body > header ul.info li.language a.custom-split-button-class span:active {
+body > header ul.info li a.language span:active {
   background-color: rgba(0, 0, 0, 0.1);
 }
 /* line 99, ../components/foundation/scss/foundation/components/_split-buttons.scss */
-body > header ul.info li.language a.custom-split-button-class span {
+body > header ul.info li a.language span {
   border-left-color: rgba(255, 255, 255, 0.5);
 }
 /* line 136, ../components/foundation/scss/foundation/components/_split-buttons.scss */
-body > header ul.info li.language a.custom-split-button-class span {
+body > header ul.info li a.language span {
   width: 3.09375rem;
 }
 /* line 137, ../components/foundation/scss/foundation/components/_split-buttons.scss */
-body > header ul.info li.language a.custom-split-button-class span:before {
+body > header ul.info li a.language span:before {
   border-top-style: solid;
   border-width: 0.375rem;
   top: 48%;
   margin-left: -0.375rem;
 }
 /* line 162, ../components/foundation/scss/foundation/components/_split-buttons.scss */
-body > header ul.info li.language a.custom-split-button-class span:before {
-  border-color: #d40000 transparent transparent transparent;
+body > header ul.info li a.language span:before {
+  border-color: orange transparent transparent transparent;
+}
+/* line 75, ../sass/main.sass */
+body > header ul.info li ul {
+  display: none;
 }
 
-/* line 38, ../sass/main.sass */
-div#portfolio ul {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: 62.5rem;
-  overflow: hidden;
-  *zoom: 1;
+/* line 82, ../sass/main.sass */
+section#portfolio header h1 {
+  font-family: Aleo;
+  font-weight: bold;
+  color: white;
+  margin: 0 1.5%;
+  text-align: right;
 }
-/* line 40, ../sass/main.sass */
-div#portfolio ul li {
-  position: relative;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  width: 25%;
-  float: left;
+/* line 88, ../sass/main.sass */
+section#portfolio ul {
+  margin: 0 0.7% !important;
+  max-width: 100%;
 }
-/* line 43, ../sass/main.sass */
-div#portfolio ul li {
-  position: relative;
+@media only screen and (max-width: 40em) {
+  /* line 88, ../sass/main.sass */
+  section#portfolio ul {
+    display: block;
+    padding: 0;
+    margin: 0 -0.625rem;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  /* line 35, ../components/foundation/scss/foundation/components/_block-grid.scss */
+  section#portfolio ul > li {
+    display: inline;
+    height: auto;
+    float: left;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 44, ../components/foundation/scss/foundation/components/_block-grid.scss */
+  section#portfolio ul > li {
+    width: 50%;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 48, ../components/foundation/scss/foundation/components/_block-grid.scss */
+  section#portfolio ul > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 49, ../components/foundation/scss/foundation/components/_block-grid.scss */
+  section#portfolio ul > li:nth-of-type(2n+1) {
+    clear: both;
+  }
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  /* line 88, ../sass/main.sass */
+  section#portfolio ul {
+    display: block;
+    padding: 0;
+    margin: 0 -0.625rem;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  /* line 35, ../components/foundation/scss/foundation/components/_block-grid.scss */
+  section#portfolio ul > li {
+    display: inline;
+    height: auto;
+    float: left;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 44, ../components/foundation/scss/foundation/components/_block-grid.scss */
+  section#portfolio ul > li {
+    width: 33.33333%;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 48, ../components/foundation/scss/foundation/components/_block-grid.scss */
+  section#portfolio ul > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 49, ../components/foundation/scss/foundation/components/_block-grid.scss */
+  section#portfolio ul > li:nth-of-type(3n+1) {
+    clear: both;
+  }
+}
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  /* line 88, ../sass/main.sass */
+  section#portfolio ul {
+    display: block;
+    padding: 0;
+    margin: 0 -0.625rem;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  /* line 35, ../components/foundation/scss/foundation/components/_block-grid.scss */
+  section#portfolio ul > li {
+    display: inline;
+    height: auto;
+    float: left;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 44, ../components/foundation/scss/foundation/components/_block-grid.scss */
+  section#portfolio ul > li {
+    width: 25%;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 48, ../components/foundation/scss/foundation/components/_block-grid.scss */
+  section#portfolio ul > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 49, ../components/foundation/scss/foundation/components/_block-grid.scss */
+  section#portfolio ul > li:nth-of-type(4n+1) {
+    clear: both;
+  }
+}
+@media only screen and (min-width: 90.063em) {
+  /* line 88, ../sass/main.sass */
+  section#portfolio ul {
+    display: block;
+    padding: 0;
+    margin: 0 -0.625rem;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  /* line 35, ../components/foundation/scss/foundation/components/_block-grid.scss */
+  section#portfolio ul > li {
+    display: inline;
+    height: auto;
+    float: left;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 44, ../components/foundation/scss/foundation/components/_block-grid.scss */
+  section#portfolio ul > li {
+    width: 20%;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 48, ../components/foundation/scss/foundation/components/_block-grid.scss */
+  section#portfolio ul > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 49, ../components/foundation/scss/foundation/components/_block-grid.scss */
+  section#portfolio ul > li:nth-of-type(5n+1) {
+    clear: both;
+  }
+}
+/* line 99, ../sass/main.sass */
+section#portfolio ul li {
   list-style: none;
+  position: relative;
 }
-/* line 46, ../sass/main.sass */
-div#portfolio ul li hgroup {
-  background: rgba(0, 153, 153, 0.8);
+/* line 102, ../sass/main.sass */
+section#portfolio ul li hgroup {
   position: absolute;
-  width: 90%;
-  height: 90%;
-  top: 5%;
-  left: 5%;
+  width: 70%;
+  height: 70%;
+  top: 15%;
+  left: 15%;
   padding: 10%;
   -webkit-box-sizing: padding-box;
   -moz-box-sizing: padding-box;
   box-sizing: padding-box;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
-  -o-border-radius: 100%;
-  border-radius: 100%;
 }
-/* line 56, ../sass/main.sass */
-div#portfolio ul li hgroup h1, div#portfolio ul li hgroup h2 {
+/* line 110, ../sass/main.sass */
+section#portfolio ul li hgroup h1, section#portfolio ul li hgroup h2 {
   position: absolute;
-  left: 0;
-  width: 80%;
-  margin: 0 10%;
-  padding: 5%;
-  color: white;
+  left: 5%;
+  width: 90%;
+  margin: 0;
+  padding: 4% 0;
+  color: #009999;
   text-align: center;
-  -webkit-box-sizing: padding-box;
-  -moz-box-sizing: padding-box;
-  box-sizing: padding-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
-/* line 66, ../sass/main.sass */
-div#portfolio ul li hgroup h1 {
+/* line 119, ../sass/main.sass */
+section#portfolio ul li hgroup h1 {
   font-family: Lato;
-  border-bottom: 0.1em solid white;
+  border-bottom: 0.1em solid #009999;
   font-size: 1.2em;
   bottom: 50%;
 }
-/* line 71, ../sass/main.sass */
-div#portfolio ul li hgroup h2 {
+/* line 124, ../sass/main.sass */
+section#portfolio ul li hgroup h2 {
   font-family: Lora;
   font-size: 0.9em;
   top: 50%;
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 130, ../sass/main.sass */
+  section#portfolio ul li hgroup {
+    background: rgba(0, 92, 92, 0.75);
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    display: none;
+  }
+  /* line 134, ../sass/main.sass */
+  section#portfolio ul li hgroup h1, section#portfolio ul li hgroup h2 {
+    color: white;
+  }
+  /* line 136, ../sass/main.sass */
+  section#portfolio ul li hgroup h1 {
+    border-bottom: 0.1em solid white;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 139, ../sass/main.sass */
+  section#portfolio ul li:hover hgroup {
+    display: block;
+  }
+}
+
+/* line 143, ../sass/main.sass */
+section#cv {
+  background: #f8f9f8;
 }
