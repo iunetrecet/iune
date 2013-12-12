@@ -54,7 +54,7 @@ html.no-js [lang="{{ resource.meta.language }}"]
 
 
     body[class="{{ resource.meta.extends.split('.')[0] }}"]
-        header
+        header.fullscreen
             {% block header %}
             h1
                 a
