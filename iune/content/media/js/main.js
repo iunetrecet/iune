@@ -9,12 +9,5 @@ function fullscreen(selector) {
 $(window).load(function() {
     $(document).foundation();
 
-    $('.grayscale').BlackAndWhite({
-        hoverEffect: true,
-        responsive: true,
-        inverHoverEffect: false,
-        speed: 200
-    });
-
     fullscreen('.full_screen');
 });
