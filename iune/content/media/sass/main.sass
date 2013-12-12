@@ -39,21 +39,19 @@ body > header
 
 section#portfolio
     ul
-        +grid-row()
+        +block-grid(4)
         max-width: 100%
+        margin: 0 .7%
         li
-            +grid-column(3)
-    ul
-        li
-            position: relative
             list-style: none
+            position: relative
             hgroup
                 background: scale-color($color: $blue, $lightness: -40%, $alpha: -25%)
                 position: absolute
-                width: 90%
-                height: 90%
-                top: 5%
-                left: 5%
+                width: 70%
+                height: 70%
+                top: 15%
+                left: 15%
                 padding: 10%
                 +box-sizing(padding-box)
                 +border-radius(100%)
