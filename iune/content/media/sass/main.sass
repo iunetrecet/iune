@@ -48,9 +48,16 @@ section#portfolio
             margin: 0 1.5%
             text-align: right
     ul
-        +block-grid(4)
         max-width: 100%
         margin: 0 .7%
+        @media #{$small-only}
+            +block-grid(2)
+        @media #{$medium-only}
+            +block-grid(3)
+        @media #{$large-only}
+            +block-grid(4)
+        @media #{$xlarge-up}
+            +block-grid(5)
         li
             list-style: none
             position: relative
