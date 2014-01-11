@@ -129,7 +129,7 @@ html.no-js [lang="{{ resource.meta.language }}"]
                                 h2
                                     | {{ res.meta.title }}
                     {% endfor %}
-            section#cv
+            section#about
                 {% block about %}
                 {% endblock about %}
             {% endblock content %}

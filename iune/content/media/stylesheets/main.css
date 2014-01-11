@@ -7704,12 +7704,12 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
-/* line 61, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 61, ../../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 * html {
   font-size: 112.5%;
 }
 
-/* line 64, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 64, ../../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 18px;
   line-height: 1.66667em;
@@ -7738,6 +7738,7 @@ a {
 
 /* line 28, ../sass/main.sass */
 body {
+  background: #000808;
   font-family: Lato;
   white-space: pre;
   white-space: pre-wrap;
@@ -7749,15 +7750,15 @@ body {
   word-wrap: break-word;
 }
 
-/* line 32, ../sass/main.sass */
+/* line 33, ../sass/main.sass */
 body > header {
   position: relative;
   width: 100%;
-  background-image: url('/media/images/iunesketch.jpg?1381053954');
+  background-image: url('/media/images/iunesketch.jpg?1380973923');
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 38, ../sass/main.sass */
+/* line 39, ../sass/main.sass */
 body > header h1 {
   position: absolute;
   height: 20%;
@@ -7765,50 +7766,50 @@ body > header h1 {
   top: 35%;
   left: 35%;
 }
-/* line 44, ../sass/main.sass */
+/* line 45, ../sass/main.sass */
 body > header h1 img {
   width: 100%;
 }
-/* line 46, ../sass/main.sass */
+/* line 47, ../sass/main.sass */
 body > header hgroup.hi {
   position: absolute;
   bottom: 1%;
   left: 1%;
 }
-/* line 50, ../sass/main.sass */
+/* line 51, ../sass/main.sass */
 body > header hgroup.hi h2, body > header hgroup.hi h3 {
   font-family: Aleo;
   color: white;
   font-weight: bold;
 }
-/* line 54, ../sass/main.sass */
+/* line 55, ../sass/main.sass */
 body > header hgroup.hi h2 {
   font-size: 3em;
 }
-/* line 56, ../sass/main.sass */
+/* line 57, ../sass/main.sass */
 body > header hgroup.hi h3 {
   font-size: 2.5em;
 }
-/* line 58, ../sass/main.sass */
+/* line 59, ../sass/main.sass */
 body > header a.scroll {
   width: 5%;
   position: absolute;
   bottom: 1%;
   left: 47.5%;
 }
-/* line 63, ../sass/main.sass */
+/* line 64, ../sass/main.sass */
 body > header ul.info {
   position: absolute;
   top: 1%;
   right: 0;
   background: #000808;
 }
-/* line 68, ../sass/main.sass */
+/* line 69, ../sass/main.sass */
 body > header ul.info li {
   width: 15%;
   margin: 0 2.5%;
 }
-/* line 71, ../sass/main.sass */
+/* line 72, ../sass/main.sass */
 body > header ul.info li a.language {
   width: 40%;
   vertical-align: middle;
@@ -7858,12 +7859,12 @@ body > header ul.info li a.language span:before {
 body > header ul.info li a.language span:before {
   border-color: orange transparent transparent transparent;
 }
-/* line 75, ../sass/main.sass */
+/* line 76, ../sass/main.sass */
 body > header ul.info li ul {
   display: none;
 }
 
-/* line 82, ../sass/main.sass */
+/* line 83, ../sass/main.sass */
 section#portfolio header h1 {
   font-family: Aleo;
   font-weight: bold;
@@ -7871,13 +7872,13 @@ section#portfolio header h1 {
   margin: 0 1.5%;
   text-align: right;
 }
-/* line 88, ../sass/main.sass */
+/* line 89, ../sass/main.sass */
 section#portfolio ul {
   margin: 0 0.7% !important;
   max-width: 100%;
 }
 @media only screen and (max-width: 40em) {
-  /* line 88, ../sass/main.sass */
+  /* line 89, ../sass/main.sass */
   section#portfolio ul {
     display: block;
     padding: 0;
@@ -7907,7 +7908,7 @@ section#portfolio ul {
   }
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 88, ../sass/main.sass */
+  /* line 89, ../sass/main.sass */
   section#portfolio ul {
     display: block;
     padding: 0;
@@ -7937,7 +7938,7 @@ section#portfolio ul {
   }
 }
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
-  /* line 88, ../sass/main.sass */
+  /* line 89, ../sass/main.sass */
   section#portfolio ul {
     display: block;
     padding: 0;
@@ -7967,7 +7968,7 @@ section#portfolio ul {
   }
 }
 @media only screen and (min-width: 90.063em) {
-  /* line 88, ../sass/main.sass */
+  /* line 89, ../sass/main.sass */
   section#portfolio ul {
     display: block;
     padding: 0;
@@ -7996,12 +7997,12 @@ section#portfolio ul {
     clear: both;
   }
 }
-/* line 99, ../sass/main.sass */
+/* line 100, ../sass/main.sass */
 section#portfolio ul li {
   list-style: none;
   position: relative;
 }
-/* line 102, ../sass/main.sass */
+/* line 103, ../sass/main.sass */
 section#portfolio ul li hgroup {
   position: absolute;
   width: 70%;
@@ -8013,7 +8014,7 @@ section#portfolio ul li hgroup {
   -moz-box-sizing: padding-box;
   box-sizing: padding-box;
 }
-/* line 110, ../sass/main.sass */
+/* line 111, ../sass/main.sass */
 section#portfolio ul li hgroup h1, section#portfolio ul li hgroup h2 {
   position: absolute;
   left: 5%;
@@ -8026,21 +8027,21 @@ section#portfolio ul li hgroup h1, section#portfolio ul li hgroup h2 {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 119, ../sass/main.sass */
+/* line 120, ../sass/main.sass */
 section#portfolio ul li hgroup h1 {
   font-family: Lato;
   border-bottom: 0.1em solid #009999;
   font-size: 1.2em;
   bottom: 50%;
 }
-/* line 124, ../sass/main.sass */
+/* line 125, ../sass/main.sass */
 section#portfolio ul li hgroup h2 {
   font-family: Lora;
   font-size: 0.9em;
   top: 50%;
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 130, ../sass/main.sass */
+  /* line 131, ../sass/main.sass */
   section#portfolio ul li hgroup {
     background: rgba(0, 92, 92, 0.75);
     -webkit-border-radius: 100%;
@@ -8050,23 +8051,23 @@ section#portfolio ul li hgroup h2 {
     border-radius: 100%;
     display: none;
   }
-  /* line 134, ../sass/main.sass */
+  /* line 135, ../sass/main.sass */
   section#portfolio ul li hgroup h1, section#portfolio ul li hgroup h2 {
     color: white;
   }
-  /* line 136, ../sass/main.sass */
+  /* line 137, ../sass/main.sass */
   section#portfolio ul li hgroup h1 {
     border-bottom: 0.1em solid white;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 139, ../sass/main.sass */
+  /* line 140, ../sass/main.sass */
   section#portfolio ul li:hover hgroup {
     display: block;
   }
 }
 
-/* line 143, ../sass/main.sass */
-section#cv {
+/* line 144, ../sass/main.sass */
+section#about {
   background: #f8f9f8;
 }

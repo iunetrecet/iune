@@ -8,29 +8,116 @@ parse: yammy
 
 {% block about %}
 header
+    hgroup
+        h1 LIBRE
+        h2 GRAPHIC DESIGNER
+    
     img
         - src {{ media_url('images/iune.jpg') }}
         - alt iune
-    hgroup.hi
-        h2 
-            | I'm&nbsp
-            span#name
-                | iune,
-        h3 a libre graphic designer
-div#personal
-    p    
-        Iune Trecet Obeso naiz, 1985eko martxoatren 31an Donostian (Gipuzkoa) jaioa.
-    p
-        Txikitatik gurasoek nere alde artistikoa garatu izan dute, txikitan jostailu gogokoena margoak eta orriak ziren, eta leku guztitara joaten nintzen hauekin. Urteak aurrera joan hala, beste bide bat hartuz, Geografiako karrera egin nuen, baina ez nintzen guztiz gustora sentitzen.
-    p
-        Inguruko kolektibo eta jendearentzako kartelak eta beste diseinu batzuk egiten hasi nintzen orduan, eta garai hartan ere Lakaxitako hacklaba ezagutu nuen. Han hasi zen software askearekiko lotura, mundu berri bat nuen aurrean eta oso erakargarria zen.
-    p
-        Hacklabean parte hartzen hasi nintzenean Django-ko ikastaro bat hasi zen, eta hemen web garapenean oinarri bat hartu nuen. Honen ondoren, nire kabuz HTMLa eta CSSa ikaste hasi nintzen. Honela, nire lehenengo diseinatzaile lana lortu nuen.
-    p
-        Horrela ezagutu nuen GISA elkartea, eta bertako partaide izatera hasi nintzen, Gipuzkoan software askea zabaltzea duen elkartea izanik.
-    p
-        Diseinu grafikoa eta software askearekiko loturak aurrera jarraitzen du, webguneak diseinatzeaz gain, argazkiak atera eta eraldatu, kartelen, manual korporatiboen edota merchandisingaren diseinua ere sortzen ditut. Beti askeak diren tresnak erabiliz, eta sortutako guztiari lizentzia askea jarriz.
-
+section#cv
+    div.cv_details
+        img
+            - src {{ media_url('images/cvgraphs.svg') }}
+            - alt Graph of knowledge
+    div.cv_details
+        h1 Graphic design using Free and Open Source tools
+        ul#tools
+            li 
+                img
+                    - src {{ media_url('images/copyleft.svg') }}
+                    - alt Copyleft
+                ul
+                    li 
+                        img
+                            - src {{ media_url('images/copyleft.svg') }}
+                            - alt Debian
+                    li 
+                        img
+                            - src {{ media_url('images/copyleft.svg') }}
+                            - alt Public Domain
+                    li 
+                        img
+                            - src {{ media_url('images/copyleft.svg') }}
+                            - alt By-sa
+            li 
+                img
+                    - src {{ media_url('images/copyleft.svg') }}
+                    - alt Web design
+                ul
+                    li 
+                        img
+                            - src {{ media_url('images/copyleft.svg') }}
+                            - alt Django
+                    li 
+                        img
+                            - src {{ media_url('images/copyleft.svg') }}
+                            - alt Git
+                    li 
+                        img
+                            - src {{ media_url('images/copyleft.svg') }}
+                            - alt Sass
+                    li 
+                        img
+                            - src {{ media_url('images/copyleft.svg') }}
+                            - alt Yammy
+                    li 
+                        img
+                            - src {{ media_url('images/copyleft.svg') }}
+                            - alt Foundation
+                    li 
+                        img
+                            - src {{ media_url('images/copyleft.svg') }}
+                            - alt Compass
+            li 
+                img
+                    - src {{ media_url('images/copyleft.svg') }}
+                    - alt Poster design
+                ul
+                    li 
+                        img
+                            - src {{ media_url('images/copyleft.svg') }}
+                            - alt Inkscape
+            li 
+                img
+                    - src {{ media_url('images/copyleft.svg') }}
+                    - alt Layout
+                ul
+                    li 
+                        img
+                            - src {{ media_url('images/copyleft.svg') }}
+                            - alt Scribus
+            li 
+                img
+                    - src {{ media_url('images/copyleft.svg') }}
+                    - alt Identity Manual
+                ul
+                    li 
+                        img
+                            - src {{ media_url('images/copyleft.svg') }}
+                            - alt Inkscape
+            li 
+                img
+                    - src {{ media_url('images/copyleft.svg') }}
+                    - alt Photography
+                ul
+                    li 
+                        img
+                            - src {{ media_url('images/copyleft.svg') }}
+                            - alt Gimp
+                    li 
+                        img
+                            - src {{ media_url('images/copyleft.svg') }}
+                            - alt Darktable
+            li 
+                img
+                    - src {{ media_url('images/copyleft.svg') }}
+                    - alt Courses of FLOSS tools
+    div.cv_details
+        h1 Online activity
+    div.cv_details
+        h1 Formation in Graphic Design
+    
 ul#links
     li
         img
