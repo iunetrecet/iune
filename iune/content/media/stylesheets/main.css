@@ -7715,28 +7715,28 @@ html {
   line-height: 1.66667em;
 }
 
-/* line 17, ../sass/main.sass */
+/* line 19, ../sass/main.sass */
 p {
   margin-top: 1.66667em;
   margin-bottom: 1.66667em;
 }
 
-/* line 21, ../sass/main.sass */
+/* line 23, ../sass/main.sass */
 h1, h2, h3, h4, h5, h6 {
   font-family: Lato;
 }
 
-/* line 23, ../sass/main.sass */
+/* line 25, ../sass/main.sass */
 .red {
   color: #d40000;
 }
 
-/* line 25, ../sass/main.sass */
+/* line 27, ../sass/main.sass */
 a {
   color: #009999;
 }
 
-/* line 28, ../sass/main.sass */
+/* line 30, ../sass/main.sass */
 body {
   background: #000808;
   font-family: Lato;
@@ -7750,7 +7750,7 @@ body {
   word-wrap: break-word;
 }
 
-/* line 33, ../sass/main.sass */
+/* line 35, ../sass/main.sass */
 body > header {
   position: relative;
   width: 100%;
@@ -7758,7 +7758,7 @@ body > header {
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 39, ../sass/main.sass */
+/* line 41, ../sass/main.sass */
 body > header h1 {
   position: absolute;
   height: 20%;
@@ -7766,50 +7766,50 @@ body > header h1 {
   top: 35%;
   left: 35%;
 }
-/* line 45, ../sass/main.sass */
+/* line 47, ../sass/main.sass */
 body > header h1 img {
   width: 100%;
 }
-/* line 47, ../sass/main.sass */
+/* line 49, ../sass/main.sass */
 body > header hgroup.hi {
   position: absolute;
   bottom: 1%;
   left: 1%;
 }
-/* line 51, ../sass/main.sass */
+/* line 53, ../sass/main.sass */
 body > header hgroup.hi h2, body > header hgroup.hi h3 {
   font-family: Aleo;
   color: white;
   font-weight: bold;
 }
-/* line 55, ../sass/main.sass */
+/* line 57, ../sass/main.sass */
 body > header hgroup.hi h2 {
   font-size: 3em;
 }
-/* line 57, ../sass/main.sass */
+/* line 59, ../sass/main.sass */
 body > header hgroup.hi h3 {
   font-size: 2.5em;
 }
-/* line 59, ../sass/main.sass */
+/* line 61, ../sass/main.sass */
 body > header a.scroll {
   width: 5%;
   position: absolute;
   bottom: 1%;
   left: 47.5%;
 }
-/* line 64, ../sass/main.sass */
+/* line 66, ../sass/main.sass */
 body > header ul.info {
   position: absolute;
   top: 1%;
   right: 0;
   background: #000808;
 }
-/* line 69, ../sass/main.sass */
+/* line 71, ../sass/main.sass */
 body > header ul.info li {
   width: 15%;
   margin: 0 2.5%;
 }
-/* line 72, ../sass/main.sass */
+/* line 74, ../sass/main.sass */
 body > header ul.info li a.language {
   width: 40%;
   vertical-align: middle;
@@ -7859,12 +7859,12 @@ body > header ul.info li a.language span:before {
 body > header ul.info li a.language span:before {
   border-color: orange transparent transparent transparent;
 }
-/* line 76, ../sass/main.sass */
+/* line 78, ../sass/main.sass */
 body > header ul.info li ul {
   display: none;
 }
 
-/* line 83, ../sass/main.sass */
+/* line 85, ../sass/main.sass */
 section#portfolio header h1 {
   font-family: Aleo;
   font-weight: bold;
@@ -7872,13 +7872,13 @@ section#portfolio header h1 {
   margin: 0 1.5%;
   text-align: right;
 }
-/* line 89, ../sass/main.sass */
+/* line 91, ../sass/main.sass */
 section#portfolio ul {
   margin: 0 0.7% !important;
   max-width: 100%;
 }
 @media only screen and (max-width: 40em) {
-  /* line 89, ../sass/main.sass */
+  /* line 91, ../sass/main.sass */
   section#portfolio ul {
     display: block;
     padding: 0;
@@ -7908,7 +7908,7 @@ section#portfolio ul {
   }
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 89, ../sass/main.sass */
+  /* line 91, ../sass/main.sass */
   section#portfolio ul {
     display: block;
     padding: 0;
@@ -7938,7 +7938,7 @@ section#portfolio ul {
   }
 }
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
-  /* line 89, ../sass/main.sass */
+  /* line 91, ../sass/main.sass */
   section#portfolio ul {
     display: block;
     padding: 0;
@@ -7968,7 +7968,7 @@ section#portfolio ul {
   }
 }
 @media only screen and (min-width: 90.063em) {
-  /* line 89, ../sass/main.sass */
+  /* line 91, ../sass/main.sass */
   section#portfolio ul {
     display: block;
     padding: 0;
@@ -7997,12 +7997,12 @@ section#portfolio ul {
     clear: both;
   }
 }
-/* line 100, ../sass/main.sass */
+/* line 102, ../sass/main.sass */
 section#portfolio ul li {
   list-style: none;
   position: relative;
 }
-/* line 103, ../sass/main.sass */
+/* line 105, ../sass/main.sass */
 section#portfolio ul li hgroup {
   position: absolute;
   width: 70%;
@@ -8014,7 +8014,7 @@ section#portfolio ul li hgroup {
   -moz-box-sizing: padding-box;
   box-sizing: padding-box;
 }
-/* line 111, ../sass/main.sass */
+/* line 113, ../sass/main.sass */
 section#portfolio ul li hgroup h1, section#portfolio ul li hgroup h2 {
   position: absolute;
   left: 5%;
@@ -8027,21 +8027,21 @@ section#portfolio ul li hgroup h1, section#portfolio ul li hgroup h2 {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 120, ../sass/main.sass */
+/* line 122, ../sass/main.sass */
 section#portfolio ul li hgroup h1 {
   font-family: Lato;
   border-bottom: 0.1em solid #009999;
   font-size: 1.2em;
   bottom: 50%;
 }
-/* line 125, ../sass/main.sass */
+/* line 127, ../sass/main.sass */
 section#portfolio ul li hgroup h2 {
   font-family: Lora;
   font-size: 0.9em;
   top: 50%;
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 131, ../sass/main.sass */
+  /* line 133, ../sass/main.sass */
   section#portfolio ul li hgroup {
     background: rgba(0, 92, 92, 0.75);
     -webkit-border-radius: 100%;
@@ -8051,23 +8051,82 @@ section#portfolio ul li hgroup h2 {
     border-radius: 100%;
     display: none;
   }
-  /* line 135, ../sass/main.sass */
+  /* line 137, ../sass/main.sass */
   section#portfolio ul li hgroup h1, section#portfolio ul li hgroup h2 {
     color: white;
   }
-  /* line 137, ../sass/main.sass */
+  /* line 139, ../sass/main.sass */
   section#portfolio ul li hgroup h1 {
     border-bottom: 0.1em solid white;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 140, ../sass/main.sass */
+  /* line 142, ../sass/main.sass */
   section#portfolio ul li:hover hgroup {
     display: block;
   }
 }
 
-/* line 144, ../sass/main.sass */
+/* line 146, ../sass/main.sass */
 section#about {
   background: #f8f9f8;
+}
+/* line 148, ../sass/main.sass */
+section#about header {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 150, ../sass/main.sass */
+section#about header hgroup {
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 66.66667%;
+  float: left;
+}
+/* line 152, ../sass/main.sass */
+section#about header div#information {
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 33.33333%;
+  float: left;
+}
+/* line 157, ../sass/main.sass */
+section#about section#cv div.cv_details ul {
+  display: block;
+  padding: 0;
+  margin: 0 -0.625rem;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 35, ../components/foundation/scss/foundation/components/_block-grid.scss */
+section#about section#cv div.cv_details ul > li {
+  display: inline;
+  height: auto;
+  float: left;
+  padding: 0 0.625rem 1.25rem;
+}
+/* line 44, ../components/foundation/scss/foundation/components/_block-grid.scss */
+section#about section#cv div.cv_details ul > li {
+  width: 8.33333%;
+  padding: 0 0.625rem 1.25rem;
+}
+/* line 48, ../components/foundation/scss/foundation/components/_block-grid.scss */
+section#about section#cv div.cv_details ul > li:nth-of-type(n) {
+  clear: none;
+}
+/* line 49, ../components/foundation/scss/foundation/components/_block-grid.scss */
+section#about section#cv div.cv_details ul > li:nth-of-type(12n+1) {
+  clear: both;
+}
+/* line 160, ../sass/main.sass */
+section#about section#cv div.cv_details ul#tools li {
+  font-family: iuneweb;
 }

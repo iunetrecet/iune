@@ -4,6 +4,8 @@
 $sans: Lato
 $serif: Lora
 $emphasis: Aleo
+$caps: Bebas
+$icons: iuneweb
 $base-font-size: 18px
 $base-line-height: 30px
 $include-open-sans: false !important
@@ -143,3 +145,17 @@ section#portfolio
 
 section#about
     background: scale-color($color: $green, $lightness: 95%, $saturation: -95%)
+    header
+        +grid-row
+        hgroup
+            +grid-column($columns:8)
+        div#information
+            +grid-column($columns:4)
+
+    section#cv
+        div.cv_details
+            ul
+                +block-grid(12)
+            ul#tools
+                li
+                    font-family: $icons
