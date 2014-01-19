@@ -145,17 +145,52 @@ section#portfolio
 
 section#about
     background: scale-color($color: $green, $lightness: 95%, $saturation: -95%)
+    h1, h2
+        font-family: $caps
+    h1
+        color: $red
     header
-        +grid-row
+        +grid-row($behavior:nest)
+        margin: 3rem 0
         hgroup
+            +box-sizing(border-box)
             +grid-column($columns:8)
+            text-align: right
+            border-right: .2em $red solid
+            h1, h2
+                font-size: 5em
         div#information
             +grid-column($columns:4)
 
     section#cv
         div.cv_details
+            margin: 5rem 0 8rem 0
+            h1
+                font-size: 2rem
             ul
-                +block-grid(12)
-            ul#tools
                 li
+                    list-style: none
+            ul#tools, ul#activity
+                margin: 0
+                li
+                    position: relative
+                    display: inline-block
+                    width: 1.5em
+                    vertical-align: top
                     font-family: $icons
+                    font-size: 6rem
+                    text-align: center
+                    color: grey    
+                    ul
+                        display: none
+                        position: absolute
+                        bottom: -7rem
+                        left: 0
+                        width: 72rem
+                        text-align: left
+                        margin: 0
+                li > a
+                    color: grey
+                li:hover
+                    ul
+                        display: block
