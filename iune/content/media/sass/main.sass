@@ -189,8 +189,20 @@ section#about
                         width: 72rem
                         text-align: left
                         margin: 0
-                li > a
-                    color: grey
                 li:hover
                     ul
                         display: block
+            ul#online, ul#formation
+                margin-top: 2em
+                li
+                    +grid-row()
+                    a, ul
+                        margin: 0
+                        padding: 0
+                    a
+                        +grid-column($columns:4)
+                        img
+                            width: 80%
+                    ul
+                        border-left: $blue solid .2em
+                        +grid-column($columns:8)
