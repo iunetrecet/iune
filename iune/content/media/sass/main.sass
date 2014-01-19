@@ -26,6 +26,8 @@ h1, h2, h3, h4, h5, h6
     color: $red
 a
     color: $blue
+a:hover
+    color: adjust-lightness($blue, -5%)
 
 body
     background: $body-color
@@ -164,23 +166,24 @@ section#about
 
     section#cv
         div.cv_details
-            margin: 5rem 0 8rem 0
+            margin: 1rem 0 8rem 0
             h1
                 font-size: 2rem
+                margin-bottom: 2rem
             ul
                 li
                     list-style: none
-            ul#tools, ul#activity
+            ul#tools, ul#activity, ul#downloads
                 margin: 0
                 li
                     position: relative
-                    display: inline-block
                     width: 1.5em
                     vertical-align: top
                     font-family: $icons
                     font-size: 6rem
                     text-align: center
-                    color: grey    
+                    color: $blue
+                    +inline-block
                     ul
                         display: none
                         position: absolute
@@ -189,11 +192,13 @@ section#about
                         width: 72rem
                         text-align: left
                         margin: 0
+                        a
+                            color: grey
                 li:hover
                     ul
                         display: block
             ul#online, ul#formation
-                margin-top: 2em
+                margin-top: 2rem
                 li
                     +grid-row()
                     a, ul
@@ -204,5 +209,5 @@ section#about
                         img
                             width: 80%
                     ul
-                        border-left: $blue solid .2em
+                        border-left: $blue solid .2rem
                         +grid-column($columns:8)
