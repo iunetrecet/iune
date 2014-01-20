@@ -65,20 +65,22 @@ body > header
         position: absolute
         bottom: 1%
         left: 47.5%
-    ul.info
+    ul#info
         position: absolute
         top: 1%
         right: 0
         background: $body-color
+        list-style: none
         li
+            display: inline-block
             width: 15%
             margin: 0 2.5%
-            a.language
-                width: 40%
-                vertical-align: middle
-                +split-button( $padding: medium, $pip-color: orange, $span-border: pink, $base-style: true )
+            a
+                font-family: $icons
             ul
                 display: none
+                a
+                    font-family: $sans
 
 
 

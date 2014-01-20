@@ -7736,7 +7736,12 @@ a {
   color: #009999;
 }
 
-/* line 30, ../sass/main.sass */
+/* line 29, ../sass/main.sass */
+a:hover {
+  color: #007f80;
+}
+
+/* line 32, ../sass/main.sass */
 body {
   background: #000808;
   font-family: Lato;
@@ -7750,7 +7755,7 @@ body {
   word-wrap: break-word;
 }
 
-/* line 35, ../sass/main.sass */
+/* line 37, ../sass/main.sass */
 body > header {
   position: relative;
   width: 100%;
@@ -7758,7 +7763,7 @@ body > header {
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 41, ../sass/main.sass */
+/* line 43, ../sass/main.sass */
 body > header h1 {
   position: absolute;
   height: 20%;
@@ -7766,105 +7771,65 @@ body > header h1 {
   top: 35%;
   left: 35%;
 }
-/* line 47, ../sass/main.sass */
+/* line 49, ../sass/main.sass */
 body > header h1 img {
   width: 100%;
 }
-/* line 49, ../sass/main.sass */
+/* line 51, ../sass/main.sass */
 body > header hgroup.hi {
   position: absolute;
   bottom: 1%;
   left: 1%;
 }
-/* line 53, ../sass/main.sass */
+/* line 55, ../sass/main.sass */
 body > header hgroup.hi h2, body > header hgroup.hi h3 {
   font-family: Aleo;
   color: white;
   font-weight: bold;
 }
-/* line 57, ../sass/main.sass */
+/* line 59, ../sass/main.sass */
 body > header hgroup.hi h2 {
   font-size: 3em;
 }
-/* line 59, ../sass/main.sass */
+/* line 61, ../sass/main.sass */
 body > header hgroup.hi h3 {
   font-size: 2.5em;
 }
-/* line 61, ../sass/main.sass */
+/* line 63, ../sass/main.sass */
 body > header a.scroll {
   width: 5%;
   position: absolute;
   bottom: 1%;
   left: 47.5%;
 }
-/* line 66, ../sass/main.sass */
-body > header ul.info {
+/* line 68, ../sass/main.sass */
+body > header ul#info {
   position: absolute;
   top: 1%;
   right: 0;
   background: #000808;
+  list-style: none;
 }
-/* line 71, ../sass/main.sass */
-body > header ul.info li {
+/* line 74, ../sass/main.sass */
+body > header ul#info li {
+  display: inline-block;
   width: 15%;
   margin: 0 2.5%;
 }
-/* line 74, ../sass/main.sass */
-body > header ul.info li a.language {
-  width: 40%;
-  vertical-align: middle;
-  position: relative;
-  padding-right: 5.0625rem;
-}
-/* line 72, ../components/foundation/scss/foundation/components/_split-buttons.scss */
-body > header ul.info li a.language span {
-  display: block;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  border-left: solid 1px;
-}
-/* line 81, ../components/foundation/scss/foundation/components/_split-buttons.scss */
-body > header ul.info li a.language span:before {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  display: block;
-  border-style: inset;
-  top: 50%;
-  left: 50%;
-}
-/* line 93, ../components/foundation/scss/foundation/components/_split-buttons.scss */
-body > header ul.info li a.language span:active {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-/* line 99, ../components/foundation/scss/foundation/components/_split-buttons.scss */
-body > header ul.info li a.language span {
-  border-left-color: rgba(255, 255, 255, 0.5);
-}
-/* line 136, ../components/foundation/scss/foundation/components/_split-buttons.scss */
-body > header ul.info li a.language span {
-  width: 3.09375rem;
-}
-/* line 137, ../components/foundation/scss/foundation/components/_split-buttons.scss */
-body > header ul.info li a.language span:before {
-  border-top-style: solid;
-  border-width: 0.375rem;
-  top: 48%;
-  margin-left: -0.375rem;
-}
-/* line 162, ../components/foundation/scss/foundation/components/_split-buttons.scss */
-body > header ul.info li a.language span:before {
-  border-color: orange transparent transparent transparent;
-}
 /* line 78, ../sass/main.sass */
-body > header ul.info li ul {
+body > header ul#info li a {
+  font-family: iuneweb;
+}
+/* line 80, ../sass/main.sass */
+body > header ul#info li ul {
   display: none;
 }
+/* line 82, ../sass/main.sass */
+body > header ul#info li ul a {
+  font-family: Lato;
+}
 
-/* line 85, ../sass/main.sass */
+/* line 89, ../sass/main.sass */
 section#portfolio header h1 {
   font-family: Aleo;
   font-weight: bold;
@@ -7872,13 +7837,13 @@ section#portfolio header h1 {
   margin: 0 1.5%;
   text-align: right;
 }
-/* line 91, ../sass/main.sass */
+/* line 95, ../sass/main.sass */
 section#portfolio ul {
   margin: 0 0.7% !important;
   max-width: 100%;
 }
 @media only screen and (max-width: 40em) {
-  /* line 91, ../sass/main.sass */
+  /* line 95, ../sass/main.sass */
   section#portfolio ul {
     display: block;
     padding: 0;
@@ -7908,7 +7873,7 @@ section#portfolio ul {
   }
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 91, ../sass/main.sass */
+  /* line 95, ../sass/main.sass */
   section#portfolio ul {
     display: block;
     padding: 0;
@@ -7938,7 +7903,7 @@ section#portfolio ul {
   }
 }
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
-  /* line 91, ../sass/main.sass */
+  /* line 95, ../sass/main.sass */
   section#portfolio ul {
     display: block;
     padding: 0;
@@ -7968,7 +7933,7 @@ section#portfolio ul {
   }
 }
 @media only screen and (min-width: 90.063em) {
-  /* line 91, ../sass/main.sass */
+  /* line 95, ../sass/main.sass */
   section#portfolio ul {
     display: block;
     padding: 0;
@@ -7997,12 +7962,12 @@ section#portfolio ul {
     clear: both;
   }
 }
-/* line 102, ../sass/main.sass */
+/* line 106, ../sass/main.sass */
 section#portfolio ul li {
   list-style: none;
   position: relative;
 }
-/* line 105, ../sass/main.sass */
+/* line 109, ../sass/main.sass */
 section#portfolio ul li hgroup {
   position: absolute;
   width: 70%;
@@ -8014,7 +7979,7 @@ section#portfolio ul li hgroup {
   -moz-box-sizing: padding-box;
   box-sizing: padding-box;
 }
-/* line 113, ../sass/main.sass */
+/* line 117, ../sass/main.sass */
 section#portfolio ul li hgroup h1, section#portfolio ul li hgroup h2 {
   position: absolute;
   left: 5%;
@@ -8027,21 +7992,21 @@ section#portfolio ul li hgroup h1, section#portfolio ul li hgroup h2 {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 122, ../sass/main.sass */
+/* line 126, ../sass/main.sass */
 section#portfolio ul li hgroup h1 {
   font-family: Lato;
   border-bottom: 0.1em solid #009999;
   font-size: 1.2em;
   bottom: 50%;
 }
-/* line 127, ../sass/main.sass */
+/* line 131, ../sass/main.sass */
 section#portfolio ul li hgroup h2 {
   font-family: Lora;
   font-size: 0.9em;
   top: 50%;
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 133, ../sass/main.sass */
+  /* line 137, ../sass/main.sass */
   section#portfolio ul li hgroup {
     background: rgba(0, 92, 92, 0.75);
     -webkit-border-radius: 100%;
@@ -8051,28 +8016,128 @@ section#portfolio ul li hgroup h2 {
     border-radius: 100%;
     display: none;
   }
-  /* line 137, ../sass/main.sass */
+  /* line 141, ../sass/main.sass */
   section#portfolio ul li hgroup h1, section#portfolio ul li hgroup h2 {
     color: white;
   }
-  /* line 139, ../sass/main.sass */
+  /* line 143, ../sass/main.sass */
   section#portfolio ul li hgroup h1 {
     border-bottom: 0.1em solid white;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 142, ../sass/main.sass */
+  /* line 146, ../sass/main.sass */
   section#portfolio ul li:hover hgroup {
     display: block;
   }
 }
 
-/* line 146, ../sass/main.sass */
+/* line 150, ../sass/main.sass */
 section#about {
   background: #f8f9f8;
 }
-/* line 148, ../sass/main.sass */
+/* line 152, ../sass/main.sass */
+section#about h1, section#about h2 {
+  font-family: Bebas;
+}
+/* line 154, ../sass/main.sass */
+section#about h1 {
+  color: #d40000;
+}
+/* line 156, ../sass/main.sass */
 section#about header {
+  width: auto;
+  margin-left: -0.9375rem;
+  margin-right: -0.9375rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
+  overflow: hidden;
+  *zoom: 1;
+  margin: 3rem 0;
+}
+/* line 159, ../sass/main.sass */
+section#about header hgroup {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 66.66667%;
+  float: left;
+  text-align: right;
+  border-right: 0.2em #d40000 solid;
+}
+/* line 164, ../sass/main.sass */
+section#about header hgroup h1, section#about header hgroup h2 {
+  font-size: 5em;
+}
+/* line 166, ../sass/main.sass */
+section#about header div#information {
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 33.33333%;
+  float: left;
+}
+/* line 170, ../sass/main.sass */
+section#about section#cv div.cv_details {
+  margin: 1rem 0 8rem 0;
+}
+/* line 172, ../sass/main.sass */
+section#about section#cv div.cv_details h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+/* line 176, ../sass/main.sass */
+section#about section#cv div.cv_details ul li {
+  list-style: none;
+}
+/* line 178, ../sass/main.sass */
+section#about section#cv div.cv_details ul#tools, section#about section#cv div.cv_details ul#activity, section#about section#cv div.cv_details ul#downloads {
+  margin: 0;
+}
+/* line 180, ../sass/main.sass */
+section#about section#cv div.cv_details ul#tools li, section#about section#cv div.cv_details ul#activity li, section#about section#cv div.cv_details ul#downloads li {
+  position: relative;
+  width: 1.5em;
+  vertical-align: top;
+  font-family: iuneweb;
+  font-size: 6rem;
+  text-align: center;
+  color: #009999;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 189, ../sass/main.sass */
+section#about section#cv div.cv_details ul#tools li ul, section#about section#cv div.cv_details ul#activity li ul, section#about section#cv div.cv_details ul#downloads li ul {
+  display: none;
+  position: absolute;
+  bottom: -7rem;
+  left: 0;
+  width: 72rem;
+  text-align: left;
+  margin: 0;
+}
+/* line 197, ../sass/main.sass */
+section#about section#cv div.cv_details ul#tools li ul a, section#about section#cv div.cv_details ul#activity li ul a, section#about section#cv div.cv_details ul#downloads li ul a {
+  color: grey;
+}
+/* line 200, ../sass/main.sass */
+section#about section#cv div.cv_details ul#tools li:hover ul, section#about section#cv div.cv_details ul#activity li:hover ul, section#about section#cv div.cv_details ul#downloads li:hover ul {
+  display: block;
+}
+/* line 202, ../sass/main.sass */
+section#about section#cv div.cv_details ul#online, section#about section#cv div.cv_details ul#formation {
+  margin-top: 2rem;
+}
+/* line 204, ../sass/main.sass */
+section#about section#cv div.cv_details ul#online li, section#about section#cv div.cv_details ul#formation li {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -8082,51 +8147,29 @@ section#about header {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 150, ../sass/main.sass */
-section#about header hgroup {
-  position: relative;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  width: 66.66667%;
-  float: left;
+/* line 206, ../sass/main.sass */
+section#about section#cv div.cv_details ul#online li a, section#about section#cv div.cv_details ul#online li ul, section#about section#cv div.cv_details ul#formation li a, section#about section#cv div.cv_details ul#formation li ul {
+  margin: 0;
+  padding: 0;
 }
-/* line 152, ../sass/main.sass */
-section#about header div#information {
+/* line 209, ../sass/main.sass */
+section#about section#cv div.cv_details ul#online li a, section#about section#cv div.cv_details ul#formation li a {
   position: relative;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   width: 33.33333%;
   float: left;
 }
-/* line 157, ../sass/main.sass */
-section#about section#cv div.cv_details ul {
-  display: block;
-  padding: 0;
-  margin: 0 -0.625rem;
-  overflow: hidden;
-  *zoom: 1;
+/* line 211, ../sass/main.sass */
+section#about section#cv div.cv_details ul#online li a img, section#about section#cv div.cv_details ul#formation li a img {
+  width: 80%;
 }
-/* line 35, ../components/foundation/scss/foundation/components/_block-grid.scss */
-section#about section#cv div.cv_details ul > li {
-  display: inline;
-  height: auto;
+/* line 213, ../sass/main.sass */
+section#about section#cv div.cv_details ul#online li ul, section#about section#cv div.cv_details ul#formation li ul {
+  border-left: #009999 solid 0.2rem;
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 66.66667%;
   float: left;
-  padding: 0 0.625rem 1.25rem;
-}
-/* line 44, ../components/foundation/scss/foundation/components/_block-grid.scss */
-section#about section#cv div.cv_details ul > li {
-  width: 8.33333%;
-  padding: 0 0.625rem 1.25rem;
-}
-/* line 48, ../components/foundation/scss/foundation/components/_block-grid.scss */
-section#about section#cv div.cv_details ul > li:nth-of-type(n) {
-  clear: none;
-}
-/* line 49, ../components/foundation/scss/foundation/components/_block-grid.scss */
-section#about section#cv div.cv_details ul > li:nth-of-type(12n+1) {
-  clear: both;
-}
-/* line 160, ../sass/main.sass */
-section#about section#cv div.cv_details ul#tools li {
-  font-family: iuneweb;
 }
