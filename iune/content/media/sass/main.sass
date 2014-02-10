@@ -180,12 +180,14 @@ section#about
             ul#tools, ul#activity, ul#downloads
                 +horizontal-list
                 overflow: visible
-                padding-bottom: 17rem
+                padding-bottom: 7rem
                 li
                     font-family: $icons
                     font-size: 6rem
                     width: 1.5em
                     position: relative
+                    text-align: center
+                    color: $blue
                     ul
                         +horizontal-list
                         position: absolute
@@ -193,68 +195,15 @@ section#about
                         bottom: -7rem
                         display: none
                         width: 27em
+                        a
+                            color: grey
                 li:nth-child(2) 
                     ul
                         width: 64em
                 li:hover
                     ul
                         display: block
-            //ul#tools, ul#activity, ul#downloads
-                +grid-row($behavior:nest)
-                max-width: 100%
-                position: relative
-                overflow: visible
-                padding-bottom: 10em
-                li
-                    +grid-column($columns:1)
-                    font-family: $icons
-                    font-size: 6rem
-                    width: 1.5em
-                    ul
-                        +grid-row($behavior:nest)
-                        width: 73rem
-                        position: absolute
-                        left: 0
-                        bottom: -7em
-                        display: none
-
-                //li:hover
-                    ul
-                        display: block
-            //ul#tools, ul#activity, ul#downloads
-                +block-grid(12)
-                li
-                    font-family: $icons
-                    font-size: 6rem
-                    width: 1.5em
-                    ul
-                        +block-grid(12)
-                        width: 100%
                             
-            //ul#tools, ul#activity, ul#downloads
-                margin: 0
-                li
-                    position: relative
-                    width: 1.5em
-                    vertical-align: top
-                    font-family: $icons
-                    font-size: 6rem
-                    text-align: center
-                    color: $blue
-                    +inline-block
-                    ul
-                        display: none
-                        position: absolute
-                        bottom: -7rem
-                        left: 0
-                        width: 63rem
-                        text-align: left
-                        margin: 0
-                        a
-                            color: grey
-                //li:hover
-                    ul
-                        display: block
             ul#online, ul#formation
                 margin-top: 2rem
                 li
