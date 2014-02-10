@@ -8103,7 +8103,6 @@ section#about section#cv div.cv_details ul#tools, section#about section#cv div.c
   overflow: hidden;
   *zoom: 1;
   overflow: visible;
-  padding-bottom: 7rem;
 }
 /* line 60, ../../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 section#about section#cv div.cv_details ul#tools li, section#about section#cv div.cv_details ul#activity li, section#about section#cv div.cv_details ul#downloads li {
@@ -8128,7 +8127,7 @@ section#about section#cv div.cv_details ul#tools li:last-child, section#about se
 section#about section#cv div.cv_details ul#tools li.last, section#about section#cv div.cv_details ul#activity li.last, section#about section#cv div.cv_details ul#downloads li.last {
   padding-right: 0;
 }
-/* line 184, ../sass/main.sass */
+/* line 183, ../sass/main.sass */
 section#about section#cv div.cv_details ul#tools li, section#about section#cv div.cv_details ul#activity li, section#about section#cv div.cv_details ul#downloads li {
   font-family: iuneweb;
   font-size: 6rem;
@@ -8136,6 +8135,7 @@ section#about section#cv div.cv_details ul#tools li, section#about section#cv di
   position: relative;
   text-align: center;
   color: #009999;
+  padding-bottom: 7rem;
 }
 /* line 191, ../sass/main.sass */
 section#about section#cv div.cv_details ul#tools li ul, section#about section#cv div.cv_details ul#activity li ul, section#about section#cv div.cv_details ul#downloads li ul {
@@ -8173,23 +8173,23 @@ section#about section#cv div.cv_details ul#tools li ul li:last-child, section#ab
 section#about section#cv div.cv_details ul#tools li ul li.last, section#about section#cv div.cv_details ul#activity li ul li.last, section#about section#cv div.cv_details ul#downloads li ul li.last {
   padding-right: 0;
 }
-/* line 198, ../sass/main.sass */
-section#about section#cv div.cv_details ul#tools li ul a, section#about section#cv div.cv_details ul#activity li ul a, section#about section#cv div.cv_details ul#downloads li ul a {
+/* line 199, ../sass/main.sass */
+section#about section#cv div.cv_details ul#tools li ul li a, section#about section#cv div.cv_details ul#activity li ul li a, section#about section#cv div.cv_details ul#downloads li ul li a {
   color: grey;
 }
-/* line 201, ../sass/main.sass */
+/* line 203, ../sass/main.sass */
 section#about section#cv div.cv_details ul#tools li:nth-child(2) ul, section#about section#cv div.cv_details ul#activity li:nth-child(2) ul, section#about section#cv div.cv_details ul#downloads li:nth-child(2) ul {
   width: 64em;
 }
-/* line 204, ../sass/main.sass */
+/* line 206, ../sass/main.sass */
 section#about section#cv div.cv_details ul#tools li:hover ul, section#about section#cv div.cv_details ul#activity li:hover ul, section#about section#cv div.cv_details ul#downloads li:hover ul {
   display: block;
 }
-/* line 207, ../sass/main.sass */
+/* line 209, ../sass/main.sass */
 section#about section#cv div.cv_details ul#online, section#about section#cv div.cv_details ul#formation {
   margin-top: 2rem;
 }
-/* line 209, ../sass/main.sass */
+/* line 211, ../sass/main.sass */
 section#about section#cv div.cv_details ul#online li, section#about section#cv div.cv_details ul#formation li {
   width: 100%;
   margin-left: auto;
@@ -8200,12 +8200,12 @@ section#about section#cv div.cv_details ul#online li, section#about section#cv d
   overflow: hidden;
   *zoom: 1;
 }
-/* line 211, ../sass/main.sass */
+/* line 213, ../sass/main.sass */
 section#about section#cv div.cv_details ul#online li a, section#about section#cv div.cv_details ul#online li ul, section#about section#cv div.cv_details ul#formation li a, section#about section#cv div.cv_details ul#formation li ul {
   margin: 0;
   padding: 0;
 }
-/* line 214, ../sass/main.sass */
+/* line 216, ../sass/main.sass */
 section#about section#cv div.cv_details ul#online li a, section#about section#cv div.cv_details ul#formation li a {
   position: relative;
   padding-left: 0.9375rem;
@@ -8213,11 +8213,11 @@ section#about section#cv div.cv_details ul#online li a, section#about section#cv
   width: 33.33333%;
   float: left;
 }
-/* line 216, ../sass/main.sass */
+/* line 218, ../sass/main.sass */
 section#about section#cv div.cv_details ul#online li a img, section#about section#cv div.cv_details ul#formation li a img {
   width: 80%;
 }
-/* line 218, ../sass/main.sass */
+/* line 220, ../sass/main.sass */
 section#about section#cv div.cv_details ul#online li ul, section#about section#cv div.cv_details ul#formation li ul {
   border-left: #009999 solid 0.2rem;
   position: relative;

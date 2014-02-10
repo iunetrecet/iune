@@ -180,7 +180,6 @@ section#about
             ul#tools, ul#activity, ul#downloads
                 +horizontal-list
                 overflow: visible
-                padding-bottom: 7rem
                 li
                     font-family: $icons
                     font-size: 6rem
@@ -188,6 +187,7 @@ section#about
                     position: relative
                     text-align: center
                     color: $blue
+                    padding-bottom: 7rem
                     ul
                         +horizontal-list
                         position: absolute
@@ -195,8 +195,10 @@ section#about
                         bottom: -7rem
                         display: none
                         width: 27em
-                        a
-                            color: grey
+                        li
+                            a
+                                color: grey
+                    //@media #{$large-up} { }
                 li:nth-child(2) 
                     ul
                         width: 64em
