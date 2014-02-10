@@ -14,7 +14,7 @@ $include-open-sans: false !important
 $red: #d40000
 $blue: #009999
 $green: #9fee00
-$body_color: scale-lightness($blue, -95%)
+$body_color: scale-lightness($blue, -90%)
 
 p
     +leader(1)
@@ -71,12 +71,15 @@ body > header
         right: 0
         background: $body-color
         list-style: none
+        width: 20%
+        margin: 0
         li
             display: inline-block
-            width: 15%
             margin: 0 2.5%
             a
                 font-family: $icons
+                font-size: 2em
+                color: white
             ul
                 display: none
                 a
@@ -85,7 +88,8 @@ body > header
 
 
 section#portfolio
-    header
+    padding: 5em 0
+    header 
         h1
             font-family: $emphasis
             font-weight: bold
@@ -108,11 +112,10 @@ section#portfolio
             position: relative
             hgroup
                 position: absolute
-                width: 70%
-                height: 70%
-                top: 15%
-                left: 15%
-                padding: 10%
+                width: 100%
+                height: 100%
+                top: 0
+                left: 0
                 +box-sizing(padding-box)
                 h1, h2
                     position: absolute
@@ -135,8 +138,6 @@ section#portfolio
 
             @media #{$large-up}
                 hgroup
-                    background: scale-color($color: $blue, $lightness: -40%, $alpha: -25%)
-                    +border-radius(100%)
                     display: none
                     h1, h2
                         color: white
@@ -172,10 +173,65 @@ section#about
             h1
                 font-size: 2rem
                 margin-bottom: 2rem
+                clear: both
             ul
                 li
                     list-style: none
             ul#tools, ul#activity, ul#downloads
+                +horizontal-list
+                overflow: visible
+                padding-bottom: 17rem
+                li
+                    font-family: $icons
+                    font-size: 6rem
+                    width: 1.5em
+                    position: relative
+                    ul
+                        +horizontal-list
+                        position: absolute
+                        left: 0
+                        bottom: -7rem
+                        display: none
+                        width: 27em
+                li:nth-child(2) 
+                    ul
+                        width: 64em
+                li:hover
+                    ul
+                        display: block
+            //ul#tools, ul#activity, ul#downloads
+                +grid-row($behavior:nest)
+                max-width: 100%
+                position: relative
+                overflow: visible
+                padding-bottom: 10em
+                li
+                    +grid-column($columns:1)
+                    font-family: $icons
+                    font-size: 6rem
+                    width: 1.5em
+                    ul
+                        +grid-row($behavior:nest)
+                        width: 73rem
+                        position: absolute
+                        left: 0
+                        bottom: -7em
+                        display: none
+
+                //li:hover
+                    ul
+                        display: block
+            //ul#tools, ul#activity, ul#downloads
+                +block-grid(12)
+                li
+                    font-family: $icons
+                    font-size: 6rem
+                    width: 1.5em
+                    ul
+                        +block-grid(12)
+                        width: 100%
+                            
+            //ul#tools, ul#activity, ul#downloads
                 margin: 0
                 li
                     position: relative
@@ -191,12 +247,12 @@ section#about
                         position: absolute
                         bottom: -7rem
                         left: 0
-                        width: 72rem
+                        width: 63rem
                         text-align: left
                         margin: 0
                         a
                             color: grey
-                li:hover
+                //li:hover
                     ul
                         display: block
             ul#online, ul#formation

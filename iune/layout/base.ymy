@@ -76,9 +76,6 @@ html.no-js [lang="{{ resource.meta.language }}"]
             {% block info %}
             ul#info
                 li
-                    a a
-                        - href #
-                li
                     a c
                         - href emailto:contact@iune.info
                 li
@@ -90,7 +87,6 @@ html.no-js [lang="{{ resource.meta.language }}"]
                 li
                     a 7
                         - href https://iunetrecet.deviantart.com/
-
                 li
                     a f
                         - href #
