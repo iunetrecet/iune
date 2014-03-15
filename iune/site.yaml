@@ -25,6 +25,7 @@ simple_copy:
     - "*.js"
     - "*.sass"
     - "*.scss"
+    - "*.css"
 
 context:
     data:
