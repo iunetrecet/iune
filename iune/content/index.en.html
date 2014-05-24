@@ -6,151 +6,18 @@ parse: yammy
 ---
 
 
-{% block about %}
+{% block cv %}
 header
-    hgroup
-        h1 LIBRE
-        h2 GRAPHIC DESIGNER
+    p ///
+    h1 my cv
+    p ///
     
-    div#information
-        img
-            - src {{ media_url('images/iune.jpg') }}
-            - alt iune
-        ul
-            li Iune Trecet Obeso
-            li contact@iune.info
-            li Date of birth: 1985/03/31
 section#cv
-    div.cv_details
-        img
-            - src {{ media_url('images/cvgraphs.svg') }}
-            - alt Graph of knowledge
-    div.cv_details
-        h1 Graphic design using Free and Open Source tools
-        ul#tools
-            li g 
-                ul.hide-for-touch
-                    li 
-                        a h
-                            - href https://debian.org/ 
-                    li 
-                        a i
-                            - href https://creativecommons.org/
-                    li 
-                        a j
-                            - href https://creativecommons.org/
-            li k 
-                ul.hide-for-touch
-                    li 
-                        a l
-                            - href https://djangoproject.com/
-                    li 
-                        a m
-                            - href https://git-scm.com/
-                    li 
-                        a n
-                            - href https://getfirebug.com/
-                    li 
-                        a o
-                            - href https://sass-lang.com/
-                    li 
-                        a p
-                            - href https://bitbucket.org/leporo/yammy
-                    li 
-                        a q
-                            - href https://foundation.zurb.com/ 
-                    li 
-                        a r
-                            - href https://compass-style.org/
-            li s 
-                ul.hide-for-touch
-                    li 
-                        a t
-                            - href https://inkscape.org/ 
-            li u 
-                ul.hide-for-touch
-                    li 
-                        a v
-                            - href https://scribus.net/
-            li w 
-                ul.hide-for-touch
-                    li 
-                        a t
-                            - href https://inkscape.org/
-            li x 
-                ul.hide-for-touch
-                    li 
-                        a y
-                            - href https://gimp.org/
-                    li 
-                        a z
-                            - href https://darktable.org/
-            li 0
-    div.cv_details
-        h1 Online activity
-        ul#activity
-            li 
-                a 1
-                    - href https://gisa-elkartea.org/
-            li 
-                a 2
-                    - href https://github.com/iunetrecet
-            li 
-                a 3
-                    - href https://flickr.com/photos/iunetrecet/
-            li 
-                a 4
-                    - href https://bitbucket.org/account/user/iunetrecet/
-            li 
-                a 5
-                    - href https://transifex.com/accounts/profile/iune/
-            li 
-                a 6
-                    - href https://openclipart.org/user-detail/iune/
-            li 
-                a 8
-                    - href https://vimeo.com/iunetrecet/ 
-            li 
-                a 7
-                    - href https://iunetrecet.deviantart.com/ 
-
-    div.cv_details
-        h1 Official formation in Graphic Design
-        ul#formation
-            li
-                a Ceinpro
-                    - href https://ceinpro.es/
-                ul
-                    li Nere titulua
-    div.cv_details
-        h1 Online formation in Graphic Design
-        ul#online
-            li
-                a
-                    - href https://codeschool.com/users/iune/ 
-                    img
-                        - src {{ media_url('images/codeschool.svg') }}
-                        - alt Code School
-                ul
-                    li HTML/CSS Master 
-                    li Fundamentals of Design
-                    li CSS Cross-Country
-                    li Journey Into Mobile
-                    li Assembling Sass
-                    li Assembling Sass 2
-                    li Front-end Formations
-                    li Try Git
-                    li Git Real
-                    li Git Real 2
-                    li Java Script Road Trip
-    div.cv_details
-        h1 Download my CV and Portfolio
-        ul#downloads
-            li
-                a d
-            li
-                a e
-{% endblock about %}
+    img
+        - src {{ media_url ('images/cv.svg') }}
+        - alt CV
+        
+{% endblock cv %}
 
 
 {% block footer %}

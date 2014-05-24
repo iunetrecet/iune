@@ -17,7 +17,7 @@ html.no-js [lang="{{ resource.meta.language }}"]
             - initial-scale 1.0
 
         title
-            | {% block title %}iune | {{ resource.meta.title }}{% endblock %}
+            | {% block title %}iune{% endblock %}
 
         meta
             - name description
@@ -54,25 +54,17 @@ html.no-js [lang="{{ resource.meta.language }}"]
 
 
     body[class="{{ resource.meta.extends.split('.')[0] }}"]
-        header.fullscreen
+        header
             {% block header %}
-            h1
-                a
-                    -href /
-                    img
-                        - src {{ media_url('images/iune.svg') }}
-                        - alt iune
-            hgroup.hi
-                h2
-                    | I'm&nbsp
-                    span.red
-                        | iune,
-                h3 a libre graphic designer
-            a.scroll
-                - href
-                img
-                    - src {{ media_url('images/down.svg') }}
-                    - alt scroll
+            hgroup
+                h1
+                    a
+                        - href /
+                        img
+                            - src {{ media_url('images/iune.svg') }}
+                            - alt iune
+                h2 Libre graphic designer
+                    
             {% block info %}
             ul#info
                 li
@@ -84,19 +76,6 @@ html.no-js [lang="{{ resource.meta.language }}"]
                 li
                     a 3
                         - href https://flickr.com/photos/iunetrecet/
-                li
-                    a 7
-                        - href https://iunetrecet.deviantart.com/
-                li
-                    a f
-                        - href #
-                    ul
-                        {% for language, translations in resource.translations|groupby('meta.language') %}
-                        {% set translation = translations|first %}
-                        li
-                            a {{ language }}
-                                - href {{ translation.full_url }}
-                        {% endfor %}
             {% endblock info %}
             {% endblock header %}
 
@@ -105,8 +84,9 @@ html.no-js [lang="{{ resource.meta.language }}"]
             {% block content %}
             section#portfolio
                 header
-                    h1 my 
-                        span.red portfolio
+                    p ///
+                    h1 my portfolio
+                    p ///
                 ul
                     {% for res in translated(site.content.walk_resources_sorted_by_time()) %}
                     li.thumbnail
@@ -129,9 +109,9 @@ html.no-js [lang="{{ resource.meta.language }}"]
                                 h2
                                     | {{ res.meta.title }}
                     {% endfor %}
-            section#about
-                {% block about %}
-                {% endblock about %}
+            section#cv
+                {% block cv %}
+                {% endblock cv %}
             {% endblock content %}
 
         footer
