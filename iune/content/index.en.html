@@ -7,12 +7,11 @@ parse: yammy
 
 
 {% block cv %}
-header
-    p ///
-    h1 my cv
-    p ///
+header.new
+    h1 ///my cv
+    h1.flip ///
     
-section#cv
+section#infography
     img
         - src {{ media_url ('images/cv.svg') }}
         - alt CV

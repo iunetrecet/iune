@@ -92,13 +92,13 @@ html.no-js [lang="{{ resource.meta.language }}"]
         main
             {% block content %}
             section#portfolio
-                header
-                    p ///
-                    h1 my portfolio
-                    p ///
+                header.new
+                    h1 ///my portfolio  
+                    h1.flip  ///
+                            
                 ul
                     {% for res in translated(site.content.walk_resources_sorted_by_time()) %}
-                    li.thumbnail
+                    li
                         a
                             - href {{ res.full_url }}
 
@@ -109,8 +109,9 @@ html.no-js [lang="{{ resource.meta.language }}"]
                             {% endif %}
 
                             {% if thumbnail %}
-                            img
-                                - src {{ media_url(thumbnail) }}
+                            section.thumbnail
+                                img.thumbnail
+                                    - src {{ media_url(thumbnail) }}
                             {% endif %}
                             hgroup
                                 h1
