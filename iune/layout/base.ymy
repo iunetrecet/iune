@@ -54,7 +54,7 @@ html.no-js [lang="{{ resource.meta.language }}"]
 
 
     body[class="{{ resource.meta.extends.split('.')[0] }}"]
-        header
+        header#logo
             {% block header %}
             hgroup
                 h1
@@ -63,21 +63,30 @@ html.no-js [lang="{{ resource.meta.language }}"]
                         img
                             - src {{ media_url('images/iune.svg') }}
                             - alt iune
-                h2 Libre graphic designer
+                h2 libre graphic designer
                     
-            {% block info %}
-            ul#info
-                li
-                    a c
-                        - href emailto:contact@iune.info
-                li
-                    a 2
-                        - href https://github.com/iunetrecet
-                li
-                    a 3
-                        - href https://flickr.com/photos/iunetrecet/
-            {% endblock info %}
             {% endblock header %}
+        {% block info %}
+        ul#info
+            li
+                a 
+                    - href emailto:contact@iune.info
+                    img
+                        - src {{ media_url('images/contact.svg') }}
+                        - alt contact
+            li
+                a
+                    - href https://github.com/iunetrecet
+                    img
+                        - src {{ media_url('images/github.svg') }}
+                        - alt github
+            li
+                a
+                    - href https://flickr.com/photos/iunetrecet/
+                    img
+                        - src {{ media_url('images/flickr.svg') }}
+                        - alt flickr
+        {% endblock info %}
 
 
         main
