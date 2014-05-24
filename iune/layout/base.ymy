@@ -58,12 +58,9 @@ html.no-js [lang="{{ resource.meta.language }}"]
             {% block header %}
             hgroup
                 h1
-                    a
-                        - href /
-                        img
-                            - src {{ media_url('images/iune.svg') }}
-                            - alt iune
-                h2 libre graphic designer
+                    img
+                        - src {{ media_url('images/header.svg') }}
+                        - alt iune
                     
             {% endblock header %}
         {% block info %}

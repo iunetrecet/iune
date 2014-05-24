@@ -16,28 +16,14 @@ a:hover
 
 body
     margin: 0 5%
-    padding-top: 5rem
+    padding-top: 3rem
     position: relative
 
 header#logo
-    background-image: image-url('header.svg') 
-    background-repeat: no-repeat 
-    background-size: 100%
-    +grid-row($behavior:nest)
-    hgroup
-        height: 35rem
-        +grid-column($columns:8, $push:4)
-        h1
-            margin-top: 9rem
-            img
-                width: 25%
-                margin: 0 37.5%
-        h2
-            font-family: $mayusbold
-            font-size: 7rem
-            text-align: center
-            margin-top: 4rem
-            color: black
+    h1
+        img
+            width: 100%
+                
 ul#info
     position: absolute
     right: 0
@@ -49,11 +35,17 @@ ul#info
         img
             width: 2.5rem
 header.new
+    text-align: center
     h1
         font-family: $title
         display: inline-block
-        font-size: 4rem
         text-align: center
+        font-size: 2rem
+        @media #{$medium-up}
+            font-size: 3rem
+        @media #{$large-up}
+            font-size: 4rem
+
     h1.flip
         transform: rotateY(180deg)
 
@@ -61,7 +53,6 @@ main
     section#portfolio
         header
             margin: 4rem 0
-            padding-left: 15rem
         ul
             border-bottom: .2rem dashed black
             li
@@ -69,32 +60,41 @@ main
                 border-top: .2rem dashed black
                 +grid-row($behavior:nest)
                 section.thumbnail
-                    +grid-column($columns:3)
+                    padding: 0 !important
+                    +grid-column($columns:4)
+                    @media #{$large-up}
+                        +grid-column($columns:3)
                     img
                         border: .3rem black dotted
                         width: 80%
                         margin: 10%
                 hgroup
-                    margin: 3rem 0
-                    +grid-column($columns:9)
+                    margin: 0
+                    +grid-column($columns:8)
+                    @media #{$medium-up}
+                        margin: 4% 0
+                    @media #{$large-up}
+                        +grid-column($columns:9)
                     h1
                         font-family: $mayusbold
-                        font-size: 4rem
+                        font-size: 3.5rem
+                        @media #{$medium-up}
+                            font-size: 4rem
                     h2
                         font-family: $mayus
-                        font-size: 3rem
+                        font-size: 2.5rem
+                        @media #{$medium-up}
+                            font-size: 3rem
             li:nth-child(even)
                 text-align: right
                 section.thumbnail
                     +grid-column($float:right)
     section#cv
         margin-top: 5rem
-        header
-            padding-left: 24rem
         section#infography
             img
-                width: 80%
-                margin: 5% 10%
+                width: 90%
+                margin: 5%
                     
 footer
     border-top: .15rem dotted black
@@ -105,12 +105,17 @@ footer
         padding: 2rem 0
         +grid-row($behavior:nest)
         a#license_icon
-            +grid-column($columns:2)
+            +grid-column($columns:4)
+            @media #{$medium-up}
+                +grid-column($columns:2)
             img
                 padding: 5%
                 width: 90%
         p#license_text
             font-family: $script
-            font-size: 2rem
-            +grid-column($columns:10)
+            font-size: 1rem
+            +grid-column($columns:8)
+            @media #{$medium-up}
+                font-size: 2rem
+                +grid-column($columns:10)
 
